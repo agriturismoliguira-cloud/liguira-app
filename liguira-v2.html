@@ -489,24 +489,41 @@ const T = {
     pdf_title:"Villages & Places of Cilento",
     pdf_desc:"Download our guide to the villages and places to visit around Stio.",
     btn_pdf:"📄 Download guide (PDF)",
-    pdf_file:"Booklet_Borghi_Cilento_EN.pdf",
-    chat_label:"Li Guira Assistant",
-    chat_title:"Hi, can I help you? 🌿",
-    chat_sub:"Ask me anything about experiences, how to get here or what to visit nearby.",
-    chat_placeholder:"Type a message…",
-    chat_welcome:"Welcome to Li Guira! I'm your assistant. I can help you with information about our experiences, how to reach us in Stio, or the Cilento villages worth visiting. How can I help?",
-    nav_home:"Home", nav_esp:"Experiences", nav_map:"Area", nav_info:"Info", nav_chat:"Assistant",
-    reg_label:"Guest registration",
-    reg_title:"Guest Form",
-    reg_sub:"Please add all guests before submitting the form. Data is handled in compliance with privacy regulations.",
-    reg_capogruppo:"Group / Family leader",
-    reg_nome:"First name",
-    reg_cognome:"Last name",
-    reg_nascita_data:"Date of birth",
-    reg_nascita_luogo:"Place of birth",
-    reg_indirizzo:"Home address",
-    reg_doc_tipo:"Document type",
-    reg_doc_tipo_ci:"ID card",
+async function sendMessage() {
+  const input = document.getElementById('chat-input');
+  const text = input.value.trim(); if(!text) return;
+  input.value=''; input.style.height='auto';
+  addMessage(text,true);
+  chatHistory.push({role:'user',content:text});
+  addTyping();
+  
+  try {
+    // Chiamiamo il "Ponte" di Netlify invece di Anthropic direttamente
+    const res = await fetch('/.netlify/functions/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        system: SYSTEM[currentLang],
+        messages: chatHistory
+      })
+    });
+    
+    const data = await res.json(); 
+    removeTyping();
+    
+    // Leggiamo la risposta correttamente
+    if(data.content && data.content[0]) {
+      const reply = data.content[0].text;
+      chatHistory.push({role:'assistant',content:reply});
+      addMessage(reply,false);
+    } else { 
+      addMessage(currentLang==='de'?'Fehler. Bitte schreiben Sie an info@liguira.it':currentLang==='en'?'Error. Please write to info@liguira.it':'Errore. Scrivi a info@liguira.it',false); 
+    }
+  } catch(e) {
+    removeTyping();
+    addMessage(currentLang==='de'?'Verbindungsfehler. info@liguira.it':currentLang==='en'?'Connection error. info@liguira.it':'Connessione non disponibile. info@liguira.it',false);
+  }
+}
     reg_doc_tipo_passaporto:"Passport",
     reg_doc_tipo_patente:"Driving licence",
     reg_doc_numero:"Document number",

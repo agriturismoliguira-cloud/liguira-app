@@ -898,21 +898,35 @@ async function sendMessage() {
   addMessage(text,true);
   chatHistory.push({role:'user',content:text});
   addTyping();
+  
   try {
-    const res = await fetch('https://api.anthropic.com/v1/messages',{
-      method:'POST',
-      headers:{'Content-Type':'application/json','x-api-key':API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-      body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:400,system:SYSTEM[currentLang],messages:chatHistory})
+    // ECCO LA NUOVA CHIAMATA AL TUO "PONTE" NETLIFY
+    const res = await fetch('/.netlify/functions/chat', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      // Passiamo solo i messaggi e il prompt di sistema (il resto lo fa la Function)
+      body: JSON.stringify({
+        system: SYSTEM[currentLang],
+        messages: chatHistory
+      })
     });
+    
     const data = await res.json(); removeTyping();
-    if(data.content&&data.content[0]){
-      const reply=data.content[0].text;
+    
+    if(data.content && data.content[0]){
+      const reply = data.content[0].text;
       chatHistory.push({role:'assistant',content:reply});
       addMessage(reply,false);
-    } else { addMessage(currentLang==='de'?'Fehler. Bitte schreiben Sie an info@liguira.it':currentLang==='en'?'Error. Please write to info@liguira.it':'Errore. Scrivi a info@liguira.it',false); }
-  } catch(e){removeTyping();addMessage(currentLang==='de'?'Verbindungsfehler. info@liguira.it':currentLang==='en'?'Connection error. info@liguira.it':'Connessione non disponibile. info@liguira.it',false)}
+    } else { 
+      addMessage(currentLang==='de'?'Fehler. Bitte schreiben Sie an info@liguira.it':currentLang==='en'?'Error. Please write to info@liguira.it':'Errore. Scrivi a info@liguira.it',false); 
+    }
+  } catch(e) {
+    removeTyping();
+    addMessage(currentLang==='de'?'Verbindungsfehler. info@liguira.it':currentLang==='en'?'Connection error. info@liguira.it':'Connessione non disponibile. info@liguira.it',false);
+  }
 }
-
 
 /* ══════════════════════════════════════════════════════════════
    DATI TREKKING

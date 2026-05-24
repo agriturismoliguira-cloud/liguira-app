@@ -3,7 +3,7 @@ exports.handler = async function(event) {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
-  const API_KEY = "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";
+const API_KEY = process.env.ANTHROPIC_API_KEY;
 
   try {
     const { messages, system } = JSON.parse(event.body);

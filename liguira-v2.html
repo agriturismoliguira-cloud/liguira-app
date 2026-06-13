@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -22,45 +23,24 @@
     button{font:inherit;border:none;background:none;cursor:pointer}
     #app{max-width:480px;margin:0 auto;min-height:100vh}
 
-    /* ── LANG SWITCHER ── */
-    #lang-bar{
-      position:fixed;top:0;left:0;right:0;z-index:200;
-      background:var(--dark);border-bottom:1px solid var(--terra);
-      display:flex;justify-content:flex-end;align-items:center;
-      padding:6px 16px;gap:4px;max-width:480px;margin:0 auto;
-    }
-    .lang-btn{
-      font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;
-      text-transform:uppercase;color:var(--stone);padding:4px 8px;
-      border-radius:2px;transition:all .2s;
-    }
-    .lang-btn.active{background:var(--terra);color:var(--warm-white);}
+    #lang-bar{position:fixed;top:0;left:0;right:0;z-index:200;background:var(--dark);border-bottom:1px solid var(--terra);display:flex;justify-content:flex-end;align-items:center;padding:6px 16px;gap:4px;max-width:480px;margin:0 auto}
+    .lang-btn{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--stone);padding:4px 8px;border-radius:2px;transition:all .2s}
+    .lang-btn.active{background:var(--terra);color:var(--warm-white)}
 
-    /* ── PAGES ── */
     .page{display:none;padding-bottom:80px;padding-top:32px}
     .page.active{display:block}
 
-    /* ── PAGE HEADER ── */
     .page-header{background:var(--dark);padding:56px 28px 32px}
     .page-header .label{font-family:'Space Mono',monospace;font-size:11px;color:var(--terra);letter-spacing:.2em;text-transform:uppercase;margin-bottom:10px}
     .page-header h2{font-family:'EB Garamond',serif;font-size:38px;color:var(--warm-white);font-weight:400}
 
-    /* ── TAG ── */
     .tag{display:inline-block;background:rgba(196,112,58,.13);color:var(--terra);border:1px solid rgba(196,112,58,.35);border-radius:3px;padding:2px 8px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-right:6px;margin-bottom:4px}
 
-    /* ── BUTTONS ── */
     .btn-primary{display:block;text-align:center;background:var(--terra);color:var(--warm-white);font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:15px;border-radius:2px;width:100%}
     .btn-dark{display:block;text-align:center;background:var(--dark);color:var(--warm-white);font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:15px;border-radius:2px;width:100%}
     .btn-outline{display:block;text-align:center;background:transparent;color:var(--warm-white);border:1px solid rgba(255,255,255,.3);font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:14px 22px;border-radius:2px;cursor:pointer}
-    .btn-ghost-back{color:var(--stone);font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px;display:inline-block}
 
-    /* ══════ HOME ══════ */
-    #hero{
-      min-height:92vh;
-      background:linear-gradient(160deg,var(--dark) 0%,#3a2518 60%,var(--brown) 100%);
-      display:flex;flex-direction:column;justify-content:center;
-      padding:60px 28px 80px;position:relative;overflow:hidden;
-    }
+    #hero{min-height:92vh;background:linear-gradient(160deg,var(--dark) 0%,#3a2518 60%,var(--brown) 100%);display:flex;flex-direction:column;justify-content:center;padding:60px 28px 80px;position:relative;overflow:hidden}
     #hero::before{content:'';position:absolute;inset:0;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E")}
     #hero::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--terra),transparent)}
     .hero-content{position:relative}
@@ -82,7 +62,6 @@
     .stat-n{font-family:'EB Garamond',serif;font-size:44px;color:var(--brown);line-height:1}
     .stat-label{font-size:12px;color:var(--stone);margin-top:4px}
 
-    /* ══════ ESPERIENZE ══════ */
     #esperienze-content{padding:24px 20px;display:flex;flex-direction:column;gap:12px}
     .exp-featured{background:var(--dark);border-radius:4px;padding:28px 24px;border-left:4px solid var(--terra)}
     .exp-featured .exp-emoji{font-size:40px;margin:16px 0 8px}
@@ -98,7 +77,6 @@
     .exp-note{background:rgba(196,112,58,.1);border:1px solid rgba(196,112,58,.3);border-radius:4px;padding:18px 22px}
     .exp-note p{font-size:14px;color:var(--dark);line-height:1.7}
 
-    /* ══════ MAPPA ══════ */
     #mappa-content{padding:20px 20px;display:flex;flex-direction:column;gap:14px}
     .map-card{background:white;border:1px solid var(--linen);border-radius:4px;overflow:hidden;box-shadow:0 2px 8px rgba(44,25,10,.06)}
     .map-card.featured{border-color:rgba(196,112,58,.5);border-width:2px}
@@ -109,7 +87,6 @@
     .map-card .highlights{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
     .map-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--terra);color:white;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:10px 16px;border-radius:2px;width:100%}
 
-    /* ══════ INFO ══════ */
     #info-content{padding:24px 20px;display:flex;flex-direction:column;gap:12px}
     .info-card{background:white;border:1px solid var(--linen);border-radius:4px;padding:20px}
     .info-inner{display:flex;gap:14px;align-items:flex-start}
@@ -122,7 +99,6 @@
     .pdf-box h3{font-family:'EB Garamond',serif;font-size:20px;color:var(--warm-white);font-weight:400;margin-bottom:8px}
     .pdf-box p{font-size:13px;color:var(--stone);line-height:1.6;margin-bottom:14px}
 
-    /* ══════ CHAT ══════ */
     #page-chat{height:calc(100vh - 70px);padding-bottom:0;flex-direction:column}
     #page-chat.active{display:flex}
     .chat-header{background:var(--dark);padding:50px 28px 24px;flex-shrink:0}
@@ -140,14 +116,12 @@
     #chat-input{flex:1;background:var(--mid);border:1px solid var(--brown);border-radius:20px;padding:10px 16px;color:var(--warm-white);font-size:14px;resize:none;outline:none;line-height:1.5;max-height:100px;overflow-y:auto}
     #chat-send{background:var(--terra);border:none;border-radius:50%;width:42px;height:42px;flex-shrink:0;color:white;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center}
 
-    /* ══════ NAV ══════ */
     #bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:100;background:var(--dark);border-top:2px solid var(--terra);display:flex;justify-content:space-around;padding:6px 0 max(10px,env(safe-area-inset-bottom));max-width:480px;margin:0 auto}
     .nav-btn{display:flex;flex-direction:column;align-items:center;gap:1px;color:var(--stone);cursor:pointer;transition:color .2s;padding:0 4px}
     .nav-btn.active{color:var(--terra)}
     .nav-icon{font-size:16px}
     .nav-label{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:.03em;text-transform:uppercase}
 
-    /* ══════ TREKKING ══════ */
     #trekking-content{padding:20px 20px;display:flex;flex-direction:column;gap:14px}
     .trek-card{background:white;border:1px solid var(--linen);border-radius:4px;overflow:hidden;box-shadow:0 2px 8px rgba(44,25,10,.06)}
     .trek-card-body{padding:18px 20px}
@@ -159,7 +133,6 @@
     .trek-note{background:rgba(196,112,58,.1);border:1px solid rgba(196,112,58,.3);border-radius:4px;padding:18px 22px}
     .trek-note p{font-size:14px;color:var(--dark);line-height:1.7}
 
-    /* ══════ REGISTRAZIONE ══════ */
     #reg-content{padding:20px 20px 32px;display:flex;flex-direction:column;gap:0}
     .reg-section-title{font-family:'EB Garamond',serif;font-size:20px;color:var(--dark);font-weight:400;margin:20px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--linen)}
     .reg-field{display:flex;flex-direction:column;gap:4px;margin-bottom:12px}
@@ -181,14 +154,13 @@
 <body>
 <div id="app">
 
-  <!-- LANG BAR -->
   <div id="lang-bar">
     <button class="lang-btn active" onclick="setLang('it')">IT</button>
     <button class="lang-btn" onclick="setLang('en')">EN</button>
     <button class="lang-btn" onclick="setLang('de')">DE</button>
   </div>
 
-  <!-- ══ HOME ══ -->
+  <!-- HOME -->
   <section id="page-home" class="page active">
     <div id="hero">
       <div class="hero-content">
@@ -217,7 +189,7 @@
     </div>
   </section>
 
-  <!-- ══ ESPERIENZE ══ -->
+  <!-- ESPERIENZE -->
   <section id="page-esperienze" class="page">
     <div class="page-header">
       <p class="label" data-key="esp_label"></p>
@@ -226,7 +198,7 @@
     <div id="esperienze-content"></div>
   </section>
 
-  <!-- ══ MAPPA ══ -->
+  <!-- MAPPA -->
   <section id="page-mappa" class="page">
     <div class="page-header">
       <p class="label" data-key="map_label"></p>
@@ -235,7 +207,7 @@
     <div id="mappa-content"></div>
   </section>
 
-  <!-- ══ INFO ══ -->
+  <!-- INFO -->
   <section id="page-info" class="page">
     <div class="page-header">
       <p class="label" data-key="info_label"></p>
@@ -253,7 +225,7 @@
     </div>
   </section>
 
-  <!-- ══ CHAT ══ -->
+  <!-- CHAT -->
   <section id="page-chat" class="page">
     <div class="chat-header">
       <p class="label" data-key="chat_label"></p>
@@ -267,7 +239,7 @@
     </div>
   </section>
 
-  <!-- ══ TREKKING ══ -->
+  <!-- TREKKING -->
   <section id="page-trekking" class="page">
     <div class="page-header">
       <p class="label" data-key="trek_label"></p>
@@ -276,27 +248,23 @@
     <div id="trekking-content"></div>
   </section>
 
-  <!-- ══ REGISTRAZIONE ══ -->
+  <!-- REGISTRAZIONE -->
   <section id="page-reg" class="page">
     <div class="page-header">
       <p class="label" data-key="reg_label"></p>
       <h2 data-key="reg_title"></h2>
       <p style="font-size:13px;color:var(--stone);margin-top:8px;line-height:1.6" data-key="reg_sub"></p>
     </div>
-
     <div id="reg-content">
-
-      <!-- SUCCESS -->
       <div id="reg-success">
         <p data-key="reg_invio_ok"></p>
       </div>
-
-      <!-- FORM -->
       <form id="reg-form" name="ospiti" data-netlify="true" data-netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="ospiti"/>
         <input name="bot-field" style="display:none"/>
+        <!-- campo che conterrà tutti i dati degli ospiti aggiuntivi serializzati -->
+        <input type="hidden" name="altri_ospiti" id="altri-ospiti-data"/>
 
-        <!-- DATE -->
         <div class="reg-row">
           <div class="reg-field">
             <label data-key="reg_checkin"></label>
@@ -308,9 +276,7 @@
           </div>
         </div>
 
-        <!-- CAPOGRUPPO -->
         <h3 class="reg-section-title" data-key="reg_capogruppo"></h3>
-
         <div class="reg-row">
           <div class="reg-field">
             <label data-key="reg_nome"></label>
@@ -355,7 +321,6 @@
           </div>
         </div>
 
-        <!-- ALTRI OSPITI -->
         <h3 class="reg-section-title" data-key="reg_altri"></h3>
         <div id="altri-ospiti"></div>
         <button type="button" class="btn-aggiungi" onclick="aggiungiOspite()" data-key="reg_aggiungi"></button>
@@ -366,12 +331,11 @@
         </div>
         <button type="submit" class="btn-primary" data-key="reg_invia"></button>
         <p class="reg-note" data-key="reg_obbligatorio"></p>
-
       </form>
     </div>
   </section>
 
-  <!-- ══ NAV ══ -->
+  <!-- NAV -->
   <nav id="bottom-nav">
     <button class="nav-btn active" data-page="home" onclick="goTo('home')">
       <span class="nav-icon">🏡</span><span class="nav-label" data-key="nav_home"></span>
@@ -396,306 +360,171 @@
     </button>
   </nav>
 
-</div><!-- #app -->
+</div>
 <script>
-/* ══════════════════════════════════════════════════════════════
-   TRADUZIONI
-══════════════════════════════════════════════════════════════ */
 const T = {
   it: {
     hero_eyebrow:"Stio · Parco Nazionale del Cilento",
     hero_claim:"Non vendiamo letti. Vendiamo il silenzio, il tempo lento e la quiete sotto le stelle del Cilento interno.",
-    btn_esperienze:"Le esperienze",
-    btn_dintorni:"Dintorni",
+    btn_esperienze:"Le esperienze", btn_dintorni:"Dintorni",
     fuoco_label:"Esperienza Signature",
-    fuoco_desc:"Braciere in ferro grezzo. Ghiaia chiara. Cielo senza inquinamento luminoso. Vino del Cilento. Un cerchio di persone vere.",
+    fuoco_desc:"Una vista spettacolare sulla valle. Tavolo in legno. Rumori della natura. I sapori della tradizione. Vino del Cilento. Non è una serata organizzata — è un rito.",
     fuoco_link:"Scopri tutte le esperienze →",
-    stat_esp:"Esperienze slow",
-    stat_borghi:"Borghi nei dintorni",
-    stat_boschi:"Ettari di boschi",
-    stat_stress:"Stress garantito",
-    esp_label:"Slow hospitality",
-    esp_title:"Le Esperienze",
-    map_label:"Cilento interno",
-    map_title:"Dintorni",
-    info_label:"Pratiche",
-    info_title:"Info Utili",
+    stat_esp:"Esperienze slow", stat_borghi:"Borghi nei dintorni", stat_boschi:"Ettari di boschi", stat_stress:"Stress garantito",
+    esp_label:"Slow hospitality", esp_title:"Le Esperienze",
+    map_label:"Cilento interno", map_title:"Dintorni",
+    info_label:"Pratiche", info_title:"Info Utili",
     btn_email:"✉️ Contattaci",
-    pdf_label:"Guida cartacea",
-    pdf_title:"Borghi & Luoghi del Cilento",
+    pdf_label:"Guida cartacea", pdf_title:"Borghi & Luoghi del Cilento",
     pdf_desc:"Scarica la nostra guida ai borghi e ai luoghi da visitare nei dintorni di Stio.",
-    btn_pdf:"📄 Scarica la guida (PDF)",
-    pdf_file:"Booklet_Borghi_Cilento.pdf",
-    chat_label:"Assistente Li Guira",
-    chat_title:"Ciao, posso aiutarti? 🌿",
+    btn_pdf:"📄 Scarica la guida (PDF)", pdf_file:"Booklet_Borghi_Cilento.pdf",
+    chat_label:"Assistente Li Guira", chat_title:"Ciao, posso aiutarti? 🌿",
     chat_sub:"Chiedimi tutto su esperienze, come arrivare o cosa visitare nei dintorni.",
     chat_placeholder:"Scrivi un messaggio…",
     chat_welcome:"Benvenuto a Li Guira! Sono il tuo assistente. Posso aiutarti con informazioni sulle esperienze, su come raggiungerci a Stio o sui borghi del Cilento da visitare. Come posso aiutarti?",
     nav_home:"Home", nav_esp:"Esperienze", nav_map:"Dintorni", nav_info:"Info", nav_chat:"Assistente",
-    reg_label:"Registrazione ospiti",
-    reg_title:"Scheda Ospiti",
+    reg_label:"Registrazione ospiti", reg_title:"Scheda Ospiti",
     reg_sub:"Inserisci tutti gli ospiti prima di inviare la scheda. I dati sono trattati nel rispetto della privacy.",
     reg_capogruppo:"Capogruppo / Capofamiglia",
-    reg_nome:"Nome",
-    reg_cognome:"Cognome",
-    reg_nascita_data:"Data di nascita",
-    reg_nascita_luogo:"Luogo di nascita",
-    reg_indirizzo:"Indirizzo di residenza",
-    reg_doc_tipo:"Tipo documento",
-    reg_doc_tipo_ci:"Carta d'identità",
-    reg_doc_tipo_passaporto:"Passaporto",
-    reg_doc_tipo_patente:"Patente",
-    reg_doc_numero:"Numero documento",
-    reg_doc_luogo:"Luogo di rilascio",
-    reg_altri:"Altri ospiti",
-    reg_aggiungi:"+ Aggiungi ospite",
-    reg_rimuovi:"Rimuovi",
-    reg_ospite:"Ospite",
+    reg_nome:"Nome", reg_cognome:"Cognome", reg_nascita_data:"Data di nascita",
+    reg_nascita_luogo:"Luogo di nascita", reg_indirizzo:"Indirizzo di residenza",
+    reg_doc_tipo:"Tipo documento", reg_doc_tipo_ci:"Carta d'identità",
+    reg_doc_tipo_passaporto:"Passaporto", reg_doc_tipo_patente:"Patente",
+    reg_doc_numero:"Numero documento", reg_doc_luogo:"Luogo di rilascio",
+    reg_altri:"Altri ospiti", reg_aggiungi:"+ Aggiungi ospite",
+    reg_rimuovi:"Rimuovi", reg_ospite:"Ospite",
     reg_invia:"Invia scheda",
     reg_invio_ok:"Scheda inviata! Ti confermiamo via email. A presto a Li Guira.",
     reg_invio_err:"Errore nell'invio. Scrivi a info@liguira.it",
-    reg_obbligatorio:"Campi obbligatori",
-    reg_warning_title:"⚠ Attenzione",
-    reg_checkin:"Data di check-in",
-    reg_checkout:"Data di check-out",
-    nav_reg:"Registrati",
+    reg_obbligatorio:"Campi obbligatori", reg_warning_title:"⚠ Attenzione",
+    reg_checkin:"Data di check-in", reg_checkout:"Data di check-out", nav_reg:"Registrati",
     trek_label:"Sentieri del Cilento", trek_title:"Percorsi Trekking", nav_trek:"Trekking",
     trek_note:"Possiamo preparare lo zainetto del pastore per accompagnarti sul sentiero: prodotti locali e genuini per una sosta autentica nel bosco. Chiedi al momento del check-in.",
-    liguira_gmaps:"📍 Apri in Google Maps",
-    liguira_dist:"La tua destinazione",
-    arriving:"Come arrivare",
-    btn_gmaps:"📍 Come raggiungerci →",
+    liguira_gmaps:"📍 Apri in Google Maps", btn_gmaps:"📍 Come raggiungerci →",
   },
   en: {
     hero_eyebrow:"Stio · Cilento National Park",
     hero_claim:"We don't sell beds. We sell silence, slow time and quiet under the stars of inner Cilento.",
-    btn_esperienze:"Experiences",
-    btn_dintorni:"Surroundings",
+    btn_esperienze:"Experiences", btn_dintorni:"Surroundings",
     fuoco_label:"Signature Experience",
-    fuoco_desc:"Raw iron fire pit. White gravel. Light-pollution-free sky. Cilento wine. A circle of real people.",
+    fuoco_desc:"A spectacular view over the valley. Wooden table. Sounds of nature. Flavours of tradition. Cilento wine. Not an organised evening — a ritual.",
     fuoco_link:"Discover all experiences →",
-    stat_esp:"Slow experiences",
-    stat_borghi:"Villages nearby",
-    stat_boschi:"Hectares of forest",
-    stat_stress:"Stress guaranteed",
-    esp_label:"Slow hospitality",
-    esp_title:"Experiences",
-    map_label:"Inner Cilento",
-    map_title:"Surroundings",
-    info_label:"Practical info",
-    info_title:"Useful Info",
+    stat_esp:"Slow experiences", stat_borghi:"Villages nearby", stat_boschi:"Hectares of forest", stat_stress:"Stress guaranteed",
+    esp_label:"Slow hospitality", esp_title:"Experiences",
+    map_label:"Inner Cilento", map_title:"Surroundings",
+    info_label:"Practical info", info_title:"Useful Info",
     btn_email:"✉️ Contact us",
-    pdf_label:"Printed guide",
-    pdf_title:"Villages & Places of Cilento",
+    pdf_label:"Printed guide", pdf_title:"Villages & Places of Cilento",
     pdf_desc:"Download our guide to the villages and places to visit around Stio.",
-    btn_pdf:"📄 Download guide (PDF)",
-    pdf_file:"Booklet_Borghi_Cilento_EN.pdf",
-    chat_label:"Li Guira Assistant",
-    chat_title:"Hi, can I help you? 🌿",
+    btn_pdf:"📄 Download guide (PDF)", pdf_file:"Booklet_Borghi_Cilento_EN.pdf",
+    chat_label:"Li Guira Assistant", chat_title:"Hi, can I help you? 🌿",
     chat_sub:"Ask me anything about experiences, how to get here or what to visit nearby.",
     chat_placeholder:"Type a message…",
     chat_welcome:"Welcome to Li Guira! I'm your assistant. I can help you with information about our experiences, how to reach us in Stio, or the Cilento villages worth visiting. How can I help?",
     nav_home:"Home", nav_esp:"Experiences", nav_map:"Area", nav_info:"Info", nav_chat:"Assistant",
-    reg_label:"Guest registration",
-    reg_title:"Guest Form",
+    reg_label:"Guest registration", reg_title:"Guest Form",
     reg_sub:"Please add all guests before submitting the form. Data is handled in compliance with privacy regulations.",
     reg_capogruppo:"Group / Family leader",
-    reg_nome:"First name",
-    reg_cognome:"Last name",
-    reg_nascita_data:"Date of birth",
-    reg_nascita_luogo:"Place of birth",
-    reg_indirizzo:"Home address",
-    reg_doc_tipo:"Document type",
-    reg_doc_tipo_ci:"ID card",
-    reg_doc_tipo_passaporto:"Passport",
-    reg_doc_tipo_patente:"Driving licence",
-    reg_doc_numero:"Document number",
-    reg_doc_luogo:"Place of issue",
-    reg_altri:"Other guests",
-    reg_aggiungi:"+ Add guest",
-    reg_rimuovi:"Remove",
-    reg_ospite:"Guest",
+    reg_nome:"First name", reg_cognome:"Last name", reg_nascita_data:"Date of birth",
+    reg_nascita_luogo:"Place of birth", reg_indirizzo:"Home address",
+    reg_doc_tipo:"Document type", reg_doc_tipo_ci:"ID card",
+    reg_doc_tipo_passaporto:"Passport", reg_doc_tipo_patente:"Driving licence",
+    reg_doc_numero:"Document number", reg_doc_luogo:"Place of issue",
+    reg_altri:"Other guests", reg_aggiungi:"+ Add guest",
+    reg_rimuovi:"Remove", reg_ospite:"Guest",
     reg_invia:"Submit form",
     reg_invio_ok:"Form submitted! We will confirm by email. See you soon at Li Guira.",
     reg_invio_err:"Submission error. Please write to info@liguira.it",
-    reg_obbligatorio:"Required fields",
-    reg_warning_title:"⚠ Please note",
-    reg_checkin:"Check-in date",
-    reg_checkout:"Check-out date",
-    nav_reg:"Register",
+    reg_obbligatorio:"Required fields", reg_warning_title:"⚠ Please note",
+    reg_checkin:"Check-in date", reg_checkout:"Check-out date", nav_reg:"Register",
     trek_label:"Cilento trails", trek_title:"Trekking Routes", nav_trek:"Trekking",
     trek_note:"We can prepare the shepherd's backpack to accompany you on the trail: local and genuine products for an authentic break in the woods. Ask at check-in.",
-    liguira_gmaps:"📍 Open in Google Maps",
-    liguira_dist:"Your destination",
-    arriving:"How to get here",
-    btn_gmaps:"📍 How to reach us →",
+    liguira_gmaps:"📍 Open in Google Maps", btn_gmaps:"📍 How to reach us →",
   },
   de: {
     hero_eyebrow:"Stio · Nationalpark Cilento",
     hero_claim:"Wir verkaufen keine Betten. Wir verkaufen Stille, langsame Zeit und Stille unter dem Sternenhimmel des Cilento.",
-    btn_esperienze:"Erlebnisse",
-    btn_dintorni:"Umgebung",
+    btn_esperienze:"Erlebnisse", btn_dintorni:"Umgebung",
     fuoco_label:"Signature-Erlebnis",
-    fuoco_desc:"Rohes Eisenfeuer. Heller Kies. Kein Lichtverschmutzung. Cilento-Wein. Ein Kreis echter Menschen.",
+    fuoco_desc:"Ein spektakulärer Blick ins Tal. Holztisch. Geräusche der Natur. Aromen der Tradition. Cilento-Wein. Kein organisierter Abend — ein Ritual.",
     fuoco_link:"Alle Erlebnisse entdecken →",
-    stat_esp:"Slow-Erlebnisse",
-    stat_borghi:"Dörfer in der Nähe",
-    
-    stat_stress:"Stress garantiert",
-    esp_label:"Slow Hospitality",
-    esp_title:"Erlebnisse",
-    map_label:"Inneres Cilento",
-    map_title:"Umgebung",
-    info_label:"Praktisches",
-    info_title:"Nützliche Infos",
+    stat_esp:"Slow-Erlebnisse", stat_borghi:"Dörfer in der Nähe", stat_boschi:"Hektar Wald", stat_stress:"Stress garantiert",
+    esp_label:"Slow Hospitality", esp_title:"Erlebnisse",
+    map_label:"Inneres Cilento", map_title:"Umgebung",
+    info_label:"Praktisches", info_title:"Nützliche Infos",
     btn_email:"✉️ Kontakt",
-    pdf_label:"Gedruckter Führer",
-    pdf_title:"Dörfer & Orte im Cilento",
+    pdf_label:"Gedruckter Führer", pdf_title:"Dörfer & Orte im Cilento",
     pdf_desc:"Laden Sie unseren Führer zu den Dörfern und Sehenswürdigkeiten rund um Stio herunter.",
-    btn_pdf:"📄 Führer herunterladen (PDF)",
-    pdf_file:"Booklet_Borghi_Cilento_DE.pdf",
-    chat_label:"Li Guira Assistent",
-    chat_title:"Hallo, kann ich helfen? 🌿",
+    btn_pdf:"📄 Führer herunterladen (PDF)", pdf_file:"Booklet_Borghi_Cilento_DE.pdf",
+    chat_label:"Li Guira Assistent", chat_title:"Hallo, kann ich helfen? 🌿",
     chat_sub:"Fragen Sie mich zu Erlebnissen, Anreise oder Ausflügen in der Umgebung.",
     chat_placeholder:"Nachricht schreiben…",
     chat_welcome:"Willkommen bei Li Guira! Ich bin Ihr Assistent. Ich helfe Ihnen gerne bei Fragen zu unseren Erlebnissen, der Anreise nach Stio oder den Dörfern des Cilento. Wie kann ich helfen?",
     nav_home:"Home", nav_esp:"Erlebnisse", nav_map:"Umgebung", nav_info:"Info", nav_chat:"Assistent",
-    reg_label:"Gästeregistrierung",
-    reg_title:"Gästeformular",
+    reg_label:"Gästeregistrierung", reg_title:"Gästeformular",
     reg_sub:"Bitte alle Gäste eintragen, bevor Sie das Formular absenden. Die Daten werden datenschutzkonform verarbeitet.",
     reg_capogruppo:"Gruppen- / Familienoberhaupt",
-    reg_nome:"Vorname",
-    reg_cognome:"Nachname",
-    reg_nascita_data:"Geburtsdatum",
-    reg_nascita_luogo:"Geburtsort",
-    reg_indirizzo:"Wohnanschrift",
-    reg_doc_tipo:"Dokumenttyp",
-    reg_doc_tipo_ci:"Personalausweis",
-    reg_doc_tipo_passaporto:"Reisepass",
-    reg_doc_tipo_patente:"Führerschein",
-    reg_doc_numero:"Dokumentnummer",
-    reg_doc_luogo:"Ausstellungsort",
-    reg_altri:"Weitere Gäste",
-    reg_aggiungi:"+ Gast hinzufügen",
-    reg_rimuovi:"Entfernen",
-    reg_ospite:"Gast",
+    reg_nome:"Vorname", reg_cognome:"Nachname", reg_nascita_data:"Geburtsdatum",
+    reg_nascita_luogo:"Geburtsort", reg_indirizzo:"Wohnanschrift",
+    reg_doc_tipo:"Dokumenttyp", reg_doc_tipo_ci:"Personalausweis",
+    reg_doc_tipo_passaporto:"Reisepass", reg_doc_tipo_patente:"Führerschein",
+    reg_doc_numero:"Dokumentnummer", reg_doc_luogo:"Ausstellungsort",
+    reg_altri:"Weitere Gäste", reg_aggiungi:"+ Gast hinzufügen",
+    reg_rimuovi:"Entfernen", reg_ospite:"Gast",
     reg_invia:"Formular absenden",
     reg_invio_ok:"Formular gesendet! Wir bestätigen per E-Mail. Bis bald in Li Guira.",
     reg_invio_err:"Fehler beim Senden. Schreiben Sie an info@liguira.it",
-    reg_obbligatorio:"Pflichtfelder",
-    reg_warning_title:"⚠ Hinweis",
-    reg_checkin:"Check-in Datum",
-    reg_checkout:"Check-out Datum",
-    nav_reg:"Anmelden",
+    reg_obbligatorio:"Pflichtfelder", reg_warning_title:"⚠ Hinweis",
+    reg_checkin:"Check-in Datum", reg_checkout:"Check-out Datum", nav_reg:"Anmelden",
     trek_label:"Cilento-Wege", trek_title:"Wanderrouten", nav_trek:"Wandern",
     trek_note:"Wir bereiten den Hirtenrucksack für Ihren Weg vor: lokale und natürliche Produkte für eine authentische Rast im Wald. Fragen Sie beim Check-in.",
-    liguira_gmaps:"📍 In Google Maps öffnen",
-    liguira_dist:"Ihr Reiseziel",
-    arriving:"Anreise",
-    btn_gmaps:"📍 Anfahrt →",
+    liguira_gmaps:"📍 In Google Maps öffnen", btn_gmaps:"📍 Anfahrt →",
   }
 };
 
 let currentLang = 'it';
 
-/* ══════════════════════════════════════════════════════════════
-   DATI ESPERIENZE
-══════════════════════════════════════════════════════════════ */
+/* ── ESPERIENZE ── */
 const ESPERIENZE = {
   it:[
-    {nome:"Aperitivo al tramonto",sub:"Esperienza Signature",desc:"Braciere in ferro grezzo nel piazzale. Cerchio di ghiaia. Ceppi di legno. Cielo senza inquinamento luminoso. Vino del Cilento. Non è una serata organizzata — è un rito.",emoji:"🌅",featured:true},
-    {nome:"Le Mani in Pasta",sub:"Cucina didattica all'aperto",desc:"Pasta fresca sul tavolo massiccio. Farina, acqua, mani. Il sapere contadino tramandato.",emoji:"🫙",featured:false},
-    {nome:"Giardino Segreto",sub:"Barbecue privato a Stio",desc:"Un'area esclusiva a 3 km, nel borgo di Stio. Forniamo il cestino. Il resto è vostro.",emoji:"🧺",featured:false},
-    {nome:"E-Bike nel Cilento",sub:"Esplorazione autonoma",desc:"E-bike per i sentieri del Parco. Itinerari verso Roscigno Vecchia, Monte Gelbison, gole del Calore.",emoji:"🚵",featured:false},
-    {nome:"Stargazing",sub:"Zero inquinamento luminoso",desc:"Stio è tra i luoghi con il cielo più buio del Sud Italia. Cieli che le città hanno dimenticato.",emoji:"✨",featured:false},
-    {nome:"Via dei Mulini",sub:"Trekking tra i mulini di un tempo",desc:"Un percorso suggestivo che ripercorre i mulini storici del territorio. Puoi partire con lo zainetto del pastore: prodotti locali e genuini per una sosta autentica nel bosco.",emoji:"🌾",featured:false,link:"https://loc.wiki/t/255901539?wa=sc"},
-    {nome:"Via del Silenzio",sub:"Sentiero nella natura incontaminata",desc:"Un cammino lento tra boschi e silenzi profondi. Per chi vuole disconnettersi davvero e ritrovare il proprio ritmo.",emoji:"🤫",featured:false,link:"https://loc.wiki/t/139913855?wa=sc"},
+    {nome:"Aperitivo al tramonto",sub:"Esperienza Signature",desc:"Una vista spettacolare sulla valle. Tavolo in legno. Rumori della natura. I sapori della tradizione. Vino del Cilento. Non è una serata organizzata — è un rito.",emoji:"🌅",featured:true},
+    {nome:"Le Mani in Pasta",sub:"Cucina didattica all'aperto",desc:"Pasta fresca o ricette cilentane. Farina, acqua, mani. Il sapere contadino tramandato.",emoji:"🫙"},
+    {nome:"Giardino Panoramico",sub:"Barbecue privato",desc:"Un'area esclusiva, se preferisci avere il tuo cestino del barbecue. Altrimenti te lo prepariamo noi.",emoji:"🧺"},
+    {nome:"E-Bike nel Cilento",sub:"Esplorazione autonoma",desc:"E-bike per i sentieri del Parco. Itinerari verso Gioi, Laurino, Magliano o nel cuore del Cilento.",emoji:"🚵"},
+    {nome:"Stargazing",sub:"Zero inquinamento luminoso",desc:"Stio è tra i luoghi con il cielo più buio del Sud Italia. Cieli che le città hanno dimenticato.",emoji:"✨"},
+    {nome:"Via dei Mulini",sub:"Trekking tra i mulini di un tempo",desc:"Un percorso suggestivo che ripercorre i mulini storici del territorio. Puoi partire con lo zainetto del pastore: prodotti locali e genuini per una sosta autentica nel bosco.",emoji:"🌾",link:"https://loc.wiki/t/255901539?wa=sc"},
+    {nome:"Via del Silenzio",sub:"Sentiero nella natura incontaminata",desc:"Un cammino lento tra boschi e silenzi profondi. Per chi vuole disconnettersi davvero e ritrovare il proprio ritmo.",emoji:"🤫",link:"https://loc.wiki/t/139913855?wa=sc"},
   ],
   en:[
-    {nome:"Aperitivo al tramonto",sub:"Signature Experience",desc:"Raw iron fire pit. Gravel circle. Firewood. No light pollution. Cilento wine. Not an organised evening — a ritual.",emoji:"🌅",featured:true},
-    {nome:"Le Mani in Pasta",sub:"Outdoor cooking class",desc:"Fresh pasta on a solid wood table. Flour, water, hands. Ancient peasant knowledge passed on.",emoji:"🫙",featured:false},
-    {nome:"Secret Garden",sub:"Private BBQ in Stio",desc:"An exclusive spot 3 km away in the village of Stio. We provide the basket. The rest is yours.",emoji:"🧺",featured:false},
-    {nome:"E-Bike in Cilento",sub:"Autonomous exploration",desc:"E-bikes for the Park trails. Routes to Roscigno Vecchia, Monte Gelbison, Calore gorges.",emoji:"🚵",featured:false},
-    {nome:"Stargazing",sub:"Zero light pollution",desc:"Stio has one of the darkest skies in southern Italy. Skies that cities have forgotten.",emoji:"✨",featured:false},
-    {nome:"Via dei Mulini",sub:"Trekking among historic mills",desc:"A scenic route retracing the historic mills of the area. You can set off with the shepherd's backpack: local and genuine products for an authentic break in the woods.",emoji:"🌾",featured:false,link:"https://loc.wiki/t/255901539?wa=sc"},
-    {nome:"Via del Silenzio",sub:"Trail through unspoilt nature",desc:"A slow walk through deep woods and profound silence. For those who truly want to disconnect and rediscover their own pace.",emoji:"🤫",featured:false,link:"https://loc.wiki/t/139913855?wa=sc"},
+    {nome:"Aperitivo al tramonto",sub:"Signature Experience",desc:"A spectacular view over the valley. Wooden table. Sounds of nature. Flavours of tradition. Cilento wine. Not an organised evening — a ritual.",emoji:"🌅",featured:true},
+    {nome:"Le Mani in Pasta",sub:"Outdoor cooking class",desc:"Fresh pasta or Cilento recipes. Flour, water, hands. Ancient peasant knowledge passed on.",emoji:"🫙"},
+    {nome:"Panoramic Garden",sub:"Private BBQ",desc:"An exclusive area, if you prefer your own BBQ basket. Otherwise we prepare it for you.",emoji:"🧺"},
+    {nome:"E-Bike in Cilento",sub:"Autonomous exploration",desc:"E-bikes for the Park trails. Routes to Gioi, Laurino, Magliano or into the heart of Cilento.",emoji:"🚵"},
+    {nome:"Stargazing",sub:"Zero light pollution",desc:"Stio has one of the darkest skies in southern Italy. Skies that cities have forgotten.",emoji:"✨"},
+    {nome:"Via dei Mulini",sub:"Trekking among historic mills",desc:"A scenic route retracing the historic mills of the area. Set off with the shepherd's backpack: local and genuine products for an authentic break in the woods.",emoji:"🌾",link:"https://loc.wiki/t/255901539?wa=sc"},
+    {nome:"Via del Silenzio",sub:"Trail through unspoilt nature",desc:"A slow walk through deep woods and profound silence. For those who truly want to disconnect and rediscover their own pace.",emoji:"🤫",link:"https://loc.wiki/t/139913855?wa=sc"},
   ],
   de:[
-    {nome:"Aperitivo al tramonto",sub:"Signature-Erlebnis",desc:"Rohes Eisenfeuer. Kieskreis. Brennholz. Kein Lichtverschmutzung. Cilento-Wein. Kein organisierter Abend — ein Ritual.",emoji:"🌅",featured:true},
-    {nome:"Le Mani in Pasta",sub:"Kochkurs im Freien",desc:"Frische Pasta auf einem massiven Holztisch. Mehl, Wasser, Hände. Altes Bauerntum weitergegeben.",emoji:"🫙",featured:false},
-    {nome:"Geheimer Garten",sub:"Privates BBQ in Stio",desc:"Ein exklusiver Ort 3 km entfernt im Dorf Stio. Wir liefern den Korb. Den Rest gestalten Sie selbst.",emoji:"🧺",featured:false},
-    {nome:"E-Bike im Cilento",sub:"Autonome Erkundung",desc:"E-Bikes für die Parkwege. Routen zu Roscigno Vecchia, Monte Gelbison, Calore-Schluchten.",emoji:"🚵",featured:false},
-    {nome:"Stargazing",sub:"Null Lichtverschmutzung",desc:"Stio hat einen der dunkelsten Himmel in Süditalien. Sternenhimmel, den Städte vergessen haben.",emoji:"✨",featured:false},
-    {nome:"Via dei Mulini",sub:"Wanderung zu den historischen Mühlen",desc:"Ein eindrucksvoller Weg entlang der alten Mühlen des Gebiets. Mit dem Hirtenrucksack: lokale und natürliche Produkte für eine authentische Rast im Wald.",emoji:"🌾",featured:false,link:"https://loc.wiki/t/255901539?wa=sc"},
-    {nome:"Via del Silenzio",sub:"Pfad durch unberührte Natur",desc:"Ein langsamer Weg durch tiefe Wälder und Stille. Für alle, die wirklich abschalten und ihren eigenen Rhythmus wiederfinden wollen.",emoji:"🤫",featured:false,link:"https://loc.wiki/t/139913855?wa=sc"},
+    {nome:"Aperitivo al tramonto",sub:"Signature-Erlebnis",desc:"Ein spektakulärer Blick ins Tal. Holztisch. Geräusche der Natur. Aromen der Tradition. Cilento-Wein. Kein organisierter Abend — ein Ritual.",emoji:"🌅",featured:true},
+    {nome:"Le Mani in Pasta",sub:"Kochkurs im Freien",desc:"Frische Pasta oder Cilento-Rezepte. Mehl, Wasser, Hände. Altes Bauerntum weitergegeben.",emoji:"🫙"},
+    {nome:"Panorama-Garten",sub:"Privates BBQ",desc:"Ein exklusiver Bereich, wenn Sie Ihren eigenen BBQ-Korb bevorzugen. Sonst bereiten wir ihn für Sie vor.",emoji:"🧺"},
+    {nome:"E-Bike im Cilento",sub:"Autonome Erkundung",desc:"E-Bikes für die Parkwege. Routen nach Gioi, Laurino, Magliano oder ins Herz des Cilento.",emoji:"🚵"},
+    {nome:"Stargazing",sub:"Null Lichtverschmutzung",desc:"Stio hat einen der dunkelsten Himmel in Süditalien. Sternenhimmel, den Städte vergessen haben.",emoji:"✨"},
+    {nome:"Via dei Mulini",sub:"Wanderung zu den historischen Mühlen",desc:"Ein eindrucksvoller Weg entlang der alten Mühlen. Mit dem Hirtenrucksack: lokale und natürliche Produkte für eine authentische Rast im Wald.",emoji:"🌾",link:"https://loc.wiki/t/255901539?wa=sc"},
+    {nome:"Via del Silenzio",sub:"Pfad durch unberührte Natur",desc:"Ein langsamer Weg durch Wälder und Stille. Für alle, die wirklich abschalten und ihren eigenen Rhythmus wiederfinden wollen.",emoji:"🤫",link:"https://loc.wiki/t/139913855?wa=sc"},
   ],
 };
 
-/* ══════════════════════════════════════════════════════════════
-   DATI MAPPA
-══════════════════════════════════════════════════════════════ */
+/* ── LUOGHI ── */
 const LUOGHI = [
-  
-  {
-    nome:"Grotte di Castelcivita",
-    dist:{it:"40 km · 50 min",en:"40 km · 50 min",de:"40 km · 50 Min."},
-    desc:{
-      it:"Percorsi guidati tra stalattiti e leggende su Spartaco. Avventura speleologica per tutte le età.",
-      en:"Guided tours among stalactites and legends of Spartacus. Caving adventure for all ages.",
-      de:"Geführte Touren zwischen Stalaktiten und Spartakus-Legenden. Höhlenabenteuer für alle."
-    },
-    highlights:["🦇 Speleologia","🏛 Storia","👨‍👩‍👧 Famiglie"],
-    gmaps:"https://maps.app.goo.gl/mNp4QGLUi73sNe867"
-  },
-  {
-    nome:"Gole del Calore – Felitto",
-    dist:{it:"20 km · 22 min",en:"20 km · 22 min",de:"20 km · 22 Min."},
-    desc:{
-      it:"Trekking e kayak tra gole spettacolari. Felitto è famosa anche per i fusilli artigianali.",
-      en:"Trekking and kayaking through spectacular gorges. Felitto is also famous for its handmade fusilli.",
-      de:"Wandern und Kajak durch spektakuläre Schluchten. Felitto ist auch für seine handgemachten Fusilli bekannt."
-    },
-    highlights:["🚣 Kayak","🥾 Trekking","🍝 Gastronomia"],
-    gmaps:"https://maps.app.goo.gl/3xynrhG1dV455T7F9"
-  },
-  {
-    nome:"Ponte di Sacco sul Sammaro",
-    dist:{it:"25 km · 30 min",en:"25 km · 30 min",de:"25 km · 30 Min."},
-    desc:{
-      it:"Eremo scavato nella montagna, gole del Sammaro e sentieri selvaggi. Un gioiello nascosto.",
-      en:"Hermitage carved into the mountain, Sammaro gorges and wild trails. A hidden gem.",
-      de:"In den Berg gehauene Einsiedelei, Sammaro-Schluchten und wilde Pfade. Ein verborgenes Juwel."
-    },
-    highlights:["⛰️ Eremo","🌊 Gole","🔍 Esplorazione"],
-    gmaps:"https://maps.app.goo.gl/NLySCxAe8ZfAAKGw6"
-  },
-  {
-    nome:"Roscigno Vecchia",
-    dist:{it:"25 km · 30 min",en:"25 km · 30 min",de:"25 km · 30 Min."},
-    desc:{
-      it:"Museo a cielo aperto abbandonato eppure vivo di memorie. L'ultimo abitante vi racconterà tutto.",
-      en:"Open-air museum, abandoned yet alive with memories. The last resident will tell you everything.",
-      de:"Freilichtmuseum, verlassen und doch voller Erinnerungen. Der letzte Bewohner erzählt alles."
-    },
-    highlights:["🏚 Borgo fantasma","📸 Fotografia","🗣 Storie"],
-    gmaps:"https://www.google.com/maps/search/Roscigno+Vecchia"
-  },
-  {
-    nome:"Trentinara – Volo dell'Angelo",
-    dist:{it:"40 km · 30 min",en:"40 km · 30 min",de:"40 km · 30 Min."},
-    desc:{
-      it:"La terrazza del Cilento con zipline panoramica e la Passeggiata degli Innamorati.",
-      en:"The terrace of Cilento with panoramic zipline and the Lovers' Walk.",
-      de:"Die Terrasse des Cilento mit Panorama-Zipline und dem Liebespfad."
-    },
-    highlights:["🪂 Zipline","🌅 Panorama","❤️ Romantico"],
-    gmaps:"https://www.google.com/maps/search/Trentinara+Cilento"
-  },
+  {nome:"Grotte di Castelcivita",dist:{it:"40 km · 50 min",en:"40 km · 50 min",de:"40 km · 50 Min."},desc:{it:"Percorsi guidati tra stalattiti e leggende su Spartaco. Avventura speleologica per tutte le età.",en:"Guided tours among stalactites and legends of Spartacus. Caving adventure for all ages.",de:"Geführte Touren zwischen Stalaktiten und Spartakus-Legenden. Höhlenabenteuer für alle."},highlights:["🦇 Speleologia","🏛 Storia","👨‍👩‍👧 Famiglie"],gmaps:"https://maps.app.goo.gl/mNp4QGLUi73sNe867"},
+  {nome:"Gole del Calore – Felitto",dist:{it:"20 km · 22 min",en:"20 km · 22 min",de:"20 km · 22 Min."},desc:{it:"Trekking e kayak tra gole spettacolari. Felitto è famosa anche per i fusilli artigianali.",en:"Trekking and kayaking through spectacular gorges. Felitto is also famous for its handmade fusilli.",de:"Wandern und Kajak durch spektakuläre Schluchten. Felitto ist auch für seine handgemachten Fusilli bekannt."},highlights:["🚣 Kayak","🥾 Trekking","🍝 Gastronomia"],gmaps:"https://maps.app.goo.gl/3xynrhG1dV455T7F9"},
+  {nome:"Ponte di Sacco sul Sammaro",dist:{it:"25 km · 30 min",en:"25 km · 30 min",de:"25 km · 30 Min."},desc:{it:"Eremo scavato nella montagna, gole del Sammaro e sentieri selvaggi. Un gioiello nascosto.",en:"Hermitage carved into the mountain, Sammaro gorges and wild trails. A hidden gem.",de:"In den Berg gehauene Einsiedelei, Sammaro-Schluchten und wilde Pfade. Ein verborgenes Juwel."},highlights:["⛰️ Eremo","🌊 Gole","🔍 Esplorazione"],gmaps:"https://maps.app.goo.gl/NLySCxAe8ZfAAKGw6"},
+  {nome:"Roscigno Vecchia",dist:{it:"25 km · 30 min",en:"25 km · 30 min",de:"25 km · 30 Min."},desc:{it:"Museo a cielo aperto abbandonato eppure vivo di memorie. L'ultimo abitante vi racconterà tutto.",en:"Open-air museum, abandoned yet alive with memories. The last resident will tell you everything.",de:"Freilichtmuseum, verlassen und doch voller Erinnerungen. Der letzte Bewohner erzählt alles."},highlights:["🏚 Borgo fantasma","📸 Fotografia","🗣 Storie"],gmaps:"https://www.google.com/maps/search/Roscigno+Vecchia"},
+  {nome:"Trentinara – Volo dell'Angelo",dist:{it:"40 km · 30 min",en:"40 km · 30 min",de:"40 km · 30 Min."},desc:{it:"La terrazza del Cilento con zipline panoramica e la Passeggiata degli Innamorati.",en:"The terrace of Cilento with panoramic zipline and the Lovers' Walk.",de:"Die Terrasse des Cilento mit Panorama-Zipline und dem Liebespfad."},highlights:["🪂 Zipline","🌅 Panorama","❤️ Romantico"],gmaps:"https://www.google.com/maps/search/Trentinara+Cilento"},
 ];
 
-/* ══════════════════════════════════════════════════════════════
-   DATI INFO
-══════════════════════════════════════════════════════════════ */
+/* ── INFO ── */
 const INFO = {
   it:[
     {icona:"📍",titolo:"Come arrivare",testo:"Stio (SA), Parco Nazionale del Cilento. 90 min da Napoli · 40 min dall'A3 uscita Petina. Strade di montagna nell'ultimo tratto — auto con buona guardia consigliata.",link:"https://maps.app.goo.gl/sz8NDxWP6iSTx5wD6",linkLabel:"📍 Apri in Google Maps"},
@@ -723,9 +552,29 @@ const INFO = {
   ],
 };
 
-/* ══════════════════════════════════════════════════════════════
-   NAVIGAZIONE
-══════════════════════════════════════════════════════════════ */
+/* ── TREKKING ── */
+const TREKKING = {
+  it:[
+    {nome:"Via dei Mulini",diff:"Facile",desc:"Un percorso suggestivo che ripercorre i mulini storici del territorio di Stio. Tra boschi e ruscelli, le antiche macine raccontano la vita contadina di un tempo.",tags:["🌾 Mulini storici","🌊 Ruscelli","👨‍👩‍👧 Famiglie","🎒 Zainetto del pastore"],link:"https://loc.wiki/t/255901539?wa=sc"},
+    {nome:"Via del Silenzio",diff:"Medio",desc:"Un cammino lento tra boschi e silenzi profondi del Cilento interno. Per chi vuole disconnettersi davvero e ritrovare il proprio ritmo nella natura incontaminata.",tags:["🤫 Silenzio","🌲 Boschi","🧘 Meditazione","🎒 Zainetto del pastore"],link:"https://loc.wiki/t/139913855?wa=sc"},
+    {nome:"Mulino Terrano – Fiume",diff:"Facile",desc:"Dal Mulino Terrano fino al fiume, passando per l'Agriturismo Li Guira. Un percorso lungo il corso d'acqua tra natura selvatica e paesaggi autentici del Cilento interno.",tags:["💧 Fiume","🌿 Natura","🏡 Partenza da Li Guira"],link:"https://es.wikiloc.com/rutas-senderismo/mulino-terrano-fiume-a-agriturismo-li-guira-verso-il-fiume-266379095?h=gzjlkwbl3m&wa=sd"},
+    {nome:"Campora – Li Guira verso il Fiume",diff:"Medio",desc:"Da Campora all'Agriturismo Li Guira, con discesa verso il fiume. Un itinerario che attraversa il bosco e collega due borghi autentici del Cilento interno.",tags:["🏘 Campora","🌲 Boschi","💧 Fiume","🥾 Sentiero"],link:"https://es.wikiloc.com/rutas-senderismo/campora-agriturismo-li-guira-verso-il-fiume-267384470?h=gzjlkwbl3m&wa=sd"},
+  ],
+  en:[
+    {nome:"Via dei Mulini",diff:"Easy",desc:"A scenic route retracing the historic mills of the Stio area. Through woods and streams, the ancient millstones tell the story of peasant life long ago.",tags:["🌾 Historic mills","🌊 Streams","👨‍👩‍👧 Families","🎒 Shepherd's backpack"],link:"https://loc.wiki/t/255901539?wa=sc"},
+    {nome:"Via del Silenzio",diff:"Moderate",desc:"A slow walk through deep woods and profound silence of inner Cilento. For those who truly want to disconnect and rediscover their own pace in unspoilt nature.",tags:["🤫 Silence","🌲 Forest","🧘 Mindfulness","🎒 Shepherd's backpack"],link:"https://loc.wiki/t/139913855?wa=sc"},
+    {nome:"Mulino Terrano – River",diff:"Easy",desc:"From Mulino Terrano to the river, passing through Agriturismo Li Guira. A route along the watercourse through wild nature and authentic landscapes of inner Cilento.",tags:["💧 River","🌿 Nature","🏡 Start from Li Guira"],link:"https://es.wikiloc.com/rutas-senderismo/mulino-terrano-fiume-a-agriturismo-li-guira-verso-il-fiume-266379095?h=gzjlkwbl3m&wa=sd"},
+    {nome:"Campora – Li Guira to the River",diff:"Moderate",desc:"From Campora to Agriturismo Li Guira, descending to the river. A route through the forest connecting two authentic villages of inner Cilento.",tags:["🏘 Campora","🌲 Forest","💧 River","🥾 Trail"],link:"https://es.wikiloc.com/rutas-senderismo/campora-agriturismo-li-guira-verso-il-fiume-267384470?h=gzjlkwbl3m&wa=sd"},
+  ],
+  de:[
+    {nome:"Via dei Mulini",diff:"Leicht",desc:"Ein eindrucksvoller Weg entlang der alten Mühlen des Stio-Gebiets. Durch Wälder und Bäche erzählen die alten Mahlsteine vom bäuerlichen Leben vergangener Zeiten.",tags:["🌾 Hist. Mühlen","🌊 Bäche","👨‍👩‍👧 Familien","🎒 Hirtenrucksack"],link:"https://loc.wiki/t/255901539?wa=sc"},
+    {nome:"Via del Silenzio",diff:"Mittel",desc:"Ein langsamer Weg durch tiefe Wälder und Stille des inneren Cilento. Für alle, die wirklich abschalten und ihren eigenen Rhythmus in unberührter Natur wiederfinden wollen.",tags:["🤫 Stille","🌲 Wald","🧘 Achtsamkeit","🎒 Hirtenrucksack"],link:"https://loc.wiki/t/139913855?wa=sc"},
+    {nome:"Mulino Terrano – Fluss",diff:"Leicht",desc:"Vom Mulino Terrano zum Fluss, vorbei am Agriturismo Li Guira. Ein Weg entlang des Wasserlaufs durch wilde Natur und authentische Landschaften des inneren Cilento.",tags:["💧 Fluss","🌿 Natur","🏡 Start bei Li Guira"],link:"https://es.wikiloc.com/rutas-senderismo/mulino-terrano-fiume-a-agriturismo-li-guira-verso-il-fiume-266379095?h=gzjlkwbl3m&wa=sd"},
+    {nome:"Campora – Li Guira zum Fluss",diff:"Mittel",desc:"Von Campora zum Agriturismo Li Guira, mit Abstieg zum Fluss. Eine Route durch den Wald, die zwei authentische Dörfer des inneren Cilento verbindet.",tags:["🏘 Campora","🌲 Wald","💧 Fluss","🥾 Wanderweg"],link:"https://es.wikiloc.com/rutas-senderismo/campora-agriturismo-li-guira-verso-il-fiume-267384470?h=gzjlkwbl3m&wa=sd"},
+  ],
+};
+
+/* ── NAVIGAZIONE ── */
 function goTo(page) {
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById('page-'+page).classList.add('active');
@@ -734,50 +583,38 @@ function goTo(page) {
   if(page==='chat' && document.getElementById('chat-messages').children.length===0) initChat();
 }
 
-/* ══════════════════════════════════════════════════════════════
-   LINGUA
-══════════════════════════════════════════════════════════════ */
+/* ── LINGUA ── */
 function setLang(lang) {
   currentLang = lang;
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.textContent===lang.toUpperCase()));
   applyTranslations();
-  renderEsperienze();
-  renderMappa();
-  renderInfo();
-  // reset chat
+  renderEsperienze(); renderMappa(); renderInfo(); renderTrekking();
   const msgs = document.getElementById('chat-messages');
-  msgs.innerHTML = '';
-  chatHistory = [];
-  initChat();
+  msgs.innerHTML = ''; chatHistory = []; initChat();
 }
 
 function updateSelectOptions() {
   const t = T[currentLang];
   document.querySelectorAll('[data-key-opt]').forEach(opt => {
     const k = opt.dataset.keyOpt;
-    if (t[k]) opt.textContent = t[k];
+    if(t[k]) opt.textContent = t[k];
   });
 }
-
 
 function applyTranslations() {
   const t = T[currentLang];
   document.querySelectorAll('[data-key]').forEach(el=>{
-    const k = el.dataset.key;
-    if(t[k]!==undefined) el.textContent = t[k];
+    const k=el.dataset.key; if(t[k]!==undefined) el.textContent=t[k];
   });
   document.querySelectorAll('[data-key-placeholder]').forEach(el=>{
-    const k = el.dataset.keyPlaceholder;
-    if(t[k]!==undefined) el.placeholder = t[k];
+    const k=el.dataset.keyPlaceholder; if(t[k]!==undefined) el.placeholder=t[k];
   });
   const pdfLink = document.getElementById('pdf-download');
   if(pdfLink && t.pdf_file) pdfLink.href = t.pdf_file;
   updateSelectOptions();
 }
 
-/* ══════════════════════════════════════════════════════════════
-   RENDER
-══════════════════════════════════════════════════════════════ */
+/* ── RENDER ── */
 function renderEsperienze() {
   const list = ESPERIENZE[currentLang];
   const featured = list.find(e=>e.featured);
@@ -796,18 +633,17 @@ function renderEsperienze() {
         <div class="exp-inner">
           <span class="exp-emoji-sm">${e.emoji}</span>
           <div><h3>${e.nome}</h3><p class="exp-sub">${e.sub}</p><p>${e.desc}</p>
-          ${e.link ? `<a href="${e.link}" target="_blank" style="display:inline-block;margin-top:10px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--terra);">🗺 Apri percorso →</a>` : ''}
+          ${e.link?`<a href="${e.link}" target="_blank" style="display:inline-block;margin-top:10px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--terra);">🗺 ${currentLang==='de'?'Route öffnen':currentLang==='en'?'Open route':'Apri percorso'} →</a>`:''}
           </div>
         </div>
       </div>`).join('')}
-    <div class="exp-note"><p>${currentLang==='it'?'Le esperienze si prenotano insieme all\'alloggio o durante il soggiorno. Scriveteci a info@liguira.it':currentLang==='en'?'Experiences can be booked with your stay or on arrival. Write to info@liguira.it':'Erlebnisse können mit der Unterkunft oder vor Ort gebucht werden. Schreiben Sie an info@liguira.it'}</p></div>
-  `;
+    <div class="exp-note"><p>${currentLang==='it'?'Le esperienze si prenotano insieme all\'alloggio o durante il soggiorno. Scriveteci a info@liguira.it':currentLang==='en'?'Experiences can be booked with your stay or on arrival. Write to info@liguira.it':'Erlebnisse können mit der Unterkunft oder vor Ort gebucht werden. Schreiben Sie an info@liguira.it'}</p></div>`;
 }
 
 function renderMappa() {
   const t = T[currentLang];
   document.getElementById('mappa-content').innerHTML = LUOGHI.map(l=>`
-    <div class="map-card ${l.featured?'featured':''}">
+    <div class="map-card">
       <div class="map-card-body">
         <p class="m-dist">${l.dist[currentLang]}</p>
         <h3>${l.nome}</h3>
@@ -817,7 +653,6 @@ function renderMappa() {
       </div>
     </div>`).join('');
 }
-
 
 function renderTrekking() {
   const list = TREKKING[currentLang];
@@ -837,36 +672,27 @@ function renderTrekking() {
 }
 
 function renderInfo() {
-  const list = INFO[currentLang];
-  document.getElementById('info-content').innerHTML = list.map(i=>`
+  document.getElementById('info-content').innerHTML = INFO[currentLang].map(i=>`
     <div class="info-card">
       <div class="info-inner">
         <span class="info-icon">${i.icona}</span>
-        <div>
-          <h3>${i.titolo}</h3>
-          <p>${i.testo}</p>
-          ${i.link ? `<a href="${i.link}" target="_blank" style="display:inline-block;margin-top:10px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--terra);">${i.linkLabel}</a>` : ''}
+        <div><h3>${i.titolo}</h3><p>${i.testo}</p>
+        ${i.link?`<a href="${i.link}" target="_blank" style="display:inline-block;margin-top:10px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--terra);">${i.linkLabel}</a>`:''}
         </div>
       </div>
     </div>`).join('');
 }
 
-/* ══════════════════════════════════════════════════════════════
-   CHATBOT
-══════════════════════════════════════════════════════════════ */
-
-const API_KEY = "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";
+/* ── CHATBOT ── */
 const SYSTEM = {
-  it:`Sei l'assistente di Agriturismo Li Guira a Stio, nel Parco Nazionale del Cilento. Rispondi in italiano, tono caldo e autentico. INFORMAZIONI: 6 alloggi (Fienile €58, Il Nido €72, Gardenia €92, Casale €120, L'Ulivo €190, La Quercia €245/notte, colazione inclusa). Esperienze: Aperitivo al tramonto (signature), Le Mani in Pasta, Giardino Segreto, E-Bike, Stargazing, Via dei Mulini (trekking con zainetto del pastore), Via del Silenzio (sentiero nella natura). Posizione: 90 min Napoli, 40 min A3 uscita Petina. Check-in 15:00, check-out 11:00. Animali benvenuti. Naturhäuschen certified. Email: info@liguira.it. Borghi vicini: Stio, Campora (9 min), Orria (11 min), Valle dell'Angelo (15 min), Laurino (15 min), Piaggine (14 min), Felitto con Gole del Calore (22 min), Roscigno Vecchia (30 min), Sacco (30 min), Trentinara con Volo dell'Angelo (30 min), Grotte di Castelcivita (50 min). Non inventare info. Per prenotazioni rimanda a info@liguira.it.`,
-  en:`You are the assistant of Agriturismo Li Guira in Stio, Cilento National Park. Reply in English, warm and authentic tone. INFO: 6 accommodations (Fienile €58, Il Nido €72, Gardenia €92, Casale €120, L'Ulivo €190, La Quercia €245/night, breakfast included). Experiences: Aperitivo al tramonto (signature), pasta-making, secret garden BBQ, e-bike, stargazing, Via dei Mulini (trekking with shepherd's backpack), Via del Silenzio (nature trail). Location: 90 min from Naples, 40 min from A3 (Petina exit). Check-in 3pm, check-out 11am. Pets welcome. Naturhäuschen certified. Email: info@liguira.it. Nearby villages: Stio, Campora (9 min), Orria (11 min), Valle dell'Angelo (15 min), Laurino (15 min), Piaggine (14 min), Felitto with Calore gorges (22 min), Roscigno Vecchia (30 min), Sacco (30 min), Trentinara with zipline (30 min), Castelcivita caves (50 min). Don't invent info. For bookings refer to info@liguira.it.`,
-  de:`Du bist der Assistent von Agriturismo Li Guira in Stio, Nationalpark Cilento. Antworte auf Deutsch, herzlich und authentisch. INFO: 6 Unterkünfte (Fienile €58, Il Nido €72, Gardenia €92, Casale €120, L'Ulivo €190, La Quercia €245/Nacht, Frühstück inklusive). Erlebnisse: Aperitivo al tramonto (Signature), Pasta-Kurs, geheimer Garten BBQ, E-Bike, Stargazing, Via dei Mulini (Wanderung mit Hirtenrucksack), Via del Silenzio (Naturpfad). Lage: 90 Min. von Neapel, 40 Min. von A3 (Ausfahrt Petina). Check-in 15:00, Check-out 11:00. Haustiere willkommen. Naturhäuschen-zertifiziert. E-Mail: info@liguira.it. Umliegende Dörfer: Stio, Campora (9 Min.), Orria (11 Min.), Valle dell'Angelo (15 Min.), Laurino (15 Min.), Piaggine (14 Min.), Felitto mit Calore-Schluchten (22 Min.), Roscigno Vecchia (30 Min.), Sacco (30 Min.), Trentinara mit Zipline (30 Min.), Grotten von Castelcivita (50 Min.). Keine Infos erfinden. Für Buchungen auf info@liguira.it verweisen.`
+  it:`Sei l'assistente di Agriturismo Li Guira a Stio, nel Parco Nazionale del Cilento. Rispondi in italiano, tono caldo e autentico. INFORMAZIONI: 6 alloggi (Fienile €58, Il Nido €72, Gardenia €92, Casale €120, L'Ulivo €190, La Quercia €245/notte, colazione inclusa). Esperienze: Aperitivo al tramonto (signature), Le Mani in Pasta, Giardino Panoramico BBQ, E-Bike, Stargazing, Via dei Mulini, Via del Silenzio, Mulino Terrano–Fiume, Campora–Li Guira. Posizione: 90 min Napoli, 40 min A3 uscita Petina. Check-in 15:00, check-out 11:00. Animali benvenuti. Naturhäuschen certified. Email: info@liguira.it. Non inventare info. Per prenotazioni rimanda a info@liguira.it.`,
+  en:`You are the assistant of Agriturismo Li Guira in Stio, Cilento National Park. Reply in English, warm and authentic tone. INFO: 6 accommodations (Fienile €58, Il Nido €72, Gardenia €92, Casale €120, L'Ulivo €190, La Quercia €245/night, breakfast included). Experiences: Aperitivo al tramonto (signature), pasta-making, panoramic garden BBQ, e-bike, stargazing, Via dei Mulini, Via del Silenzio, Mulino Terrano–River, Campora–Li Guira. Location: 90 min from Naples, 40 min from A3 (Petina exit). Check-in 3pm, check-out 11am. Pets welcome. Naturhäuschen certified. Email: info@liguira.it. Don't invent info. For bookings refer to info@liguira.it.`,
+  de:`Du bist der Assistent von Agriturismo Li Guira in Stio, Nationalpark Cilento. Antworte auf Deutsch, herzlich und authentisch. INFO: 6 Unterkünfte (Fienile €58, Il Nido €72, Gardenia €92, Casale €120, L'Ulivo €190, La Quercia €245/Nacht, Frühstück inklusive). Erlebnisse: Aperitivo al tramonto (Signature), Pasta-Kurs, Panorama-Garten BBQ, E-Bike, Stargazing, Via dei Mulini, Via del Silenzio, Mulino Terrano–Fluss, Campora–Li Guira. Lage: 90 Min. von Neapel, 40 Min. von A3 (Ausfahrt Petina). Check-in 15:00, Check-out 11:00. Haustiere willkommen. Naturhäuschen-zertifiziert. E-Mail: info@liguira.it. Keine Infos erfinden. Für Buchungen auf info@liguira.it verweisen.`
 };
 
 let chatHistory = [];
 
-function initChat() {
-  addMessage(T[currentLang].chat_welcome, false);
-}
+function initChat() { addMessage(T[currentLang].chat_welcome, false); }
 
 const chatInputEl = document.getElementById('chat-input');
 chatInputEl.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMessage()}});
@@ -874,185 +700,88 @@ chatInputEl.addEventListener('input',function(){this.style.height='auto';this.st
 
 function addMessage(text,isUser) {
   const msgs = document.getElementById('chat-messages');
-  const w = document.createElement('div');
-  w.className = isUser?'msg-user':'msg-bot';
-  const b = document.createElement('div');
-  b.className = 'msg-bubble '+(isUser?'msg-bubble-user':'msg-bubble-bot');
-  b.textContent = text;
-  w.appendChild(b); msgs.appendChild(w);
-  msgs.scrollTop = msgs.scrollHeight;
+  const w = document.createElement('div'); w.className=isUser?'msg-user':'msg-bot';
+  const b = document.createElement('div'); b.className='msg-bubble '+(isUser?'msg-bubble-user':'msg-bubble-bot');
+  b.textContent=text; w.appendChild(b); msgs.appendChild(w); msgs.scrollTop=msgs.scrollHeight;
 }
-
-function addTyping() {
-  const msgs = document.getElementById('chat-messages');
-  const w = document.createElement('div'); w.className='msg-bot'; w.id='typing';
-  const b = document.createElement('div'); b.className='msg-bubble msg-bubble-typing'; b.textContent='…';
-  w.appendChild(b); msgs.appendChild(w); msgs.scrollTop=msgs.scrollHeight;
-}
+function addTyping(){const msgs=document.getElementById('chat-messages');const w=document.createElement('div');w.className='msg-bot';w.id='typing';const b=document.createElement('div');b.className='msg-bubble msg-bubble-typing';b.textContent='…';w.appendChild(b);msgs.appendChild(w);msgs.scrollTop=msgs.scrollHeight}
 function removeTyping(){const t=document.getElementById('typing');if(t)t.remove()}
 
 async function sendMessage() {
-  const input = document.getElementById('chat-input');
-  const text = input.value.trim(); if(!text) return;
+  const input=document.getElementById('chat-input');
+  const text=input.value.trim(); if(!text) return;
   input.value=''; input.style.height='auto';
-  addMessage(text,true);
-  chatHistory.push({role:'user',content:text});
-  addTyping();
-  
+  addMessage(text,true); chatHistory.push({role:'user',content:text}); addTyping();
   try {
-    // ECCO LA NUOVA CHIAMATA AL TUO "PONTE" NETLIFY
-    const res = await fetch('/.netlify/functions/chat', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      // Passiamo solo i messaggi e il prompt di sistema (il resto lo fa la Function)
-      body: JSON.stringify({
-        system: SYSTEM[currentLang],
-        messages: chatHistory
-      })
-    });
-    
-    const data = await res.json(); removeTyping();
-    
-    if(data.content && data.content[0]){
-      const reply = data.content[0].text;
-      chatHistory.push({role:'assistant',content:reply});
-      addMessage(reply,false);
-    } else { 
-      addMessage(currentLang==='de'?'Fehler. Bitte schreiben Sie an info@liguira.it':currentLang==='en'?'Error. Please write to info@liguira.it':'Errore. Scrivi a info@liguira.it',false); 
-    }
-  } catch(e) {
-    removeTyping();
-    addMessage(currentLang==='de'?'Verbindungsfehler. info@liguira.it':currentLang==='en'?'Connection error. info@liguira.it':'Connessione non disponibile. info@liguira.it',false);
-  }
+    const res=await fetch('/.netlify/functions/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({system:SYSTEM[currentLang],messages:chatHistory})});
+    const data=await res.json(); removeTyping();
+    if(data.content&&data.content[0]){const reply=data.content[0].text;chatHistory.push({role:'assistant',content:reply});addMessage(reply,false);}
+    else{addMessage(currentLang==='de'?'Fehler. info@liguira.it':currentLang==='en'?'Error. info@liguira.it':'Errore. Scrivi a info@liguira.it',false);}
+  }catch(e){removeTyping();addMessage(currentLang==='de'?'Verbindungsfehler. info@liguira.it':currentLang==='en'?'Connection error. info@liguira.it':'Connessione non disponibile. info@liguira.it',false);}
 }
 
-/* ══════════════════════════════════════════════════════════════
-   DATI TREKKING
-══════════════════════════════════════════════════════════════ */
-const TREKKING = {
-  it:[
-    {
-      nome:"Via dei Mulini",
-      diff:"Facile",
-      desc:"Un percorso suggestivo che ripercorre i mulini storici del territorio di Stio. Tra boschi e ruscelli, le antiche macine raccontano la vita contadina di un tempo.",
-      tags:["🌾 Mulini storici","🌊 Ruscelli","👨‍👩‍👧 Famiglie","🎒 Zainetto del pastore"],
-      link:"https://loc.wiki/t/255901539?wa=sc"
-    },
-    {
-      nome:"Via del Silenzio",
-      diff:"Medio",
-      desc:"Un cammino lento tra boschi e silenzi profondi del Cilento interno. Per chi vuole disconnettersi davvero e ritrovare il proprio ritmo nella natura incontaminata.",
-      tags:["🤫 Silenzio","🌲 Boschi","🧘 Meditazione","🎒 Zainetto del pastore"],
-      link:"https://loc.wiki/t/139913855?wa=sc"
-    },
-  ],
-  en:[
-    {
-      nome:"Via dei Mulini",
-      diff:"Easy",
-      desc:"A scenic route retracing the historic mills of the Stio area. Through woods and streams, the ancient millstones tell the story of peasant life long ago.",
-      tags:["🌾 Historic mills","🌊 Streams","👨‍👩‍👧 Families","🎒 Shepherd's backpack"],
-      link:"https://loc.wiki/t/255901539?wa=sc"
-    },
-    {
-      nome:"Via del Silenzio",
-      diff:"Moderate",
-      desc:"A slow walk through deep woods and profound silence of inner Cilento. For those who truly want to disconnect and rediscover their own pace in unspoilt nature.",
-      tags:["🤫 Silence","🌲 Forest","🧘 Mindfulness","🎒 Shepherd's backpack"],
-      link:"https://loc.wiki/t/139913855?wa=sc"
-    },
-  ],
-  de:[
-    {
-      nome:"Via dei Mulini",
-      diff:"Leicht",
-      desc:"Ein eindrucksvoller Weg entlang der alten Mühlen des Stio-Gebiets. Durch Wälder und Bäche erzählen die alten Mahlsteine vom bäuerlichen Leben vergangener Zeiten.",
-      tags:["🌾 Hist. Mühlen","🌊 Bäche","👨‍👩‍👧 Familien","🎒 Hirtenrucksack"],
-      link:"https://loc.wiki/t/255901539?wa=sc"
-    },
-    {
-      nome:"Via del Silenzio",
-      diff:"Mittel",
-      desc:"Ein langsamer Weg durch tiefe Wälder und Stille des inneren Cilento. Für alle, die wirklich abschalten und ihren eigenen Rhythmus in unberührter Natur wiederfinden wollen.",
-      tags:["🤫 Stille","🌲 Wald","🧘 Achtsamkeit","🎒 Hirtenrucksack"],
-      link:"https://loc.wiki/t/139913855?wa=sc"
-    },
-  ],
-};
-
-
-/* ══════════════════════════════════════════════════════════════
-   REGISTRAZIONE
-══════════════════════════════════════════════════════════════ */
+/* ── REGISTRAZIONE ── */
 let ospiteCount = 0;
+const ospiti = []; // array per tenere traccia degli ospiti aggiunti
 
 function aggiungiOspite() {
   ospiteCount++;
   const t = T[currentLang];
+  const id = ospiteCount;
+  ospiti.push(id);
   const div = document.createElement('div');
-  div.className = 'ospite-card';
-  div.id = 'ospite-' + ospiteCount;
-  div.innerHTML = `
+  div.className='ospite-card'; div.id='ospite-'+id;
+  div.innerHTML=`
     <div class="ospite-header">
-      <h4>${t.reg_ospite} ${ospiteCount}</h4>
-      <button type="button" class="btn-rimuovi" onclick="rimuoviOspite(${ospiteCount})">${t.reg_rimuovi}</button>
+      <h4>${t.reg_ospite} ${id}</h4>
+      <button type="button" class="btn-rimuovi" onclick="rimuoviOspite(${id})">${t.reg_rimuovi}</button>
     </div>
     <div class="reg-row">
-      <div class="reg-field">
-        <label>${t.reg_nome}</label>
-        <input type="text" name="ospite_${ospiteCount}_nome"/>
-      </div>
-      <div class="reg-field">
-        <label>${t.reg_cognome}</label>
-        <input type="text" name="ospite_${ospiteCount}_cognome"/>
-      </div>
+      <div class="reg-field"><label>${t.reg_nome}</label><input type="text" id="o${id}_nome"/></div>
+      <div class="reg-field"><label>${t.reg_cognome}</label><input type="text" id="o${id}_cognome"/></div>
     </div>
     <div class="reg-row">
-      <div class="reg-field">
-        <label>${t.reg_nascita_data}</label>
-        <input type="date" name="ospite_${ospiteCount}_nascita_data"/>
-      </div>
-      <div class="reg-field">
-        <label>${t.reg_nascita_luogo}</label>
-        <input type="text" name="ospite_${ospiteCount}_nascita_luogo"/>
-      </div>
-    </div>
-  `;
+      <div class="reg-field"><label>${t.reg_nascita_data}</label><input type="date" id="o${id}_data"/></div>
+      <div class="reg-field"><label>${t.reg_nascita_luogo}</label><input type="text" id="o${id}_luogo"/></div>
+    </div>`;
   document.getElementById('altri-ospiti').appendChild(div);
 }
 
 function rimuoviOspite(n) {
-  const el = document.getElementById('ospite-' + n);
-  if (el) el.remove();
+  const el=document.getElementById('ospite-'+n); if(el)el.remove();
+  const idx=ospiti.indexOf(n); if(idx>-1)ospiti.splice(idx,1);
 }
 
+function serializzaOspiti() {
+  // raccoglie tutti gli ospiti aggiuntivi in una stringa leggibile
+  const cards = document.querySelectorAll('.ospite-card');
+  if(cards.length===0) return '';
+  const righe = [];
+  cards.forEach((card,i)=>{
+    const id = card.id.replace('ospite-','');
+    const nome = (document.getElementById('o'+id+'_nome')||{}).value||'';
+    const cognome = (document.getElementById('o'+id+'_cognome')||{}).value||'';
+    const data = (document.getElementById('o'+id+'_data')||{}).value||'';
+    const luogo = (document.getElementById('o'+id+'_luogo')||{}).value||'';
+    righe.push(`Ospite ${i+1}: ${nome} ${cognome} | nato/a: ${data} a ${luogo}`);
+  });
+  return righe.join('\n');
+}
 
 document.getElementById('reg-form').addEventListener('submit', async function(e) {
   e.preventDefault();
   const t = T[currentLang];
-  const form = e.target;
-  const data = new FormData(form);
-
+  // serializza ospiti aggiuntivi nel campo hidden
+  document.getElementById('altri-ospiti-data').value = serializzaOspiti();
+  const data = new FormData(this);
   try {
-    const res = await fetch('/', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-      body: new URLSearchParams(data).toString()
-    });
-    if (res.ok) {
-      form.style.display = 'none';
-      document.getElementById('reg-success').style.display = 'block';
-    } else {
-      alert(t.reg_invio_err);
-    }
-  } catch(err) {
-    alert(t.reg_invio_err);
-  }
+    const res=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(data).toString()});
+    if(res.ok){this.style.display='none';document.getElementById('reg-success').style.display='block';}
+    else{alert(t.reg_invio_err);}
+  }catch(err){alert(t.reg_invio_err);}
 });
 
-/* ══ INIT ══ */
+/* ── INIT ── */
 applyTranslations();
 renderEsperienze();
 renderMappa();

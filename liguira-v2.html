@@ -271,7 +271,7 @@
         <p class="hero-claim" data-key="hero_claim"></p>
         <div class="hero-ctas">
           <button class="btn-primary" onclick="goTo('esperienze')" data-key="btn_esperienze"></button>
-          <button class="btn-outline" onclick="goTo('mappa')" data-key="btn_dintorni"></button>
+          <button class="btn-outline" onclick="goToDintorni()" data-key="btn_dintorni"></button>
         </div>
         <a href="https://maps.app.goo.gl/sz8NDxWP6iSTx5wD6" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);" data-key="btn_gmaps"></a>
       </div>
@@ -1171,11 +1171,17 @@ function renderAgenda() {
   agendaEl.innerHTML = `<p class="agenda-week">${weekLabel[currentLang]}</p>${items}`;
 }
 
-function switchTab(tab) {
+function switchTab(tab, btn) {
   document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
   document.getElementById('tab-'+tab).classList.add('active');
-  event.target.classList.add('active');
+  const target = btn || (typeof event!=='undefined' ? event.target : null) || document.querySelector(`.tab-btn[onclick*="'${tab}'"]`);
+  if (target) target.classList.add('active');
+}
+
+function goToDintorni() {
+  goTo('esplora');
+  switchTab('dintorni');
 }
 
 

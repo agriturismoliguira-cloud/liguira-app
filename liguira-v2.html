@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -59,6 +58,108 @@
     #fuoco-teaser .link{color:var(--terra);font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
 
     #stats{background:var(--linen);padding:32px 28px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+
+    /* ── METEO ── */
+    #meteo{background:var(--dark);padding:24px 28px;border-top:1px solid rgba(196,112,58,.3)}
+    #meteo .label{font-family:'Space Mono',monospace;font-size:11px;color:var(--terra);letter-spacing:.2em;text-transform:uppercase;margin-bottom:14px}
+    .meteo-inner{display:flex;align-items:center;gap:20px;margin-bottom:16px}
+    .meteo-icon{font-size:44px;flex-shrink:0}
+    .meteo-data{}
+    .meteo-temp{font-family:'EB Garamond',serif;font-size:38px;color:var(--warm-white);font-weight:400;line-height:1}
+    .meteo-cond{font-size:13px;color:var(--stone);margin-top:2px}
+    .meteo-tip{margin-bottom:16px;font-family:'EB Garamond',serif;font-size:16px;font-style:italic;color:var(--stone);line-height:1.6}
+    .meteo-forecast{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;padding-top:14px;border-top:1px solid rgba(255,255,255,.1)}
+    .forecast-day{text-align:center}
+    .forecast-day .fd-name{font-family:'Space Mono',monospace;font-size:9px;color:var(--stone);letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+    .forecast-day .fd-icon{font-size:22px;margin-bottom:2px}
+    .forecast-day .fd-temp{font-family:'EB Garamond',serif;font-size:15px;color:var(--warm-white)}
+    .forecast-day .fd-min{font-size:11px;color:var(--stone)}
+
+
+    /* ── ESPLORA TABS ── */
+    #page-esplora .tab-bar{display:flex;background:var(--dark);padding:0 20px;gap:0;border-bottom:1px solid rgba(196,112,58,.3);overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .tab-btn{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--stone);padding:14px 16px;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s;flex-shrink:0}
+    .tab-btn.active{color:var(--terra);border-bottom-color:var(--terra)}
+    .tab-panel{display:none}.tab-panel.active{display:block}
+
+    /* ── SE SEI QUI PER ── */
+    #per-te-content{padding:20px 20px;display:flex;flex-direction:column;gap:12px}
+    .per-te-card{border:1px solid var(--linen);border-radius:4px;overflow:hidden}
+    .per-te-header{display:flex;align-items:center;gap:14px;padding:18px 20px;cursor:pointer;background:white}
+    .per-te-emoji{font-size:28px;flex-shrink:0}
+    .per-te-title{font-family:'EB Garamond',serif;font-size:20px;color:var(--dark);font-weight:400}
+    .per-te-arrow{margin-left:auto;color:var(--stone);transition:transform .2s;font-size:14px}
+    .per-te-body{display:none;padding:0 20px 18px;background:white;border-top:1px solid var(--linen)}
+    .per-te-body.open{display:block}
+    .per-te-body ul{list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:14px}
+    .per-te-body ul li{font-size:14px;color:var(--dark);padding:8px 12px;background:var(--linen);border-radius:3px;line-height:1.5}
+    .per-te-body ul li a{color:var(--terra);font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+
+    /* ── AGENDA ── */
+    #agenda-content{padding:20px 20px}
+    .agenda-week{font-family:'Space Mono',monospace;font-size:11px;color:var(--terra);letter-spacing:.15em;text-transform:uppercase;margin-bottom:16px}
+    .agenda-item{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--linen)}
+    .agenda-item:last-child{border-bottom:none}
+    .agenda-day{font-family:'Space Mono',monospace;font-size:10px;color:var(--stone);text-transform:uppercase;width:36px;flex-shrink:0;padding-top:3px;letter-spacing:.06em}
+    .agenda-testo{font-size:14px;color:var(--dark);line-height:1.6}
+    .agenda-testo strong{font-family:'EB Garamond',serif;font-size:16px;font-weight:400;display:block;margin-bottom:2px}
+    .agenda-empty{font-family:'EB Garamond',serif;font-size:17px;font-style:italic;color:var(--stone);text-align:center;padding:32px 0}
+
+
+    /* ── STORIA ── */
+    #storia-content{padding:0 0 32px}
+    .storia-chapter{padding:28px 28px 0}
+    .storia-chapter .s-label{font-family:'Space Mono',monospace;font-size:11px;color:var(--terra);letter-spacing:.2em;text-transform:uppercase;margin-bottom:10px}
+    .storia-chapter h3{font-family:'EB Garamond',serif;font-size:28px;color:var(--dark);font-weight:400;margin-bottom:16px;line-height:1.2}
+    .storia-chapter p{font-size:15px;color:var(--dark);line-height:1.85;margin-bottom:14px}
+    .storia-chapter p em{font-style:italic;color:var(--brown)}
+    .storia-divider{height:1px;background:var(--linen);margin:28px 28px 0}
+    .storia-pull{font-family:'EB Garamond',serif;font-size:20px;font-style:italic;color:var(--brown);line-height:1.5;padding:24px 28px;border-left:3px solid var(--terra);margin:20px 28px 0;background:rgba(92,64,51,.05)}
+
+    /* ── ALLOGGI ── */
+    #alloggi-content{padding:20px 20px;display:flex;flex-direction:column;gap:16px}
+    .alloggio-story-card{background:white;border:1px solid var(--linen);border-radius:4px;overflow:hidden;box-shadow:0 2px 8px rgba(44,25,10,.06)}
+    .alloggio-photo-placeholder{background:linear-gradient(135deg,var(--linen) 0%,#d4c8b8 100%);height:160px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px}
+    .alloggio-photo-placeholder span{font-size:36px}
+    .alloggio-photo-placeholder p{font-family:'Space Mono',monospace;font-size:9px;color:var(--stone);letter-spacing:.1em;text-transform:uppercase}
+
+    /* ── GALLERIA FOTO (carosello) ── */
+    .photo-gallery{position:relative;height:180px;overflow:hidden;background:var(--linen)}
+    .photo-gallery-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+    .photo-gallery-track::-webkit-scrollbar{display:none}
+    .photo-gallery-slide{flex:0 0 100%;scroll-snap-align:start;height:100%;position:relative}
+    .photo-gallery-slide img{width:100%;height:100%;object-fit:cover;display:block}
+    .photo-gallery-placeholder{width:100%;height:100%;background:linear-gradient(135deg,var(--linen) 0%,#d4c8b8 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px}
+    .photo-gallery-placeholder span{font-size:32px}
+    .photo-gallery-placeholder p{font-family:'Space Mono',monospace;font-size:9px;color:var(--stone);letter-spacing:.1em;text-transform:uppercase}
+    .photo-gallery-dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:5px;z-index:5}
+    .photo-gallery-dots span{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.5)}
+    .photo-gallery-dots span.active{background:white;width:14px;border-radius:3px}
+    .photo-gallery-count{position:absolute;top:8px;right:8px;background:rgba(0,0,0,.5);color:white;font-family:'Space Mono',monospace;font-size:9px;padding:3px 7px;border-radius:10px;z-index:5}
+
+    /* ── ESTERNI ── */
+    #esterni-content{padding:20px 20px;display:flex;flex-direction:column;gap:16px}
+    .esterno-card{background:white;border:1px solid var(--linen);border-radius:4px;overflow:hidden;box-shadow:0 2px 8px rgba(44,25,10,.06)}
+    .esterno-body{padding:18px 20px}
+    .esterno-body h3{font-family:'EB Garamond',serif;font-size:22px;color:var(--dark);font-weight:400;margin-bottom:6px}
+    .esterno-body p{font-size:13px;color:var(--stone);line-height:1.65}
+    .alloggio-story-body{padding:20px}
+    .alloggio-story-body .a-tag{font-family:'Space Mono',monospace;font-size:10px;color:var(--terra);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px}
+    .alloggio-story-body h3{font-family:'EB Garamond',serif;font-size:24px;color:var(--dark);font-weight:400;margin-bottom:4px}
+    .alloggio-story-body .a-pax{font-size:12px;color:var(--stone);font-family:'Space Mono',monospace;margin-bottom:10px}
+    .alloggio-story-body .a-storia{font-style:italic;font-size:14px;color:var(--brown);line-height:1.65;margin-bottom:10px;padding-left:10px;border-left:2px solid var(--terra)}
+    .alloggio-story-body .a-desc{font-size:13px;color:var(--stone);line-height:1.65}
+
+    /* ── CONSIGLI ── */
+    #consigli{background:var(--warm-white);padding:32px 28px;border-top:1px solid var(--linen)}
+    #consigli .label{font-family:'Space Mono',monospace;font-size:11px;color:var(--terra);letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px}
+    #consigli h2{font-family:'EB Garamond',serif;font-size:24px;color:var(--dark);font-weight:400;margin-bottom:20px}
+    .consiglio-card{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--linen)}
+    .consiglio-card:last-child{border-bottom:none}
+    .consiglio-avatar{width:40px;height:40px;border-radius:50%;background:var(--dark);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+    .consiglio-body{}
+    .consiglio-chi{font-family:'Space Mono',monospace;font-size:10px;color:var(--terra);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+    .consiglio-testo{font-family:'EB Garamond',serif;font-size:17px;font-style:italic;color:var(--dark);line-height:1.65}
     .stat-n{font-family:'EB Garamond',serif;font-size:44px;color:var(--brown);line-height:1}
     .stat-label{font-size:12px;color:var(--stone);margin-top:4px}
 
@@ -177,7 +278,7 @@
     </div>
     <div id="fuoco-teaser">
       <p class="label" data-key="fuoco_label"></p>
-      <h2>🌅 Aperitivo al tramonto</h2>
+      <h2>🌄 Aperitivo al tramonto</h2>
       <p data-key="fuoco_desc"></p>
       <button class="link" onclick="goTo('esperienze')" data-key="fuoco_link"></button>
     </div>
@@ -186,6 +287,25 @@
       <div><p class="stat-n">11</p><p class="stat-label" data-key="stat_borghi"></p></div>
       <div><p class="stat-n">40ha</p><p class="stat-label" data-key="stat_boschi"></p></div>
       <div><p class="stat-n">0</p><p class="stat-label" data-key="stat_stress"></p></div>
+    </div>
+
+    <div id="consigli">
+      <p class="label" data-key="consigli_label"></p>
+      <h2 data-key="consigli_title"></h2>
+      <div id="consigli-list"></div>
+    </div>
+
+    <div id="meteo">
+      <p class="label" data-key="meteo_label"></p>
+      <div class="meteo-inner">
+        <div class="meteo-icon" id="meteo-icon">⏳</div>
+        <div class="meteo-data">
+          <p class="meteo-temp" id="meteo-temp">—</p>
+          <p class="meteo-cond" id="meteo-cond"></p>
+        </div>
+      </div>
+      <p class="meteo-tip" id="meteo-tip"></p>
+      <div class="meteo-forecast" id="meteo-forecast"></div>
     </div>
   </section>
 
@@ -198,13 +318,42 @@
     <div id="esperienze-content"></div>
   </section>
 
-  <!-- MAPPA -->
-  <section id="page-mappa" class="page">
+  <!-- ESPLORA -->
+  <section id="page-esplora" class="page">
     <div class="page-header">
-      <p class="label" data-key="map_label"></p>
-      <h2 data-key="map_title"></h2>
+      <p class="label" data-key="esplora_label"></p>
+      <h2 data-key="esplora_title"></h2>
     </div>
-    <div id="mappa-content"></div>
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab('per-te')" data-key="tab_perte"></button>
+      <button class="tab-btn" onclick="switchTab('agenda')" data-key="tab_agenda"></button>
+      <button class="tab-btn" onclick="switchTab('alloggi-tab')" data-key="tab_alloggi"></button>
+      <button class="tab-btn" onclick="switchTab('esterni')" data-key="tab_esterni"></button>
+      <button class="tab-btn" onclick="switchTab('dintorni')" data-key="tab_dintorni"></button>
+      <button class="tab-btn" onclick="switchTab('trekking')" data-key="tab_trek"></button>
+      <button class="tab-btn" onclick="switchTab('storia')" data-key="tab_storia"></button>
+    </div>
+    <div id="tab-per-te" class="tab-panel active">
+      <div id="per-te-content"></div>
+    </div>
+    <div id="tab-agenda" class="tab-panel">
+      <div id="agenda-content"></div>
+    </div>
+    <div id="tab-alloggi-tab" class="tab-panel">
+      <div id="alloggi-content"></div>
+    </div>
+    <div id="tab-esterni" class="tab-panel">
+      <div id="esterni-content"></div>
+    </div>
+    <div id="tab-dintorni" class="tab-panel">
+      <div id="mappa-content"></div>
+    </div>
+    <div id="tab-trekking" class="tab-panel">
+      <div id="trekking-content"></div>
+    </div>
+    <div id="tab-storia" class="tab-panel">
+      <div id="storia-content"></div>
+    </div>
   </section>
 
   <!-- INFO -->
@@ -239,14 +388,7 @@
     </div>
   </section>
 
-  <!-- TREKKING -->
-  <section id="page-trekking" class="page">
-    <div class="page-header">
-      <p class="label" data-key="trek_label"></p>
-      <h2 data-key="trek_title"></h2>
-    </div>
-    <div id="trekking-content"></div>
-  </section>
+
 
   <!-- REGISTRAZIONE -->
   <section id="page-reg" class="page">
@@ -341,17 +483,15 @@
       <span class="nav-icon">🏡</span><span class="nav-label" data-key="nav_home"></span>
     </button>
     <button class="nav-btn" data-page="esperienze" onclick="goTo('esperienze')">
-      <span class="nav-icon">🌅</span><span class="nav-label" data-key="nav_esp"></span>
+      <span class="nav-icon">🌄</span><span class="nav-label" data-key="nav_esp"></span>
     </button>
-    <button class="nav-btn" data-page="mappa" onclick="goTo('mappa')">
-      <span class="nav-icon">🗺</span><span class="nav-label" data-key="nav_map"></span>
+    <button class="nav-btn" data-page="esplora" onclick="goTo('esplora')">
+      <span class="nav-icon">🗺</span><span class="nav-label" data-key="nav_esplora"></span>
     </button>
     <button class="nav-btn" data-page="info" onclick="goTo('info')">
       <span class="nav-icon">📄</span><span class="nav-label" data-key="nav_info"></span>
     </button>
-    <button class="nav-btn" data-page="trekking" onclick="goTo('trekking')">
-      <span class="nav-icon">🥾</span><span class="nav-label" data-key="nav_trek"></span>
-    </button>
+
     <button class="nav-btn" data-page="reg" onclick="goTo('reg')">
       <span class="nav-icon">📋</span><span class="nav-label" data-key="nav_reg"></span>
     </button>
@@ -401,6 +541,11 @@ const T = {
     trek_label:"Sentieri del Cilento", trek_title:"Percorsi Trekking", nav_trek:"Trekking",
     trek_note:"Possiamo preparare lo zainetto del pastore per accompagnarti sul sentiero: prodotti locali e genuini per una sosta autentica nel bosco. Chiedi al momento del check-in.",
     liguira_gmaps:"📍 Apri in Google Maps", btn_gmaps:"📍 Come raggiungerci →",
+    esplora_label:"Esplora il territorio", esplora_title:"Esplora",
+    tab_perte:"Per te", tab_agenda:"Agenda", tab_alloggi:"Alloggi", tab_esterni:"Esterni", tab_dintorni:"Dintorni", tab_trek:"Trekking", tab_storia:"Storia",
+    nav_esplora:"Esplora",
+    consigli_label:"Questa settimana", consigli_title:"I consigli di Fernando e Agustina",
+    meteo_label:"Meteo a Stio · oggi",
   },
   en: {
     hero_eyebrow:"Stio · Cilento National Park",
@@ -440,6 +585,11 @@ const T = {
     trek_label:"Cilento trails", trek_title:"Trekking Routes", nav_trek:"Trekking",
     trek_note:"We can prepare the shepherd's backpack to accompany you on the trail: local and genuine products for an authentic break in the woods. Ask at check-in.",
     liguira_gmaps:"📍 Open in Google Maps", btn_gmaps:"📍 How to reach us →",
+    esplora_label:"Explore the area", esplora_title:"Explore",
+    tab_perte:"For you", tab_agenda:"Agenda", tab_alloggi:"Accommodations", tab_esterni:"Outdoors", tab_dintorni:"Surroundings", tab_trek:"Trekking", tab_storia:"History",
+    nav_esplora:"Explore",
+    consigli_label:"This week", consigli_title:"Fernando & Agustina's tips",
+    meteo_label:"Weather in Stio · today",
   },
   de: {
     hero_eyebrow:"Stio · Nationalpark Cilento",
@@ -479,6 +629,11 @@ const T = {
     trek_label:"Cilento-Wege", trek_title:"Wanderrouten", nav_trek:"Wandern",
     trek_note:"Wir bereiten den Hirtenrucksack für Ihren Weg vor: lokale und natürliche Produkte für eine authentische Rast im Wald. Fragen Sie beim Check-in.",
     liguira_gmaps:"📍 In Google Maps öffnen", btn_gmaps:"📍 Anfahrt →",
+    esplora_label:"Das Gebiet entdecken", esplora_title:"Entdecken",
+    tab_perte:"Für Sie", tab_agenda:"Agenda", tab_alloggi:"Unterkünfte", tab_esterni:"Außenbereiche", tab_dintorni:"Umgebung", tab_trek:"Wandern", tab_storia:"Geschichte",
+    nav_esplora:"Entdecken",
+    consigli_label:"Diese Woche", consigli_title:"Tipps von Fernando & Agustina",
+    meteo_label:"Wetter in Stio · heute",
   }
 };
 
@@ -487,7 +642,7 @@ let currentLang = 'it';
 /* ── ESPERIENZE ── */
 const ESPERIENZE = {
   it:[
-    {nome:"Aperitivo al tramonto",sub:"Esperienza Signature",desc:"Una vista spettacolare sulla valle. Tavolo in legno. Rumori della natura. I sapori della tradizione. Vino del Cilento. Non è una serata organizzata — è un rito.",emoji:"🌅",featured:true},
+    {nome:"Aperitivo al tramonto",sub:"Esperienza Signature",desc:"Una vista spettacolare sulla valle. Tavolo in legno. Rumori della natura. I sapori della tradizione. Vino del Cilento. Non è una serata organizzata — è un rito.",emoji:"🌄",featured:true},
     {nome:"Le Mani in Pasta",sub:"Cucina didattica all'aperto",desc:"Pasta fresca o ricette cilentane. Farina, acqua, mani. Il sapere contadino tramandato.",emoji:"🫙"},
     {nome:"Giardino Panoramico",sub:"Barbecue privato",desc:"Un'area esclusiva, se preferisci avere il tuo cestino del barbecue. Altrimenti te lo prepariamo noi.",emoji:"🧺"},
     {nome:"E-Bike nel Cilento",sub:"Esplorazione autonoma",desc:"E-bike per i sentieri del Parco. Itinerari verso Gioi, Laurino, Magliano o nel cuore del Cilento.",emoji:"🚵"},
@@ -496,7 +651,7 @@ const ESPERIENZE = {
     {nome:"Via del Silenzio",sub:"Sentiero nella natura incontaminata",desc:"Un cammino lento tra boschi e silenzi profondi. Per chi vuole disconnettersi davvero e ritrovare il proprio ritmo.",emoji:"🤫",link:"https://loc.wiki/t/139913855?wa=sc"},
   ],
   en:[
-    {nome:"Aperitivo al tramonto",sub:"Signature Experience",desc:"A spectacular view over the valley. Wooden table. Sounds of nature. Flavours of tradition. Cilento wine. Not an organised evening — a ritual.",emoji:"🌅",featured:true},
+    {nome:"Aperitivo al tramonto",sub:"Signature Experience",desc:"A spectacular view over the valley. Wooden table. Sounds of nature. Flavours of tradition. Cilento wine. Not an organised evening — a ritual.",emoji:"🌄",featured:true},
     {nome:"Le Mani in Pasta",sub:"Outdoor cooking class",desc:"Fresh pasta or Cilento recipes. Flour, water, hands. Ancient peasant knowledge passed on.",emoji:"🫙"},
     {nome:"Panoramic Garden",sub:"Private BBQ",desc:"An exclusive area, if you prefer your own BBQ basket. Otherwise we prepare it for you.",emoji:"🧺"},
     {nome:"E-Bike in Cilento",sub:"Autonomous exploration",desc:"E-bikes for the Park trails. Routes to Gioi, Laurino, Magliano or into the heart of Cilento.",emoji:"🚵"},
@@ -505,7 +660,7 @@ const ESPERIENZE = {
     {nome:"Via del Silenzio",sub:"Trail through unspoilt nature",desc:"A slow walk through deep woods and profound silence. For those who truly want to disconnect and rediscover their own pace.",emoji:"🤫",link:"https://loc.wiki/t/139913855?wa=sc"},
   ],
   de:[
-    {nome:"Aperitivo al tramonto",sub:"Signature-Erlebnis",desc:"Ein spektakulärer Blick ins Tal. Holztisch. Geräusche der Natur. Aromen der Tradition. Cilento-Wein. Kein organisierter Abend — ein Ritual.",emoji:"🌅",featured:true},
+    {nome:"Aperitivo al tramonto",sub:"Signature-Erlebnis",desc:"Ein spektakulärer Blick ins Tal. Holztisch. Geräusche der Natur. Aromen der Tradition. Cilento-Wein. Kein organisierter Abend — ein Ritual.",emoji:"🌄",featured:true},
     {nome:"Le Mani in Pasta",sub:"Kochkurs im Freien",desc:"Frische Pasta oder Cilento-Rezepte. Mehl, Wasser, Hände. Altes Bauerntum weitergegeben.",emoji:"🫙"},
     {nome:"Panorama-Garten",sub:"Privates BBQ",desc:"Ein exklusiver Bereich, wenn Sie Ihren eigenen BBQ-Korb bevorzugen. Sonst bereiten wir ihn für Sie vor.",emoji:"🧺"},
     {nome:"E-Bike im Cilento",sub:"Autonome Erkundung",desc:"E-Bikes für die Parkwege. Routen nach Gioi, Laurino, Magliano oder ins Herz des Cilento.",emoji:"🚵"},
@@ -581,6 +736,7 @@ function goTo(page) {
   document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('active',b.dataset.page===page));
   window.scrollTo(0,0);
   if(page==='chat' && document.getElementById('chat-messages').children.length===0) initChat();
+  if(page==='esplora') { renderPerTe(); renderAgenda(); }
 }
 
 /* ── LINGUA ── */
@@ -588,7 +744,7 @@ function setLang(lang) {
   currentLang = lang;
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.textContent===lang.toUpperCase()));
   applyTranslations();
-  renderEsperienze(); renderMappa(); renderInfo(); renderTrekking();
+  renderEsperienze(); renderMappa(); renderInfo(); renderTrekking(); renderConsigli(); renderPerTe(); renderAgenda(); renderAlloggi(); renderEsterni(); renderStoria(); fetchMeteo();
   const msgs = document.getElementById('chat-messages');
   msgs.innerHTML = ''; chatHistory = []; initChat();
 }
@@ -781,12 +937,645 @@ document.getElementById('reg-form').addEventListener('submit', async function(e)
   }catch(err){alert(t.reg_invio_err);}
 });
 
+/* ── METEO ── */
+const METEO_CODES = {
+  it:{
+    0:['☀️','Cielo sereno'],1:['🌤','Prevalentemente sereno'],2:['⛅','Parzialmente nuvoloso'],
+    3:['☁️','Nuvoloso'],45:['🌫','Nebbia'],48:['🌫','Nebbia gelata'],
+    51:['🌦','Pioggerella'],53:['🌦','Pioggia leggera'],55:['🌧','Pioggia'],
+    61:['🌧','Pioggia moderata'],63:['🌧','Pioggia intensa'],65:['🌧','Pioggia forte'],
+    71:['🌨','Neve leggera'],73:['❄️','Neve'],75:['❄️','Neve intensa'],
+    80:['🌦','Rovesci'],81:['🌧','Rovesci forti'],82:['⛈','Rovesci violenti'],
+    95:['⛈','Temporale'],96:['⛈','Temporale con grandine'],99:['⛈','Temporale forte'],
+  },
+  en:{
+    0:['☀️','Clear sky'],1:['🌤','Mainly clear'],2:['⛅','Partly cloudy'],
+    3:['☁️','Overcast'],45:['🌫','Foggy'],48:['🌫','Icy fog'],
+    51:['🌦','Light drizzle'],53:['🌦','Drizzle'],55:['🌧','Rain'],
+    61:['🌧','Moderate rain'],63:['🌧','Heavy rain'],65:['🌧','Very heavy rain'],
+    71:['🌨','Light snow'],73:['❄️','Snow'],75:['❄️','Heavy snow'],
+    80:['🌦','Showers'],81:['🌧','Heavy showers'],82:['⛈','Violent showers'],
+    95:['⛈','Thunderstorm'],96:['⛈','Thunderstorm with hail'],99:['⛈','Heavy thunderstorm'],
+  },
+  de:{
+    0:['☀️','Klarer Himmel'],1:['🌤','Überwiegend klar'],2:['⛅','Teilweise bewölkt'],
+    3:['☁️','Bewölkt'],45:['🌫','Neblig'],48:['🌫','Eisnebel'],
+    51:['🌦','Leichter Nieselregen'],53:['🌦','Nieselregen'],55:['🌧','Regen'],
+    61:['🌧','Mäßiger Regen'],63:['🌧','Starker Regen'],65:['🌧','Sehr starker Regen'],
+    71:['🌨','Leichter Schnee'],73:['❄️','Schnee'],75:['❄️','Starker Schnee'],
+    80:['🌦','Schauer'],81:['🌧','Starke Schauer'],82:['⛈','Heftige Schauer'],
+    95:['⛈','Gewitter'],96:['⛈','Gewitter mit Hagel'],99:['⛈','Heftiges Gewitter'],
+  }
+};
+
+const METEO_TIPS = {
+  it:{
+    sole:['Giornata perfetta per il sentiero Via dei Mulini.','Cielo limpido: stanotte lo stargazing sarà spettacolare.','Ideale per un aperitivo al tramonto nel piazzale.'],
+    nuvole:['Temperatura mite: ottima per camminare nel bosco senza fatica.','Buona giornata per esplorare i borghi vicini — Roscigno Vecchia è a 30 minuti.','Luce soffusa: perfetta per fotografare il paesaggio.'],
+    pioggia:['Giornata perfetta per Le Mani in Pasta in cucina.','Pioggia leggera: il bosco profuma di terra bagnata — uscite lo stesso.','Buon momento per visitare le Grotte di Castelcivita.'],
+    temporale:['Restate vicini: il braciere vi aspetta nel piazzale al primo schiarito.','Giornata da bivacco: buon libro, tè caldo, nessuna fretta.'],
+  },
+  en:{
+    sole:['Perfect day for the Via dei Mulini trail.','Clear sky: tonight\'s stargazing will be spectacular.','Ideal for a sunset aperitivo in the courtyard.'],
+    nuvole:['Mild temperature: great for walking in the forest without effort.','Good day to explore nearby villages — Roscigno Vecchia is 30 minutes away.','Soft light: perfect for photographing the landscape.'],
+    pioggia:['Perfect day for a pasta-making class in the kitchen.','Light rain: the forest smells of wet earth — go out anyway.','Good time to visit the Castelcivita Caves.'],
+    temporale:['Stay close: the fire pit awaits you in the courtyard at the first break in the clouds.','A day to hunker down: good book, hot tea, no rush.'],
+  },
+  de:{
+    sole:['Perfekter Tag für den Via dei Mulini-Weg.','Klarer Himmel: das Stargazing heute Nacht wird spektakulär sein.','Ideal für einen Sonnenuntergangs-Aperitivo im Innenhof.'],
+    nuvole:['Milde Temperatur: ideal zum Wandern im Wald ohne Anstrengung.','Guter Tag für nahe Dörfer — Roscigno Vecchia ist 30 Minuten entfernt.','Weiches Licht: perfekt für Landschaftsfotos.'],
+    pioggia:['Perfekter Tag für einen Pasta-Kurs in der Küche.','Leichter Regen: der Wald riecht nach feuchter Erde — trotzdem raus.','Gute Zeit für die Castelcivita-Höhlen.'],
+    temporale:['Bleiben Sie nah: das Lagerfeuer wartet beim ersten Aufklaren.','Ein Tag zum Gemütlichsein: gutes Buch, heißer Tee, keine Eile.'],
+  }
+};
+
+function meteoTip(code, lang) {
+  let cat = 'nuvole';
+  if(code===0||code===1||code===2) cat='sole';
+  else if(code>=80||code>=95) cat='temporale';
+  else if(code>=51) cat='pioggia';
+  const tips = METEO_TIPS[lang][cat];
+  return tips[Math.floor(Math.random()*tips.length)];
+}
+
+async function fetchMeteo() {
+  try {
+    const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=40.29&longitude=15.26&current=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=Europe%2FRome&forecast_days=6');
+    const d = await res.json();
+
+    // Oggi
+    const temp = Math.round(d.current.temperature_2m);
+    const code = d.current.weather_code;
+    const info = METEO_CODES[currentLang][code] || METEO_CODES[currentLang][0];
+    document.getElementById('meteo-icon').textContent = info[0];
+    document.getElementById('meteo-temp').textContent = temp + '°C';
+    document.getElementById('meteo-cond').textContent = info[1];
+    document.getElementById('meteo-tip').textContent = '💡 ' + meteoTip(code, currentLang);
+
+    // Previsioni 5 giorni (esclude oggi)
+    const giorni = {
+      it:['Dom','Lun','Mar','Mer','Gio','Ven','Sab'],
+      en:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
+      de:['So','Mo','Di','Mi','Do','Fr','Sa'],
+    };
+    const days = d.daily;
+    let html = '';
+    for(let i=1; i<=5; i++) {
+      const date = new Date(days.time[i]);
+      const dayName = giorni[currentLang][date.getDay()];
+      const dc = days.weather_code[i];
+      const dinfo = METEO_CODES[currentLang][dc] || METEO_CODES[currentLang][0];
+      const max = Math.round(days.temperature_2m_max[i]);
+      const min = Math.round(days.temperature_2m_min[i]);
+      html += `<div class="forecast-day">
+        <p class="fd-name">${dayName}</p>
+        <p class="fd-icon">${dinfo[0]}</p>
+        <p class="fd-temp">${max}°</p>
+        <p class="fd-min">${min}°</p>
+      </div>`;
+    }
+    document.getElementById('meteo-forecast').innerHTML = html;
+
+  } catch(e) {
+    document.getElementById('meteo-icon').textContent = '🌿';
+    document.getElementById('meteo-cond').textContent = '';
+    document.getElementById('meteo-tip').textContent = '';
+    document.getElementById('meteo-forecast').innerHTML = '';
+  }
+}
+
+
+/* ── PER TE ── */
+const PER_TE = {
+  it:[
+    {emoji:"🧘", titolo:"Vuoi rilassarti",
+     items:["🌄 Aperitivo al tramonto nel piazzale — braciere, vino, silenzio","✨ Stargazing — il cielo più buio del Sud Italia","🧺 Giardino Panoramico — spazio solo per voi","☕ Colazione agricola sul terrazzo"]},
+    {emoji:"🥾", titolo:"Ami camminare",
+     items:["🌾 Via dei Mulini — mulini storici, boschi e ruscelli · <a href='https://loc.wiki/t/255901539?wa=sc' target='_blank'>Apri percorso →</a>","🤫 Via del Silenzio — natura incontaminata · <a href='https://loc.wiki/t/139913855?wa=sc' target='_blank'>Apri percorso →</a>","💧 Mulino Terrano–Fiume — parte da Li Guira","🏘 Campora–Li Guira — collega due borghi"]},
+    {emoji:"🍝", titolo:"Ami il cibo",
+     items:["🫙 Le Mani in Pasta — pasta fresca e ricette cilentane","🍷 Aperitivo con prodotti locali","🏘 Felitto — fusilli artigianali a 22 min · <a href='https://maps.app.goo.gl/3xynrhG1dV455T7F9' target='_blank'>Mappa →</a>","🦇 Grotte di Castelcivita — 50 min"]},
+    {emoji:"👨‍👩‍👧", titolo:"Viaggi con bambini",
+     items:["🌾 Via dei Mulini — facile, adatta a famiglie","🧺 Giardino Panoramico — spazio aperto e sicuro","🦇 Grotte di Castelcivita — avventura per tutte le età","🏚 Roscigno Vecchia — il borgo fantasma che incuriosisce i bambini"]},
+    {emoji:"❤️", titolo:"Siete una coppia",
+     items:["🌄 Aperitivo al tramonto — il rito del fuoco sotto le stelle","✨ Stargazing — cielo senza inquinamento luminoso","🪂 Trentinara Volo dell'Angelo — zipline panoramica a 30 min","🌊 Gole del Calore a Felitto — kayak e natura selvaggia"]},
+    {emoji:"🌿", titolo:"Cerchi natura vera",
+     items:["🫒 Uliveto di Li Guira — 40 ettari di ulivi storici","🌲 40 ha di bosco a disposizione","🤫 Via del Silenzio — il percorso più selvaggio","⛰️ Eremo di Sacco sul Sammaro — gioiello nascosto a 30 min"]},
+  ],
+  en:[
+    {emoji:"🧘", titolo:"You want to relax",
+     items:["🌄 Sunset aperitivo — fire pit, wine, silence","✨ Stargazing — darkest sky in southern Italy","🧺 Panoramic Garden — exclusive space just for you","☕ Farm breakfast on the terrace"]},
+    {emoji:"🥾", titolo:"You love walking",
+     items:["🌾 Via dei Mulini — historic mills, woods and streams · <a href='https://loc.wiki/t/255901539?wa=sc' target='_blank'>Open route →</a>","🤫 Via del Silenzio — unspoilt nature · <a href='https://loc.wiki/t/139913855?wa=sc' target='_blank'>Open route →</a>","💧 Mulino Terrano–River — starts from Li Guira","🏘 Campora–Li Guira — connects two villages"]},
+    {emoji:"🍝", titolo:"You love food",
+     items:["🫙 Le Mani in Pasta — fresh pasta and Cilento recipes","🍷 Aperitivo with local products","🏘 Felitto — handmade fusilli, 22 min away · <a href='https://maps.app.goo.gl/3xynrhG1dV455T7F9' target='_blank'>Map →</a>","🦇 Castelcivita Caves — 50 min"]},
+    {emoji:"👨‍👩‍👧", titolo:"Travelling with children",
+     items:["🌾 Via dei Mulini — easy, family-friendly","🧺 Panoramic Garden — open, safe outdoor space","🦇 Castelcivita Caves — adventure for all ages","🏚 Roscigno Vecchia — the ghost village kids love"]},
+    {emoji:"❤️", titolo:"You are a couple",
+     items:["🌄 Sunset aperitivo — the fire ritual under the stars","✨ Stargazing — zero light pollution","🪂 Trentinara zipline — panoramic views, 30 min away","🌊 Calore gorges in Felitto — kayaking and wild nature"]},
+    {emoji:"🌿", titolo:"You seek real nature",
+     items:["🫒 Li Guira olive grove — 40 hectares of historic olive trees","🌲 40 ha of forest at your disposal","🤫 Via del Silenzio — the wildest trail","⛰️ Sacco hermitage — hidden gem, 30 min away"]},
+  ],
+  de:[
+    {emoji:"🧘", titolo:"Sie möchten sich erholen",
+     items:["🌄 Sonnenuntergangs-Aperitivo — Lagerfeuer, Wein, Stille","✨ Stargazing — dunkelster Himmel Süditaliens","🧺 Panorama-Garten — exklusiver Raum nur für Sie","☕ Landwirtschaftliches Frühstück auf der Terrasse"]},
+    {emoji:"🥾", titolo:"Sie lieben Wandern",
+     items:["🌾 Via dei Mulini — hist. Mühlen, Wälder und Bäche · <a href='https://loc.wiki/t/255901539?wa=sc' target='_blank'>Route öffnen →</a>","🤫 Via del Silenzio — unberührte Natur · <a href='https://loc.wiki/t/139913855?wa=sc' target='_blank'>Route öffnen →</a>","💧 Mulino Terrano–Fluss — Start bei Li Guira","🏘 Campora–Li Guira — verbindet zwei Dörfer"]},
+    {emoji:"🍝", titolo:"Sie lieben Essen",
+     items:["🫙 Le Mani in Pasta — frische Pasta und Cilento-Rezepte","🍷 Aperitivo mit lokalen Produkten","🏘 Felitto — handgemachte Fusilli, 22 Min. · <a href='https://maps.app.goo.gl/3xynrhG1dV455T7F9' target='_blank'>Karte →</a>","🦇 Castelcivita-Höhlen — 50 Min."]},
+    {emoji:"👨‍👩‍👧", titolo:"Sie reisen mit Kindern",
+     items:["🌾 Via dei Mulini — leicht, familienfreundlich","🧺 Panorama-Garten — offener, sicherer Außenbereich","🦇 Castelcivita-Höhlen — Abenteuer für alle","🏚 Roscigno Vecchia — das Geisterdorf"]},
+    {emoji:"❤️", titolo:"Sie sind ein Pärchen",
+     items:["🌄 Sonnenuntergangs-Aperitivo — das Feuerritual unter den Sternen","✨ Stargazing — null Lichtverschmutzung","🪂 Trentinara Zipline — Panoramablick, 30 Min.","🌊 Calore-Schluchten — Kajak und wilde Natur"]},
+    {emoji:"🌿", titolo:"Sie suchen echte Natur",
+     items:["🫒 Li Guira Olivenhain — 40 Hektar historische Olivenbäume","🌲 40 ha Wald zur freien Verfügung","🤫 Via del Silenzio — der wildeste Weg","⛰️ Einsiedelei von Sacco — verstecktes Juwel, 30 Min."]},
+  ],
+};
+
+// ⬇ AGENDA: aggiornare ogni lunedì
+const AGENDA = [
+  {
+    it:  {giorno:"Lun", titolo:"", testo:""},
+    en:  {giorno:"Mon", titolo:"", testo:""},
+    de:  {giorno:"Mo",  titolo:"", testo:""},
+  },
+  {
+    it:  {giorno:"Mar", titolo:"Le Mani in Pasta", testo:"Cucina aperta nel pomeriggio — prenotate al check-in"},
+    en:  {giorno:"Tue", titolo:"Le Mani in Pasta", testo:"Kitchen open in the afternoon — book at check-in"},
+    de:  {giorno:"Di",  titolo:"Le Mani in Pasta", testo:"Küche am Nachmittag offen — beim Check-in buchen"},
+  },
+  {
+    it:  {giorno:"Mer", titolo:"E-Bike nel Cilento", testo:"Giornata libera per esplorare i sentieri del Parco"},
+    en:  {giorno:"Wed", titolo:"E-Bike in Cilento", testo:"Free day to explore the Park trails"},
+    de:  {giorno:"Mi",  titolo:"E-Bike im Cilento", testo:"Freier Tag zur Erkundung der Parkwege"},
+  },
+  {
+    it:  {giorno:"Gio", titolo:"", testo:""},
+    en:  {giorno:"Thu", titolo:"", testo:""},
+    de:  {giorno:"Do",  titolo:"", testo:""},
+  },
+  {
+    it:  {giorno:"Ven", titolo:"Aperitivo al tramonto", testo:"Braciere nel piazzale, in serata"},
+    en:  {giorno:"Fri", titolo:"Sunset Aperitivo", testo:"Fire pit in the courtyard, in the evening"},
+    de:  {giorno:"Fr",  titolo:"Sonnenuntergangs-Aperitivo", testo:"Lagerfeuer im Innenhof, am Abend"},
+  },
+  {
+    it:  {giorno:"Sab", titolo:"Giardino Panoramico", testo:"Barbecue privato su richiesta — basta avvisarci"},
+    en:  {giorno:"Sat", titolo:"Panoramic Garden", testo:"Private BBQ on request — just let us know"},
+    de:  {giorno:"Sa",  titolo:"Panorama-Garten", testo:"Privates BBQ auf Anfrage — einfach Bescheid geben"},
+  },
+  {
+    it:  {giorno:"Dom", titolo:"", testo:""},
+    en:  {giorno:"Sun", titolo:"", testo:""},
+    de:  {giorno:"So",  titolo:"", testo:""},
+  },
+];
+
+function renderPerTe() {
+  const list = PER_TE[currentLang];
+  document.getElementById('per-te-content').innerHTML = list.map((c,i) => `
+    <div class="per-te-card">
+      <div class="per-te-header" onclick="togglePerTe(${i})">
+        <span class="per-te-emoji">${c.emoji}</span>
+        <span class="per-te-title">${c.titolo}</span>
+        <span class="per-te-arrow" id="arrow-${i}">▼</span>
+      </div>
+      <div class="per-te-body" id="perte-${i}">
+        <ul>${c.items.map(it=>`<li>${it}</li>`).join('')}</ul>
+      </div>
+    </div>`).join('');
+}
+
+function togglePerTe(i) {
+  const body = document.getElementById('perte-'+i);
+  const arrow = document.getElementById('arrow-'+i);
+  const open = body.classList.toggle('open');
+  arrow.style.transform = open ? 'rotate(180deg)' : '';
+}
+
+function renderAgenda() {
+  const hasItems = AGENDA.some(a => a[currentLang].titolo);
+  const agendaEl = document.getElementById('agenda-content');
+  if(!hasItems) {
+    const empty = {it:'Nessun evento in programma questa settimana. Chiedete a Fernando o Agustina!',en:'No events scheduled this week. Ask Fernando or Agustina!',de:'Keine Veranstaltungen diese Woche. Fragen Sie Fernando oder Agustina!'};
+    agendaEl.innerHTML = `<p class="agenda-empty">${empty[currentLang]}</p>`;
+    return;
+  }
+  const weekLabel = {it:'Questa settimana a Li Guira',en:'This week at Li Guira',de:'Diese Woche in Li Guira'};
+  const items = AGENDA.filter(a => a[currentLang].titolo).map(a => {
+    const d = a[currentLang];
+    return `<div class="agenda-item">
+      <p class="agenda-day">${d.giorno}</p>
+      <div class="agenda-testo"><strong>${d.titolo}</strong>${d.testo}</div>
+    </div>`;
+  }).join('');
+  agendaEl.innerHTML = `<p class="agenda-week">${weekLabel[currentLang]}</p>${items}`;
+}
+
+function switchTab(tab) {
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+tab).classList.add('active');
+  event.target.classList.add('active');
+}
+
+
+/* ── ALLOGGI ── */
+const ALLOGGI_STORY = {
+  it:[
+    {
+      id:"casale", emoji:"🏛️", nome:"Il Casale",
+      photos:["images/alloggi/casale.jpg"],
+      tag:"Dal 1500 · Pietra viva",
+      pax:"4 pax · 2 bagni · cucina",
+      storia:"Questo non è solo un edificio restaurato. È un rifugio per pecore del Cinquecento — quello che la gente del posto ha sempre chiamato il Casino. Nelle pietre originarie ci sono ancora le tracce di contratti stipulati in latino, secoli fa, quando la famiglia Guida gestiva queste terre. La pietra che tocchi ha memoria.",
+      desc:"Cucina attrezzata, due bagni, spazi generosi. I soffitti a volta e i pavimenti in pietra originale sono rimasti intatti. Non troverai nulla di simile altrove.",
+    },
+    {
+      id:"fienile", emoji:"🌾", nome:"Fienile",
+      photos:["images/alloggi/fienile.jpg"],
+      tag:"Antica stalla · Travi originali",
+      pax:"2 pax",
+      storia:"Era la stalla e la mangiatoia delle vacche della famiglia. Le travi di legno che sorreggono il soffitto sono le stesse di allora. L'essenziale, portato ai suoi limiti più belli.",
+      desc:"Due persone, silenzio assoluto, luce naturale che filtra tra le travi antiche. Per chi cerca il vuoto, non il comfort.",
+    },
+    {
+      id:"gardenia", emoji:"🌿", nome:"Gardenia",
+      photos:["images/alloggi/gardenia.jpg"],
+      tag:"Ex deposito legna e stalla",
+      pax:"4 pax · cucina",
+      storia:"Qui si teneva la legna per i camini dell'inverno e le vacche nei mesi freddi. Oggi è uno degli alloggi più luminosi della struttura — la conversione ha rispettato le proporzioni originali.",
+      desc:"Spazi generosi, cucina attrezzata. Per famiglie o gruppi di amici che vogliono autonomia completa.",
+    },
+    {
+      id:"nido", emoji:"🔥", nome:"Il Nido",
+      photos:["images/alloggi/nido.jpg"],
+      tag:"Casa della famiglia Guida",
+      pax:"2 pax · cucina · camino",
+      storia:"Insieme all'Ulivo, era la casa dove Angelo, Emma e i tre figli Francesco, Roberto e Paolo vivevano durante le estati a Stio. Il camino è quello che si accendeva nelle sere d'autunno quando il Cilento si svuotava di turisti e tornava a essere se stesso.",
+      desc:"Cucina propria e camino secolare. Per la coppia che vuole il proprio ritmo, la propria solitudine scelta.",
+    },
+    {
+      id:"ulivo", emoji:"🫒", nome:"L'Ulivo",
+      photos:["images/alloggi/ulivo.jpg"],
+      tag:"Casa della famiglia Guida",
+      pax:"7 pax · 2 bagni",
+      storia:"L'altra metà della casa di famiglia. Angelo portava qui i figli da Napoli — Francesco, Roberto, Paolo — ogni estate. Il nome viene dall'ulivo secolare che cresce a pochi passi dalla porta, lo stesso che si vede dallo streaming dell'uliveto.",
+      desc:"Sette persone, due bagni. Chi prenota qui sa già che mangerà fuori, sotto le stelle.",
+    },
+    {
+      id:"quercia", emoji:"🌳", nome:"La Quercia",
+      photos:["images/alloggi/quercia.jpg"],
+      tag:"Il grande rifugio",
+      pax:"9 pax · 3 bagni · cucina",
+      storia:"Il più capiente degli spazi. Prende il nome dalla quercia secolare che cresce ai margini del terreno — uno degli alberi più antichi di questa parte del Cilento.",
+      desc:"Nove persone, tre bagni, cucina grande. Per il gruppo che vuole il Cilento tutto per sé.",
+    },
+  ],
+  en:[
+    {
+      id:"casale", emoji:"🏛️", nome:"Il Casale",
+      photos:["images/alloggi/casale.jpg"],
+      tag:"Since 1500 · Living stone",
+      pax:"4 pax · 2 bathrooms · kitchen",
+      storia:"This is not just a restored building. It is a 16th-century sheep shelter — what the locals have always called il Casino. The original stones still bear traces of contracts written in Latin, centuries ago, when the Guida family managed these lands. The stone you touch has memory.",
+      desc:"Equipped kitchen, two bathrooms, generous spaces. The vaulted ceilings and original stone floors remain intact. You won't find anything like it elsewhere.",
+    },
+    {
+      id:"fienile", emoji:"🌾", nome:"Fienile",
+      photos:["images/alloggi/fienile.jpg"],
+      tag:"Ancient stable · Original beams",
+      pax:"2 pax",
+      storia:"This was the family's cattle stable and manger. The wooden beams holding up the ceiling are the same ones from back then. The essential, taken to its most beautiful limits.",
+      desc:"Two people, absolute silence, natural light filtering through ancient beams. For those who seek emptiness, not comfort.",
+    },
+    {
+      id:"gardenia", emoji:"🌿", nome:"Gardenia",
+      photos:["images/alloggi/gardenia.jpg"],
+      tag:"Former woodstore and stable",
+      pax:"4 pax · kitchen",
+      storia:"This was where the firewood for winter was kept and where the cattle sheltered in cold months. Today it is one of the brightest accommodations on the property — the conversion respected the original proportions.",
+      desc:"Generous spaces, equipped kitchen. For families or groups of friends who want full autonomy.",
+    },
+    {
+      id:"nido", emoji:"🔥", nome:"Il Nido",
+      photos:["images/alloggi/nido.jpg"],
+      tag:"Guida family home",
+      pax:"2 pax · kitchen · fireplace",
+      storia:"Together with L'Ulivo, this was the house where Angelo, Emma and their three children Francesco, Roberto and Paolo spent their summers in Stio. The fireplace is the one that was lit on autumn evenings when Cilento emptied of tourists and returned to itself.",
+      desc:"Own kitchen and centuries-old fireplace. For the couple who wants their own pace, their own chosen solitude.",
+    },
+    {
+      id:"ulivo", emoji:"🫒", nome:"L'Ulivo",
+      photos:["images/alloggi/ulivo.jpg"],
+      tag:"Guida family home",
+      pax:"7 pax · 2 bathrooms",
+      storia:"The other half of the family home. Angelo brought his children here from Naples — Francesco, Roberto, Paolo — every summer. The name comes from the ancient olive tree growing a few steps from the door, the same one you can see in the live olive grove stream.",
+      desc:"Seven people, two bathrooms. Those who book here already know they will eat outside, under the stars.",
+    },
+    {
+      id:"quercia", emoji:"🌳", nome:"La Quercia",
+      photos:["images/alloggi/quercia.jpg"],
+      tag:"The great refuge",
+      pax:"9 pax · 3 bathrooms · kitchen",
+      storia:"The largest of the spaces. Named after the centuries-old oak growing at the edge of the property — one of the oldest trees in this part of Cilento.",
+      desc:"Nine people, three bathrooms, large kitchen. For the group that wants Cilento all to themselves.",
+    },
+  ],
+  de:[
+    {
+      id:"casale", emoji:"🏛️", nome:"Il Casale",
+      photos:["images/alloggi/casale.jpg"],
+      tag:"Seit 1500 · Lebendiger Stein",
+      pax:"4 Pers. · 2 Bäder · Küche",
+      storia:"Dies ist kein gewöhnlich restauriertes Gebäude. Es ist ein Schafunterstand aus dem 16. Jahrhundert — was die Einheimischen immer il Casino nannten. In den Originalsteinen finden sich noch Spuren von Verträgen, die vor Jahrhunderten auf Latein geschlossen wurden, als die Familie Guida dieses Land bewirtschaftete. Der Stein, den Sie berühren, hat Gedächtnis.",
+      desc:"Ausgestattete Küche, zwei Bäder, großzügige Räume. Die Gewölbedecken und Originalsteinböden blieben intakt. So etwas finden Sie nirgendwo sonst.",
+    },
+    {
+      id:"fienile", emoji:"🌾", nome:"Fienile",
+      photos:["images/alloggi/fienile.jpg"],
+      tag:"Alter Stall · Originalbalken",
+      pax:"2 Pers.",
+      storia:"Dies war der Rinderstall und die Krippe der Familie. Die Holzbalken, die die Decke tragen, sind dieselben wie damals. Das Wesentliche, an seine schönsten Grenzen gebracht.",
+      desc:"Zwei Personen, absolute Stille, natürliches Licht durch alte Balken. Für die, die Leere suchen, nicht Komfort.",
+    },
+    {
+      id:"gardenia", emoji:"🌿", nome:"Gardenia",
+      photos:["images/alloggi/gardenia.jpg"],
+      tag:"Ehemaliges Holzlager und Stall",
+      pax:"4 Pers. · Küche",
+      storia:"Hier wurde das Winterholz gelagert und das Vieh in den kalten Monaten untergebracht. Heute ist es eine der hellsten Unterkünfte auf dem Anwesen — die Umgestaltung respektierte die ursprünglichen Proportionen.",
+      desc:"Großzügige Räume, ausgestattete Küche. Für Familien oder Freundesgruppen, die vollständige Autonomie wollen.",
+    },
+    {
+      id:"nido", emoji:"🔥", nome:"Il Nido",
+      photos:["images/alloggi/nido.jpg"],
+      tag:"Haus der Familie Guida",
+      pax:"2 Pers. · Küche · Kamin",
+      storia:"Zusammen mit L'Ulivo war dies das Haus, in dem Angelo, Emma und ihre drei Kinder Francesco, Roberto und Paolo ihre Sommer in Stio verbrachten. Der Kamin ist derselbe, der an Herbstabenden angezündet wurde, wenn der Cilento sich von Touristen leerte und wieder zu sich selbst wurde.",
+      desc:"Eigene Küche und jahrhundertealter Kamin. Für das Paar, das seinen eigenen Rhythmus will, seine eigene gewählte Einsamkeit.",
+    },
+    {
+      id:"ulivo", emoji:"🫒", nome:"L'Ulivo",
+      photos:["images/alloggi/ulivo.jpg"],
+      tag:"Haus der Familie Guida",
+      pax:"7 Pers. · 2 Bäder",
+      storia:"Die andere Hälfte des Familienhauses. Angelo brachte seine Kinder jeden Sommer von Neapel hierher — Francesco, Roberto, Paolo. Der Name kommt vom uralten Olivenbaum, der wenige Schritte von der Tür wächst — derselbe, den Sie im Live-Olivenhain-Stream sehen können.",
+      desc:"Sieben Personen, zwei Bäder. Wer hier bucht, weiß bereits, dass er draußen unter den Sternen essen wird.",
+    },
+    {
+      id:"quercia", emoji:"🌳", nome:"La Quercia",
+      photos:["images/alloggi/quercia.jpg"],
+      tag:"Das große Refugium",
+      pax:"9 Pers. · 3 Bäder · Küche",
+      storia:"Der größte der Räume. Benannt nach der jahrhundertealten Eiche am Rand des Grundstücks — einem der ältesten Bäume in diesem Teil des Cilento.",
+      desc:"Neun Personen, drei Bäder, große Küche. Für die Gruppe, die den Cilento ganz für sich haben möchte.",
+    },
+  ],
+};
+
+/* ── STORIA ── */
+const STORIA = {
+  it:{
+    stio_label:"Dove siamo",
+    stio_title:"Stio — Un luogo che esiste da prima che avesse un nome",
+    stio_pull:"Non siamo un resort che ha scelto una bella location. Siamo un posto che fa parte di un posto — e quel posto ha qualcosa da dire.",
+    stio_p:[
+      "C'è una cosa che si impara stando a Stio: il tempo qui ha una velocità diversa. Questo borgo a 675 metri, nel cuore del Parco Nazionale del Cilento, era già abitato in epoca Enotria, prima che i Romani costruissero le loro strade. Quando parliamo di \"luogo antico\", di solito intendiamo qualche centinaio di anni. Stio parla di millenni.",
+      "Il nome stesso è ancora materia di dibattito. C'è chi lo fa derivare dal latino <em>ostium</em> — ingresso, passaggio, la porta d'accesso all'interno del Cilento; chi da <em>aestivus</em>, i pascoli d'estate dei pastori transumanti; chi da <em>hostilius</em>, la fierezza degli stiesi nel resistere ai nemici. Tutte e tre le versioni dicono la stessa cosa: Stio era un posto che contava.",
+      "Tra il Quattrocento e il Seicento, la Fiera della Croce — nata intorno alla reliquia di San Nilo da Rossano — divenne la fiera più importante dell'intero Cilento e una delle più rinomate del Mediterraneo. Si scambiava seta, bestiame, formaggi. La gente aspettava quella settimana per stipulare atti notarili, decidere matrimoni, chiudere eredità. Oggi la fiera si svolge ancora ogni anno ai primi di settembre.",
+      "Nel 1742 qui nacque Giuseppe Pepe, matematico e fisico di rilevanza europea. Nell'Ottocento Stio fu uno dei centri dei Moti Cilentani del 1828, insurrezione popolare per la Costituzione. Pastori e intellettuali, ribelli e commercianti — tutto nello stesso vicolo stretto.",
+      "Il territorio è ricco di sorgenti — qui nasce il fiume Alento — e di boschi di cerri, faggi e castagni. La Valle dei Mulini, raggiungibile a piedi, è un sito di archeologia rurale dove la natura ha inglobato i resti degli antichi mulini ad acqua. Non un museo — un luogo dove la storia è diventata paesaggio.",
+    ],
+    guida_label:"Chi siamo",
+    guida_title:"La famiglia Guida e Li Guira",
+    guida_pull:"Li Guira è la storpiatura dialettale cilentana di \"Li Guida\". Il nome del posto è il nome della famiglia, da secoli.",
+    guida_p:[
+      "La famiglia Guida è presente a Stio da secoli. Il Casale — quello che la gente del posto chiama ancora il Casino — risale al Cinquecento: era originariamente un rifugio per pecore. Nelle sue pietre ci sono ancora le tracce di contratti stipulati in latino. Un prozio sacerdote ha compilato un albero genealogico che risale per secoli, costruito sui registri parrocchiali e sui manoscritti di famiglia.",
+      "Angelo Guida fu il primo a lasciare Stio, partendo per studiare medicina a Napoli. Ha avuto tre figli: Francesco, medico ginecologo; Roberto, professore universitario di economia aziendale; Paolo, economista. Tutti e tre hanno mantenuto il legame con la terra del padre, che non ha mai smesso di tornarvi.",
+      "Oggi Francesco e Paolo seguono l'agriturismo insieme a Fernando e Agustina — due ragazzi argentini che vivono stabilmente a Li Guira e si prendono cura degli ospiti e del posto con una dedizione che va oltre il lavoro. Li Guira non funziona senza di loro.",
+      "Li Guira non è nato per fare profitto. È nato per dare un senso a una terra che la famiglia ha sempre amato, per tenerla viva, per farla conoscere a chi non l'avrebbe mai scoperta altrimenti. Ogni ospite che arriva qui diventa, in piccolo, parte di questa storia.",
+    ],
+  },
+  en:{
+    stio_label:"Where we are",
+    stio_title:"Stio — A place that existed before it had a name",
+    stio_pull:"We are not a resort that chose a beautiful location. We are a place that is part of a place — and that place has something to say.",
+    stio_p:[
+      "There is something you learn while staying in Stio: time here moves at a different pace. This village at 675 metres, in the heart of the Cilento National Park, was already inhabited in the Oenotrian age, before the Romans built their roads. When we say \"ancient place\", we usually mean a few hundred years. Stio speaks in millennia.",
+      "The name itself is still debated. Some trace it to the Latin <em>ostium</em> — entrance, passage, the gateway to inner Cilento; others to <em>aestivus</em>, the summer pastures of transhumant shepherds; others still to <em>hostilius</em>, the proud resistance of its people. All three versions say the same thing: Stio was a place that mattered.",
+      "Between the 15th and 17th centuries, the Fiera della Croce — born around the relic donated by San Nilo da Rossano — became the most important fair in all of Cilento and one of the most renowned in the Mediterranean. Silk, cattle, cheese. People waited for that week to sign notarial deeds, decide marriages, settle inheritances. The fair still takes place every year in early September.",
+      "In 1742, Giuseppe Pepe was born here — a mathematician and physicist of European significance. In the 19th century, Stio was one of the centres of the 1828 Cilento Uprisings. Shepherds and intellectuals, rebels and merchants — all in the same narrow alley.",
+      "The territory is rich in springs — the Alento river rises here — and forests of cerris, beeches and chestnuts. The Valley of the Mills, reachable on foot, is a rural archaeology site where nature has slowly absorbed the remains of ancient water mills. Not a museum — a place where history has become landscape.",
+    ],
+    guida_label:"Who we are",
+    guida_title:"The Guida family and Li Guira",
+    guida_pull:"Li Guira is the Cilentano dialect corruption of \"Li Guida\". The name of the place is the name of the family, for centuries.",
+    guida_p:[
+      "The Guida family has been in Stio for centuries. The Casale — what locals still call il Casino — dates to the 16th century: it was originally a shelter for sheep. Its stones still bear traces of contracts written in Latin. A priest great-uncle compiled a genealogical tree going back centuries, built from parish records and family manuscripts.",
+      "Angelo Guida was the first to leave Stio, going to Naples to study medicine. He had three children: Francesco, a gynaecologist like his father; Roberto, a university professor of business economics; Paolo, an economist. All three have kept their bond with their father's land, which he never stopped returning to.",
+      "Today Francesco and Paolo run the agriturismo together with Fernando and Agustina — two young Argentines who live permanently at Li Guira and care for the guests and the place with a dedication that goes beyond work. Li Guira would not work without them.",
+      "Li Guira was not born to make a profit. It was born to give meaning to a land the family has always loved, to keep it alive, to make it known to those who would never have discovered it otherwise. Every guest who comes here becomes, in a small way, part of this story.",
+    ],
+  },
+  de:{
+    stio_label:"Wo wir sind",
+    stio_title:"Stio — Ein Ort, der existierte, bevor er einen Namen hatte",
+    stio_pull:"Wir sind kein Resort, das einen schönen Standort gewählt hat. Wir sind ein Ort, der Teil eines Ortes ist — und dieser Ort hat etwas zu sagen.",
+    stio_p:[
+      "In Stio lernt man eines: Die Zeit bewegt sich hier in einem anderen Tempo. Dieses Dorf auf 675 Metern, im Herzen des Cilento-Nationalparks, war bereits in der Oinotrischen Epoche bewohnt, bevor die Römer ihre Straßen bauten. Wenn wir \"alter Ort\" sagen, meinen wir meist einige hundert Jahre. Stio spricht in Jahrtausenden.",
+      "Der Name selbst ist noch Gegenstand von Debatten. Manche leiten ihn vom lateinischen <em>ostium</em> ab — Eingang, Durchgang, das Tor zum inneren Cilento; andere von <em>aestivus</em>, den Sommerweiden der Wanderhirten; wieder andere von <em>hostilius</em>, dem stolzen Widerstand seiner Bewohner. Alle drei Versionen sagen dasselbe: Stio war ein Ort, der zählte.",
+      "Zwischen dem 15. und 17. Jahrhundert wurde die Fiera della Croce — entstanden rund um eine Reliquie des Heiligen Nilus von Rossano — zur wichtigsten Messe im gesamten Cilento und einer der renommiertesten im Mittelmeer. Seide, Vieh, Käse. Die Menschen warteten auf diese Woche, um Notarakte zu unterzeichnen, Ehen zu beschließen, Erbschaften zu regeln. Die Messe findet noch heute jedes Jahr Anfang September statt.",
+      "1742 wurde hier Giuseppe Pepe geboren — ein Mathematiker und Physiker von europäischer Bedeutung. Im 19. Jahrhundert war Stio eines der Zentren des Cilentaner Aufstands von 1828. Hirten und Intellektuelle, Rebellen und Kaufleute — alles in derselben engen Gasse.",
+      "Das Gebiet ist reich an Quellen — hier entspringt der Fluss Alento — und Wäldern aus Zerreichen, Buchen und Kastanien. Das Tal der Mühlen, zu Fuß erreichbar, ist eine ländliche Archäologiestätte, wo die Natur die Überreste alter Wassermühlen langsam in sich aufgenommen hat. Kein Museum — ein Ort, an dem Geschichte zur Landschaft geworden ist.",
+    ],
+    guida_label:"Wer wir sind",
+    guida_title:"Die Familie Guida und Li Guira",
+    guida_pull:"Li Guira ist die cilentanische Dialektvariante von \"Li Guida\". Der Name des Ortes ist der Name der Familie, seit Jahrhunderten.",
+    guida_p:[
+      "Die Familie Guida ist seit Jahrhunderten in Stio ansässig. Das Casale — was die Einheimischen noch immer il Casino nennen — stammt aus dem 16. Jahrhundert: Es war ursprünglich ein Schafsunterstand. In seinen Steinen finden sich noch Spuren von Verträgen, die auf Latein geschlossen wurden. Ein Priester-Großonkel stellte einen Stammbaum zusammen, der Jahrhunderte zurückreicht, aufgebaut aus Pfarrregistern und Familienmanuskripten.",
+      "Angelo Guida war der erste, der Stio verließ, um in Neapel Medizin zu studieren. Er hatte drei Kinder: Francesco, Gynäkologe wie sein Vater; Roberto, Universitätsprofessor für Betriebswirtschaft; Paolo, Ökonom. Alle drei haben ihre Verbindung zum Land ihres Vaters bewahrt, zu dem er nie aufgehört hatte zurückzukehren.",
+      "Heute führen Francesco und Paolo das Agriturismo zusammen mit Fernando und Agustina — zwei jungen Argentiniern, die dauerhaft in Li Guira leben und sich mit einer Hingabe um die Gäste und den Ort kümmern, die über Arbeit hinausgeht. Li Guira würde ohne sie nicht funktionieren.",
+      "Li Guira wurde nicht gegründet, um Gewinn zu erzielen. Es wurde geschaffen, um einem Land, das die Familie immer geliebt hat, einen Sinn zu geben, es lebendig zu halten und es jenen bekannt zu machen, die es sonst nie entdeckt hätten. Jeder Gast, der hierherkommt, wird auf seine Weise Teil dieser Geschichte.",
+    ],
+  },
+};
+
+/* ── ESTERNI ── */
+const ESTERNI = {
+  it:[
+    {id:"uliveto", emoji:"🫒", nome:"L'uliveto", desc:"Quaranta ettari di ulivi, alcuni secolari. Lo stesso che potete guardare in diretta dalla sezione Uliveto dell'app."},
+    {id:"piazzale", emoji:"🔥", photos:["images/esterni/piazzale.jpg"], nome:"Il piazzale", desc:"Il cuore delle serate a Li Guira. Qui si accende il braciere per l'aperitivo al tramonto e si resta a parlare fino a tardi."},
+    {id:"giardino", emoji:"🧺", photos:["images/esterni/giardino.jpg"], nome:"Giardino Panoramico", desc:"Uno spazio riservato con vista sulla valle, perfetto per un barbecue privato o un momento tutto vostro."},
+    {id:"orto", emoji:"🌱", photos:["images/esterni/orto.jpg"], nome:"L'orto", desc:"Dove crescono le erbe e le verdure che spesso arrivano in tavola. Potete dare un'occhiata quando volete."},
+    {id:"bosco", emoji:"🌲", photos:["images/esterni/bosco.jpg"], nome:"Il bosco", desc:"Quaranta ettari di boschi che circondano la proprietà, attraversati dai sentieri Via dei Mulini e Via del Silenzio."},
+  ],
+  en:[
+    {id:"uliveto", emoji:"🫒", nome:"The olive grove", desc:"Forty hectares of olive trees, some centuries old. The same one you can watch live in the Olive Grove section of the app."},
+    {id:"piazzale", emoji:"🔥", photos:["images/esterni/piazzale.jpg"], nome:"The courtyard", desc:"The heart of evenings at Li Guira. This is where the fire pit is lit for the sunset aperitivo and where people stay talking late into the night."},
+    {id:"giardino", emoji:"🧺", photos:["images/esterni/giardino.jpg"], nome:"Panoramic Garden", desc:"A reserved space overlooking the valley, perfect for a private BBQ or a moment all to yourselves."},
+    {id:"orto", emoji:"🌱", photos:["images/esterni/orto.jpg"], nome:"The vegetable garden", desc:"Where the herbs and vegetables that often end up on your table grow. Feel free to take a look whenever you like."},
+    {id:"bosco", emoji:"🌲", photos:["images/esterni/bosco.jpg"], nome:"The forest", desc:"Forty hectares of forest surrounding the property, crossed by the Via dei Mulini and Via del Silenzio trails."},
+  ],
+  de:[
+    {id:"uliveto", emoji:"🫒", nome:"Der Olivenhain", desc:"Vierzig Hektar Olivenbäume, einige jahrhundertealt. Derselbe, den Sie im Bereich Olivenhain der App live sehen können."},
+    {id:"piazzale", emoji:"🔥", photos:["images/esterni/piazzale.jpg"], nome:"Der Innenhof", desc:"Das Herz der Abende in Li Guira. Hier wird das Lagerfeuer für den Sonnenuntergangs-Aperitivo entzündet und man bleibt bis spät in die Nacht im Gespräch."},
+    {id:"giardino", emoji:"🧺", photos:["images/esterni/giardino.jpg"], nome:"Panorama-Garten", desc:"Ein reservierter Bereich mit Blick ins Tal, perfekt für ein privates BBQ oder einen Moment nur für Sie."},
+    {id:"orto", emoji:"🌱", photos:["images/esterni/orto.jpg"], nome:"Der Gemüsegarten", desc:"Hier wachsen die Kräuter und das Gemüse, die oft auf Ihrem Tisch landen. Schauen Sie sich gerne um, wann immer Sie möchten."},
+    {id:"bosco", emoji:"🌲", photos:["images/esterni/bosco.jpg"], nome:"Der Wald", desc:"Vierzig Hektar Wald rund um das Anwesen, durchzogen von den Wegen Via dei Mulini und Via del Silenzio."},
+  ],
+};
+
+function renderEsterni() {
+  const list = ESTERNI[currentLang];
+  document.getElementById('esterni-content').innerHTML = list.map(e => {
+    const photos = e.photos || [];
+    const galleryId = 'gallery-ext-' + e.id;
+    let galleryHtml;
+    if (photos.length > 0) {
+      galleryHtml = `
+        <div class="photo-gallery">
+          <div class="photo-gallery-track" id="${galleryId}" onscroll="updateDots('${galleryId}')">
+            ${photos.map(src => `<div class="photo-gallery-slide"><img src="${src}" alt="${e.nome}"></div>`).join('')}
+          </div>
+          ${photos.length > 1 ? `<div class="photo-gallery-count">1/${photos.length}</div>
+          <div class="photo-gallery-dots">${photos.map((_,i)=>`<span class="${i===0?'active':''}"></span>`).join('')}</div>` : ''}
+        </div>`;
+    } else {
+      galleryHtml = `
+        <div class="alloggio-photo-placeholder">
+          <span>${e.emoji}</span>
+          <p>Foto in arrivo</p>
+        </div>`;
+    }
+    return `
+    <div class="esterno-card">
+      ${galleryHtml}
+      <div class="esterno-body">
+        <h3>${e.emoji} ${e.nome}</h3>
+        <p>${e.desc}</p>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderAlloggi() {
+  const list = ALLOGGI_STORY[currentLang];
+  document.getElementById('alloggi-content').innerHTML = list.map((a,idx) => {
+    const photos = a.photos || []; // array di URL immagini, vuoto = placeholder
+    const galleryId = 'gallery-' + a.id;
+    let galleryHtml;
+    if (photos.length > 0) {
+      galleryHtml = `
+        <div class="photo-gallery">
+          <div class="photo-gallery-track" id="${galleryId}" onscroll="updateDots('${galleryId}')">
+            ${photos.map(src => `<div class="photo-gallery-slide"><img src="${src}" alt="${a.nome}"></div>`).join('')}
+          </div>
+          ${photos.length > 1 ? `<div class="photo-gallery-count">1/${photos.length}</div>
+          <div class="photo-gallery-dots">${photos.map((_,i)=>`<span class="${i===0?'active':''}"></span>`).join('')}</div>` : ''}
+        </div>`;
+    } else {
+      galleryHtml = `
+        <div class="alloggio-photo-placeholder">
+          <span>${a.emoji}</span>
+          <p>Foto in arrivo</p>
+        </div>`;
+    }
+    return `
+    <div class="alloggio-story-card">
+      ${galleryHtml}
+      <div class="alloggio-story-body">
+        <p class="a-tag">${a.tag}</p>
+        <h3>${a.nome}</h3>
+        <p class="a-pax">${a.pax}</p>
+        <p class="a-storia">${a.storia}</p>
+        <p class="a-desc">${a.desc}</p>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// Aggiorna i puntini e il contatore quando si scorre la galleria foto
+function updateDots(galleryId) {
+  const track = document.getElementById(galleryId);
+  if (!track) return;
+  const slideWidth = track.clientWidth;
+  const idx = Math.round(track.scrollLeft / slideWidth);
+  const card = track.closest('.alloggio-story-card');
+  const dots = card.querySelectorAll('.photo-gallery-dots span');
+  dots.forEach((d,i) => d.classList.toggle('active', i===idx));
+  const counter = card.querySelector('.photo-gallery-count');
+  if (counter) counter.textContent = (idx+1) + '/' + dots.length;
+}
+
+function renderStoria() {
+  const s = STORIA[currentLang];
+  document.getElementById('storia-content').innerHTML = `
+    <div class="storia-chapter">
+      <p class="s-label">${s.stio_label}</p>
+      <h3>${s.stio_title}</h3>
+      ${s.stio_p.map(p=>`<p>${p}</p>`).join('')}
+    </div>
+    <div class="storia-pull">${s.stio_pull}</div>
+    <div class="storia-divider"></div>
+    <div class="storia-chapter">
+      <p class="s-label">${s.guida_label}</p>
+      <h3>${s.guida_title}</h3>
+      ${s.guida_p.map(p=>`<p>${p}</p>`).join('')}
+    </div>
+    <div class="storia-pull">${s.guida_pull}</div>
+  `;
+}
+
+/* ── CONSIGLI DI FERNANDO E AGUSTINA ── */
+// ⬇ AGGIORNARE OGNI SETTIMANA — basta modificare questi testi e ricaricare su GitHub
+const CONSIGLI = [
+  {
+    chi: "Fernando",
+    emoji: "👨‍🌾",
+    it: "Il sentiero Via dei Mulini è sempre una buona idea — bosco, ruscelli, silenzio. Chiedeteci la mappa al check-in.",
+    en: "The Via dei Mulini trail is always a good idea — forest, streams, silence. Ask us for the map at check-in.",
+    de: "Der Via dei Mulini-Weg ist immer eine gute Idee — Wald, Bäche, Stille. Fragen Sie uns beim Check-in nach der Karte.",
+  },
+  {
+    chi: "Agustina",
+    emoji: "👩‍🍳",
+    it: "Se volete provare la pasta fatta a mano o organizzare un barbecue nel Giardino Panoramico, basta dircelo con un giorno di anticipo.",
+    en: "If you'd like to try hand-made pasta or organise a BBQ in the Panoramic Garden, just let us know a day in advance.",
+    de: "Wenn Sie handgemachte Pasta probieren oder ein BBQ im Panorama-Garten organisieren möchten, sagen Sie uns das einen Tag vorher.",
+  },
+  {
+    chi: "Fernando",
+    emoji: "👨‍🌾",
+    it: "Le e-bike sono pronte quando volete — ottime per arrivare a Gioi o Laurino senza fatica e con tutto il tempo per guardarvi intorno.",
+    en: "The e-bikes are ready whenever you want — great for reaching Gioi or Laurino without effort and with plenty of time to look around.",
+    de: "Die E-Bikes stehen jederzeit bereit — ideal, um Gioi oder Laurino mühelos zu erreichen und sich dabei viel Zeit zum Schauen zu lassen.",
+  },
+];
+
+function renderConsigli() {
+  document.getElementById('consigli-list').innerHTML = CONSIGLI.map(c => `
+    <div class="consiglio-card">
+      <div class="consiglio-avatar">${c.emoji}</div>
+      <div class="consiglio-body">
+        <p class="consiglio-chi">${c.chi}</p>
+        <p class="consiglio-testo">${c[currentLang]}</p>
+      </div>
+    </div>`).join('');
+}
+
 /* ── INIT ── */
 applyTranslations();
 renderEsperienze();
 renderMappa();
 renderInfo();
 renderTrekking();
+renderConsigli();
+renderPerTe();
+renderAgenda();
+renderAlloggi();
+renderEsterni();
+renderStoria();
+fetchMeteo();
 initChat();
 </script>
 </body>

@@ -77,8 +77,12 @@
 
 
     /* ── ESPLORA TABS ── */
-    #page-esplora .tab-bar{display:flex;background:var(--dark);padding:0 20px;gap:0;border-bottom:1px solid rgba(196,112,58,.3);overflow-x:auto;-webkit-overflow-scrolling:touch}
-    .tab-btn{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--stone);padding:14px 16px;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s;flex-shrink:0}
+    #page-esplora .tab-bar{display:grid;grid-template-columns:repeat(4,1fr);background:var(--dark);padding:0 8px;border-bottom:1px solid rgba(196,112,58,.3)}
+    .tab-bar-wrap{position:relative}
+    .tab-bar-fade{display:none}
+    .tab-btn{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--stone);padding:10px 4px;text-align:center;line-height:1.25;border-bottom:2px solid transparent;transition:all .2s}
+    #page-esplora .tab-btn{border-right:1px solid rgba(196,112,58,.15)}
+    #page-esplora .tab-btn:nth-child(4n){border-right:none}
     .tab-btn.active{color:var(--terra);border-bottom-color:var(--terra)}
     .tab-panel{display:none}.tab-panel.active{display:block}
 
@@ -122,6 +126,13 @@
     .alloggio-photo-placeholder{background:linear-gradient(135deg,var(--linen) 0%,#d4c8b8 100%);height:160px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px}
     .alloggio-photo-placeholder span{font-size:36px}
     .alloggio-photo-placeholder p{font-family:'Space Mono',monospace;font-size:9px;color:var(--stone);letter-spacing:.1em;text-transform:uppercase}
+
+    /* ── COMING SOON (Uliveto Live) ── */
+    .coming-soon-card{margin:20px;padding:40px 24px;background:white;border:1px solid var(--linen);border-radius:4px;text-align:center;box-shadow:0 2px 8px rgba(44,25,10,.06)}
+    .cs-icon{font-size:40px;margin-bottom:14px}
+    .cs-badge{display:inline-block;background:var(--terra);color:white;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:20px;margin-bottom:14px}
+    .coming-soon-card h3{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--dark);margin-bottom:10px}
+    .coming-soon-card p{font-size:13.5px;color:var(--stone);line-height:1.6;max-width:320px;margin:0 auto}
 
     /* ── GALLERIA FOTO (carosello) ── */
     .photo-gallery{position:relative;height:180px;overflow:hidden;background:var(--linen)}
@@ -327,14 +338,18 @@
       <p class="label" data-key="esplora_label"></p>
       <h2 data-key="esplora_title"></h2>
     </div>
-    <div class="tab-bar">
-      <button class="tab-btn active" onclick="switchTab('per-te')" data-key="tab_perte"></button>
-      <button class="tab-btn" onclick="switchTab('agenda')" data-key="tab_agenda"></button>
-      <button class="tab-btn" onclick="switchTab('alloggi-tab')" data-key="tab_alloggi"></button>
-      <button class="tab-btn" onclick="switchTab('esterni')" data-key="tab_esterni"></button>
-      <button class="tab-btn" onclick="switchTab('dintorni')" data-key="tab_dintorni"></button>
-      <button class="tab-btn" onclick="switchTab('trekking')" data-key="tab_trek"></button>
-      <button class="tab-btn" onclick="switchTab('storia')" data-key="tab_storia"></button>
+    <div class="tab-bar-wrap">
+      <div class="tab-bar" id="esplora-tabbar" onscroll="updateTabFade()">
+        <button class="tab-btn active" onclick="switchTab('per-te')" data-key="tab_perte"></button>
+        <button class="tab-btn" onclick="switchTab('agenda')" data-key="tab_agenda"></button>
+        <button class="tab-btn" onclick="switchTab('alloggi-tab')" data-key="tab_alloggi"></button>
+        <button class="tab-btn" onclick="switchTab('esterni')" data-key="tab_esterni"></button>
+        <button class="tab-btn" onclick="switchTab('dintorni')" data-key="tab_dintorni"></button>
+          <button class="tab-btn" onclick="switchTab('trekking')" data-key="tab_trek"></button>
+        <button class="tab-btn" onclick="switchTab('storia')" data-key="tab_storia"></button>
+        <button class="tab-btn" onclick="switchTab('uliveto-live')" data-key="tab_ulivolive"></button>
+      </div>
+      <div class="tab-bar-fade" id="esplora-tabfade"></div>
     </div>
     <div id="tab-per-te" class="tab-panel active">
       <div id="per-te-content"></div>
@@ -356,6 +371,14 @@
     </div>
     <div id="tab-storia" class="tab-panel">
       <div id="storia-content"></div>
+    </div>
+    <div id="tab-uliveto-live" class="tab-panel">
+      <div class="coming-soon-card">
+        <div class="cs-icon">🫒</div>
+        <span class="cs-badge" data-key="cs_badge"></span>
+        <h3 data-key="cs_title"></h3>
+        <p data-key="cs_desc"></p>
+      </div>
     </div>
   </section>
 
@@ -545,7 +568,8 @@ const T = {
     trek_note:"Possiamo preparare lo zainetto del pastore per accompagnarti sul sentiero: prodotti locali e genuini per una sosta autentica nel bosco. Chiedi al momento del check-in.",
     liguira_gmaps:"📍 Apri in Google Maps", btn_gmaps:"📍 Come raggiungerci →",
     esplora_label:"Esplora il territorio", esplora_title:"Esplora",
-    tab_perte:"Per te", tab_agenda:"Agenda", tab_alloggi:"Alloggi", tab_esterni:"Esterni", tab_dintorni:"Dintorni", tab_trek:"Trekking", tab_storia:"Storia",
+    tab_perte:"Per te", tab_agenda:"Agenda", tab_alloggi:"Alloggi", tab_esterni:"Esterni", tab_dintorni:"Dintorni", tab_trek:"Trekking", tab_storia:"Storia", tab_ulivolive:"Uliveto Live",
+    cs_badge:"Presto disponibile", cs_title:"🫒 Uliveto in diretta", cs_desc:"Stiamo preparando lo streaming live dell'uliveto secolare di Li Guira. A breve potrai guardarlo crescere, in ogni stagione, direttamente da qui.",
     nav_esplora:"Esplora",
     consigli_label:"Questa settimana", consigli_title:"I consigli di Fernando e Agustina",
     meteo_label:"Meteo a Stio · oggi",
@@ -589,7 +613,8 @@ const T = {
     trek_note:"We can prepare the shepherd's backpack to accompany you on the trail: local and genuine products for an authentic break in the woods. Ask at check-in.",
     liguira_gmaps:"📍 Open in Google Maps", btn_gmaps:"📍 How to reach us →",
     esplora_label:"Explore the area", esplora_title:"Explore",
-    tab_perte:"For you", tab_agenda:"Agenda", tab_alloggi:"Accommodations", tab_esterni:"Outdoors", tab_dintorni:"Surroundings", tab_trek:"Trekking", tab_storia:"History",
+    tab_perte:"For you", tab_agenda:"Agenda", tab_alloggi:"Accommodations", tab_esterni:"Outdoors", tab_dintorni:"Surroundings", tab_trek:"Trekking", tab_storia:"History", tab_ulivolive:"Olive Live",
+    cs_badge:"Coming soon", cs_title:"🫒 Live Olive Grove", cs_desc:"We're setting up a live stream of Li Guira's centuries-old olive grove. Soon you'll be able to watch it through the seasons, right from here.",
     nav_esplora:"Explore",
     consigli_label:"This week", consigli_title:"Fernando & Agustina's tips",
     meteo_label:"Weather in Stio · today",
@@ -633,7 +658,8 @@ const T = {
     trek_note:"Wir bereiten den Hirtenrucksack für Ihren Weg vor: lokale und natürliche Produkte für eine authentische Rast im Wald. Fragen Sie beim Check-in.",
     liguira_gmaps:"📍 In Google Maps öffnen", btn_gmaps:"📍 Anfahrt →",
     esplora_label:"Das Gebiet entdecken", esplora_title:"Entdecken",
-    tab_perte:"Für Sie", tab_agenda:"Agenda", tab_alloggi:"Unterkünfte", tab_esterni:"Außenbereiche", tab_dintorni:"Umgebung", tab_trek:"Wandern", tab_storia:"Geschichte",
+    tab_perte:"Für Sie", tab_agenda:"Agenda", tab_alloggi:"Unterkünfte", tab_esterni:"Außenbereiche", tab_dintorni:"Umgebung", tab_trek:"Wandern", tab_storia:"Geschichte", tab_ulivolive:"Hain Live",
+    cs_badge:"Bald verfügbar", cs_title:"🫒 Olivenhain live", cs_desc:"Wir richten gerade einen Livestream des jahrhundertealten Olivenhains von Li Guira ein. Bald können Sie ihn von hier aus durch die Jahreszeiten verfolgen.",
     nav_esplora:"Entdecken",
     consigli_label:"Diese Woche", consigli_title:"Tipps von Fernando & Agustina",
     meteo_label:"Wetter in Stio · heute",
@@ -739,7 +765,15 @@ function goTo(page) {
   document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('active',b.dataset.page===page));
   window.scrollTo(0,0);
   if(page==='chat' && document.getElementById('chat-messages').children.length===0) initChat();
-  if(page==='esplora') { renderPerTe(); renderAgenda(); }
+  if(page==='esplora') { renderPerTe(); renderAgenda(); updateTabFade(); }
+}
+
+function updateTabFade() {
+  const bar = document.getElementById('esplora-tabbar');
+  const fade = document.getElementById('esplora-tabfade');
+  if (!bar || !fade) return;
+  const atEnd = bar.scrollLeft + bar.clientWidth >= bar.scrollWidth - 4;
+  fade.classList.toggle('hidden', atEnd);
 }
 
 /* ── LINGUA ── */

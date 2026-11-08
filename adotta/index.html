@@ -38,6 +38,18 @@ footer .logo{font-size:26px}
 .ostium{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center;border-top:1px solid var(--cenere);padding-top:64px}
 .ost-mark{font-family:var(--serif);font-weight:300;font-size:clamp(40px,8vw,72px);letter-spacing:.32em;color:var(--oro);border:1px solid var(--oro);padding:26px 18px 26px 30px;line-height:1}
 @media(max-width:700px){.ostium{grid-template-columns:1fr;gap:28px}.ost-mark{justify-self:start}}
+.hero h1{margin-bottom:4px}
+.h1b{font-family:var(--serif);font-weight:300;font-size:clamp(26px,4.6vw,46px);line-height:1.1;color:var(--crema2);margin-bottom:18px}
+.choices{gap:12px!important}
+.choice{display:flex;flex-direction:column;gap:2px;text-decoration:none;border:1px solid var(--brace);border-radius:14px;padding:13px 20px;min-width:210px;background:rgba(20,17,14,.35);backdrop-filter:blur(4px);transition:background .2s}
+.choice b{font-size:17px;font-weight:600;color:var(--brace2)}
+.choice span{font-size:13.5px;color:var(--crema2)}
+.choice.main{background:var(--brace)}
+.choice.main b,.choice.main span{color:#fff}
+.choice:hover{background:var(--brace2)}.choice:hover b,.choice:hover span{color:#fff}
+.hero .wrap .eyebrow,.hero h1,.h1b,.hero .lead,.hero-note{text-shadow:0 1px 14px rgba(0,0,0,.65),0 0 2px rgba(0,0,0,.4)}
+.hero-note{font-size:13px;color:var(--crema2);margin-top:14px}
+@media(max-width:480px){.choice{flex:1 1 100%}}
 /* hero */
 .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
 .hero video,.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -154,10 +166,13 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
   <div class="wrap">
     <div class="eyebrow" data-t="hero_eye">Agriturismo Li Guira · Stio, Cilento</div>
     <h1 data-t="hero_h">Adotta un <em>ulivo</em>.</h1>
-    <p class="lead" data-t="hero_p">Il tuo nome su un ulivo dell'Agriturismo Li Guira, e il suo olio Ostium a casa tua.</p>
-    <div class="row">
-      <a class="cta" href="#prenota" data-t="cta">Prenota la tua adozione</a>
-      <div class="price-tag">200 €<small data-t="hero_price">9 litri · nessun pagamento ora</small></div>
+    <p class="h1b" data-t="hero_h2">O porta a casa il suo olio.</p>
+    <p class="lead" data-t="hero_p">Olio EVO Ostium dell'Agriturismo Li Guira, raccolto 2026. Con l'adozione, anche il tuo nome sull'ulivo.</p>
+    <div class="row choices">
+      <a class="choice main" href="#prenota" data-pick="adozione"><b data-t="hc1">Adotta un ulivo</b><span data-t="hc1s">200 € · 9 litri · targhetta e sconti</span></a>
+      <a class="choice" href="#prenota" data-pick="olio"><b data-t="hc2">Compra l'olio</b><span data-t="hc2s">50 € · latta da 3 litri</span></a>
+    </div>
+    <p class="hero-note" data-t="hero_price">Prenoti ora, nessun pagamento finché non confermiamo.</p>
     </div>
   </div>
 </section>
@@ -322,9 +337,10 @@ const SCRIPT_URL = "";
 const WA = "393201464485";
 
 const T = { en: {
- hero_eye:"Agriturismo Li Guira · Stio, Cilento", hero_h:"Adopt an <em>olive tree</em>.",
- hero_p:"Your name on an olive tree at Agriturismo Li Guira, and its Ostium oil delivered to your home.",
- cta:"Reserve your tree", hero_price:"9 litres · no payment now",
+ hero_eye:"Agriturismo Li Guira · Stio, Cilento", hero_h:"Adopt an <em>olive tree</em>.", hero_h2:"Or take its oil home.",
+ hero_p:"Ostium extra virgin olive oil from Agriturismo Li Guira, 2026 harvest. With an adoption, your name on the tree too.",
+ hc1:"Adopt a tree", hc1s:"€200 · 9 litres · plate and discounts", hc2:"Buy the oil", hc2s:"€50 · 3-litre tin",
+ cta:"Reserve your tree", hero_price:"Reserve now, no payment until we confirm.",
  get_eye:"What you get", get_h:"An oil you won't find on any shelf.",
  g1h:"Ostium extra virgin olive oil", g1p:"Three 3-litre tins from our groves' 2026 harvest. Shipped together at the end of January.",
  g2h:"Wooden name plate", g2p:"With your name, fixed to your tree.",

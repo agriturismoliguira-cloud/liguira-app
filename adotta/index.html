@@ -106,6 +106,8 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--brace)}
 
 .solo{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:28px;border-top:1px solid var(--cenere);padding-top:56px}
 .solo-box{display:flex;align-items:center;gap:22px}
+.bottiglie{margin-top:22px;color:var(--crema2);font-size:15.5px}
+.bottiglie a{color:var(--brace2);font-weight:600;text-decoration:none}
 .cta.ghost{background:none;border:1px solid var(--brace);color:var(--brace2)}
 .cta.ghost:hover{background:var(--brace);color:#fff}
 .pick{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -159,7 +161,7 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
     <div class="eyebrow" data-t="get_eye">Cosa ricevi</div>
     <h2 data-t="get_h">Un olio che non troverai su nessuno scaffale.</h2>
     <div class="grid4">
-      <div class="item"><div class="n">9 L</div><h3 data-t="g1h">Olio EVO del Cilento</h3><p data-t="g1p">Dal raccolto 2026 dei nostri uliveti. Spedito a fine gennaio.</p></div>
+      <div class="item"><div class="n">9 L</div><h3 data-t="g1h">Olio EVO del Cilento</h3><p data-t="g1p">Tre latte da 3 litri, dal raccolto 2026 dei nostri uliveti. Spedite a fine gennaio in un'unica scatola.</p></div>
       <div class="item"><div class="n">I</div><h3 data-t="g2h">Targhetta in legno</h3><p data-t="g2p">Col tuo nome, fissata sul tuo ulivo.</p></div>
       <div class="item"><div class="n">II</div><h3 data-t="g3h">Certificato di adozione</h3><p data-t="g3p">Da tenere, o da regalare.</p></div>
       <div class="item"><div class="n">III</div><h3 data-t="g4h">Il tuo ulivo nelle stagioni</h3><p data-t="g4p">Ti mandiamo le sue foto durante l'anno, dalla fioritura alla maturazione.</p></div>
@@ -219,10 +221,11 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
         <p class="lead" data-t="so_p">Lo stesso olio del raccolto 2026, senza targhetta e senza certificato. Spedito a fine gennaio, o da ritirare a Li Guira.</p>
       </div>
       <div class="solo-box">
-        <div class="price-tag">80 €<small data-t="so_unit">latta da 5 litri</small></div>
+        <div class="price-tag">48 €<small data-t="so_unit">latta da 3 litri</small></div>
         <a class="cta ghost" href="#prenota" data-pick="olio" data-t="so_btn">Prenota l'olio</a>
       </div>
     </div>
+    <p class="bottiglie"><span data-t="bt_p">Cerchi le bottiglie da 0,75 litri?</span> <a id="bt" href="https://wa.me/393201464485?text=Ciao%21%20Vorrei%20informazioni%20sulle%20bottiglie%20d%27olio%20da%200%2C75%20L." data-t="bt_a">Scrivici su WhatsApp →</a></p>
   </div>
 </section>
 
@@ -234,8 +237,8 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
 
     <form id="f" novalidate>
       <div class="pick" role="radiogroup">
-        <button type="button" class="on" data-tipo="adozione"><b data-t="t_ad">Adozione</b><small data-t="t_ad_s">9 L · targhetta · certificato · 190 €</small></button>
-        <button type="button" data-tipo="olio"><b data-t="t_ol">Solo olio</b><small data-t="t_ol_s">latta da 5 L · 80 €</small></button>
+        <button type="button" class="on" data-tipo="adozione"><b data-t="t_ad">Adozione</b><small data-t="t_ad_s">3 latte da 3 L · targhetta · certificato · 190 €</small></button>
+        <button type="button" data-tipo="olio"><b data-t="t_ol">Solo olio</b><small data-t="t_ol_s">latta da 3 L · 48 €</small></button>
       </div>
       <div class="two">
         <label><span data-t="l_nome">Nome e cognome</span><input name="nome" required autocomplete="name"></label>
@@ -272,7 +275,7 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
     <div class="eyebrow" data-t="faq_eye">Domande</div>
     <h2 data-t="faq_h">Prima che tu ce lo chieda.</h2>
     <details><summary data-t="q1">Devo pagare adesso?</summary><p data-t="a1">No. Ora prenoti soltanto. Ti scriviamo per confermare e ti mandiamo i dati per il pagamento.</p></details>
-    <details><summary data-t="q6">Posso comprare solo l'olio?</summary><p data-t="a6">Sì: latta da 5 litri a 80 €, stesso olio del raccolto 2026. Scegli "Solo olio" nel modulo.</p></details>
+    <details><summary data-t="q6">Posso comprare solo l'olio?</summary><p data-t="a6">Sì: la latta da 3 litri costa 48 €, ed è lo stesso olio del raccolto 2026. Scegli "Solo olio" nel modulo. Per le bottiglie da 0,75 litri scrivici su WhatsApp.</p></details>
     <details><summary data-t="q2">Quando arriva l'olio?</summary><p data-t="a2">Spediamo a fine gennaio. Se scegli il ritiro, lo prendi quando vieni a Li Guira.</p></details>
     <details><summary data-t="q3">Posso regalarlo?</summary><p data-t="a3">Sì. Scrivi nelle note il nome da mettere sulla targhetta e sul certificato: possiamo intestarli a chi vuoi.</p></details>
     <details><summary data-t="q4">Quanto costa la spedizione?</summary><p data-t="a4">Dipende dalla destinazione. Te lo diciamo prima della conferma, così decidi con il prezzo completo.</p></details>
@@ -301,7 +304,7 @@ const T = { en: {
  hero_p:"Your name on a tree in our grove, and its oil delivered to your home.",
  cta:"Reserve your tree", hero_price:"9 litres · no payment now",
  get_eye:"What you get", get_h:"An oil you won't find on any shelf.",
- g1h:"Cilento extra virgin olive oil", g1p:"From our groves' 2026 harvest. Shipped at the end of January.",
+ g1h:"Cilento extra virgin olive oil", g1p:"Three 3-litre tins from our groves' 2026 harvest. Shipped together at the end of January.",
  g2h:"Wooden name plate", g2p:"With your name, fixed to your tree.",
  g3h:"Adoption certificate", g3p:"To keep, or to give as a gift.",
  g4h:"Your tree through the seasons", g4p:"We send you photos of it during the year, from blossom to ripening.",
@@ -315,9 +318,9 @@ const T = { en: {
  rit_eye:"Shipping or pick-up", rit_h:"Or come and collect it.",
  rit_p:"Shipping is extra. If you'd rather collect the oil at Li Guira, we'll give you a discount on your stay: breakfast in the sun, your tree a few steps away.",
  b_h:"Adopt 3 trees and the weekend is on us.", b_p:"With three adoptions you get a low-season weekend at Li Guira.",
- so_eye:"Without adoption", so_h:"Just the oil?", so_p:"The same oil from the 2026 harvest, without plate or certificate. Shipped at the end of January, or collected at Li Guira.", so_unit:"5-litre tin", so_btn:"Reserve the oil",
- t_ad:"Adoption", t_ad_s:"9 L · plate · certificate · €190", t_ol:"Oil only", t_ol_s:"5 L tin · €80",
- q6:"Can I buy just the oil?", a6:"Yes: a 5-litre tin for €80, the same oil from the 2026 harvest. Choose \"Oil only\" in the form.",
+ so_eye:"Without adoption", so_h:"Just the oil?", so_p:"The same oil from the 2026 harvest, without plate or certificate. Shipped at the end of January, or collected at Li Guira.", so_unit:"3-litre tin", bt_p:"Looking for 0.75-litre bottles?", bt_a:"Message us on WhatsApp →", so_btn:"Reserve the oil",
+ t_ad:"Adoption", t_ad_s:"three 3 L tins · plate · certificate · €190", t_ol:"Oil only", t_ol_s:"3 L tin · €48",
+ q6:"Can I buy just the oil?", a6:"Yes: a 3-litre tin costs €48, the same oil from the 2026 harvest. Choose \"Oil only\" in the form. For 0.75-litre bottles, message us on WhatsApp.",
  f_eye:"Reservation", f_h:"Reserve your tree, or your oil.", f_p:"Limited to the 2026 harvest. No payment now.",
  l_nome:"Full name", l_tel:"WhatsApp", l_email:"Email", l_ulivi:"How many trees",
  l_tot:"Estimated total", l_gift:"· free weekend included", l_rit:"How you'd like to receive the oil",
@@ -339,13 +342,14 @@ function setLang(l){
   lang=l; document.documentElement.lang=l;
   document.querySelectorAll('[data-t]').forEach(e=>{const v=(l==='it'?IT:T[l])[e.dataset.t]; if(v) e.innerHTML=v;});
   document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===l));
+  document.getElementById('bt').href=l==='it'?'https://wa.me/393201464485?text=Ciao%21%20Vorrei%20informazioni%20sulle%20bottiglie%20d%27olio%20da%200%2C75%20L.':'https://wa.me/393201464485?text=Hi%21%20I%27d%20like%20information%20about%20the%200.75%20L%20bottles%20of%20oil.';
   calc();
 }
 document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
 
 let q=1, tipo='adozione';
-const PREZZO={adozione:190, olio:80};
-const QLAB={adozione:{it:'Quanti ulivi',en:'How many trees'}, olio:{it:'Quante latte da 5 L',en:'How many 5 L tins'}};
+const PREZZO={adozione:190, olio:48};
+const QLAB={adozione:{it:'Quanti ulivi',en:'How many trees'}, olio:{it:'Quante latte da 3 L',en:'How many 3 L tins'}};
 function calc(){
   document.getElementById('qn').textContent=q;
   document.getElementById('tot').textContent=(q*PREZZO[tipo]).toLocaleString('it-IT')+' €';
@@ -380,7 +384,7 @@ f.addEventListener('submit', async ev=>{
   for(const el of f.querySelectorAll('[required]')){
     if(el.type==='checkbox'?!el.checked:!el.value.trim()){ el.focus(); el.reportValidity&&el.reportValidity(); return; }
   }
-  const d=Object.fromEntries(new FormData(f)); d.tipo=tipo==='adozione'?'Adozione 9 L':'Solo olio (latta 5 L)'; d.ulivi=q; d.lingua=lang; delete d.privacy;
+  const d=Object.fromEntries(new FormData(f)); d.tipo=tipo==='adozione'?'Adozione 9 L (3 latte da 3 L)':'Solo olio (latta 3 L)'; d.ulivi=q; d.lingua=lang; delete d.privacy;
   const btn=document.getElementById('sub'); btn.disabled=true; btn.style.opacity=.6;
   let ok=false;
   if(SCRIPT_URL){
@@ -388,8 +392,8 @@ f.addEventListener('submit', async ev=>{
   }
   if(ok){ f.style.display='none'; document.getElementById('done').style.display='block'; return; }
   const msg=(lang==='it'
-    ? (tipo==='adozione' ? `Ciao! Vorrei adottare ${q} ${q>1?'ulivi':'ulivo'} (9 L ciascuno).` : `Ciao! Vorrei prenotare ${q} ${q>1?'latte':'latta'} di olio da 5 L.`) + `\nNome: ${d.nome}\nEmail: ${d.email}\nRicezione: ${d.ritiro}`
-    : (tipo==='adozione' ? `Hi! I'd like to adopt ${q} olive tree${q>1?'s':''} (9 L each).` : `Hi! I'd like to reserve ${q} 5 L tin${q>1?'s':''} of oil.`) + `\nName: ${d.nome}\nEmail: ${d.email}\nDelivery: ${d.ritiro}`)
+    ? (tipo==='adozione' ? `Ciao! Vorrei adottare ${q} ${q>1?'ulivi':'ulivo'} (3 latte da 3 L ciascuno).` : `Ciao! Vorrei prenotare ${q} ${q>1?'latte':'latta'} di olio da 3 L.`) + `\nNome: ${d.nome}\nEmail: ${d.email}\nRicezione: ${d.ritiro}`
+    : (tipo==='adozione' ? `Hi! I'd like to adopt ${q} olive tree${q>1?'s':''} (three 3 L tins each).` : `Hi! I'd like to reserve ${q} 3 L tin${q>1?'s':''} of oil.`) + `\nName: ${d.nome}\nEmail: ${d.email}\nDelivery: ${d.ritiro}`)
     + (d.note?`\n${lang==='it'?'Note':'Notes'}: ${d.note}`:'');
   const a=document.getElementById('wa'); a.href=`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
   a.style.color='var(--brace2)'; a.style.fontWeight='600';

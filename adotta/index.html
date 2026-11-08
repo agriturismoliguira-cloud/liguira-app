@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adotta un ulivo — Li Guira</title>
+<meta name="description" content="Adotta un ulivo a Li Guira, nel Cilento: 5 litri di olio EVO, targhetta in legno col tuo nome, certificato di adozione.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --notte:#14110e; --notte2:#1d1814; --cenere:#2a231d;
+  --brace:#d06a2c; --brace2:#e8894a; --oro:#c9a74a;
+  --crema:#efe6d6; --crema2:#b9ad99; --oliva:#8c9159;
+  --serif:'Fraunces',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--notte);color:var(--crema);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--brace2);font-weight:600}
+h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.08;letter-spacing:-.01em}
+h2{font-size:clamp(32px,5.5vw,52px);margin:12px 0 18px}
+p.lead{font-size:clamp(18px,2.2vw,21px);color:var(--crema2);max-width:560px}
+
+/* top bar */
+.bar{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:14px 22px;background:linear-gradient(var(--notte) 0%,transparent);}
+.logo{font-family:var(--serif);font-size:22px;letter-spacing:.02em;text-decoration:none}
+.lang{display:flex;gap:4px;background:rgba(20,17,14,.6);border:1px solid var(--cenere);border-radius:99px;padding:3px}
+.lang button{background:none;border:0;color:var(--crema2);font:600 12px var(--sans);letter-spacing:.08em;padding:6px 11px;border-radius:99px;cursor:pointer}
+.lang button.on{background:var(--crema);color:var(--notte)}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
+.hero video,.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero img{object-position:center 70%}
+.hero .h-wide{display:none}
+@media(min-width:820px){.hero .h-wide{display:block}.hero .h-tall{display:none}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,17,14,.35) 0%,rgba(20,17,14,.05) 35%,rgba(20,17,14,.55) 70%,var(--notte) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:56px;width:100%}
+.hero h1{font-size:clamp(48px,10vw,104px);margin:14px 0 18px}
+.hero h1 em{font-style:italic;color:var(--oro)}
+.cta{display:inline-flex;align-items:center;gap:10px;background:var(--brace);color:#fff;text-decoration:none;font-weight:600;font-size:16px;padding:16px 26px;border-radius:99px;border:0;cursor:pointer;transition:background .2s}
+.cta:hover{background:var(--brace2)}
+.hero .row{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:28px}
+.price-tag{font-family:var(--serif);font-size:28px}
+.price-tag small{font-family:var(--sans);font-size:13px;color:var(--crema2);display:block;letter-spacing:.04em}
+
+section{padding:92px 0}
+
+/* cosa ricevi */
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--cenere);border:1px solid var(--cenere);border-radius:14px;overflow:hidden;margin-top:42px}
+.item{background:var(--notte2);padding:28px 24px}
+.item .n{font-family:var(--serif);font-size:42px;color:var(--oro);line-height:1}
+.item h3{font-size:22px;margin:14px 0 8px}
+.item p{color:var(--crema2);font-size:15.5px}
+
+/* filiera video */
+.filiera{background:var(--notte2)}
+.clips{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px}
+.clip{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:9/14;background:var(--cenere)}
+.clip video{width:100%;height:100%;object-fit:cover}
+.clip span{position:absolute;left:12px;bottom:12px;right:12px;font-size:13px;font-weight:500;text-shadow:0 1px 8px rgba(0,0,0,.8)}
+@media(max-width:620px){.clips{grid-template-columns:repeat(3,72%);overflow-x:auto;scroll-snap-type:x mandatory;margin-right:-22px;padding-right:22px}.clip{scroll-snap-align:start}}
+
+/* split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split img{border-radius:14px;width:100%;aspect-ratio:4/5;object-fit:cover}
+@media(max-width:820px){.split{grid-template-columns:1fr;gap:32px}}
+
+/* come funziona */
+.steps{counter-reset:s;display:grid;gap:22px;margin-top:36px}
+.step{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start}
+.step::before{counter-increment:s;content:counter(s);width:52px;height:52px;border-radius:50%;border:1px solid var(--brace);color:var(--brace2);display:grid;place-items:center;font-family:var(--serif);font-size:22px}
+.step h3{font-size:22px;margin-bottom:4px}
+.step p{color:var(--crema2);font-size:15.5px}
+
+/* bonus */
+.bonus{border:1px solid var(--oro);border-radius:14px;padding:30px 28px;margin-top:40px;background:linear-gradient(135deg,rgba(201,167,74,.10),transparent 60%)}
+.bonus h3{font-size:26px;color:var(--oro);margin-bottom:6px}
+.bonus p{color:var(--crema2)}
+
+/* form */
+.prenota{background:var(--notte2)}
+form{display:grid;gap:16px;margin-top:34px;max-width:620px}
+label{display:grid;gap:6px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--crema2)}
+input,select,textarea{font:16px var(--sans);color:var(--crema);background:var(--notte);border:1px solid var(--cenere);border-radius:10px;padding:14px 14px;width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--brace)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:560px){.two{grid-template-columns:1fr}}
+.stepper{display:flex;align-items:center;gap:0;border:1px solid var(--cenere);border-radius:10px;overflow:hidden;background:var(--notte);width:max-content}
+.stepper button{background:none;border:0;color:var(--crema);font-size:22px;width:52px;height:50px;cursor:pointer}
+.stepper output{min-width:48px;text-align:center;font-family:var(--serif);font-size:24px}
+.total{font-size:15px;color:var(--crema2);text-transform:none;letter-spacing:0;font-weight:400}
+.total b{color:var(--crema);font-family:var(--serif);font-size:22px;font-weight:500}
+.total .gift{color:var(--oro);display:none}
+.check{display:flex;gap:10px;align-items:flex-start;text-transform:none;letter-spacing:0;font-weight:400;font-size:14px}
+.check input{width:20px;height:20px;margin-top:2px;accent-color:var(--brace);flex:none}
+.note{font-size:14px;color:var(--crema2);border-left:2px solid var(--brace);padding-left:14px}
+.wa{display:inline-flex;gap:8px;align-items:center;color:var(--crema2);font-size:15px;margin-top:4px}
+.done{display:none;border:1px solid var(--oliva);border-radius:14px;padding:28px;max-width:620px;margin-top:34px}
+.done h3{font-size:28px;margin-bottom:8px}
+
+/* faq */
+details{border-bottom:1px solid var(--cenere);padding:20px 0}
+summary{cursor:pointer;font-family:var(--serif);font-size:21px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--brace2);font-family:var(--sans)}
+details[open] summary::after{content:"–"}
+details p{color:var(--crema2);margin-top:10px;font-size:15.5px}
+
+footer{padding:56px 0 70px;border-top:1px solid var(--cenere);color:var(--crema2);font-size:14px}
+footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
+
+.fade{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none}html{scroll-behavior:auto}}
+.sticky{position:fixed;left:16px;right:16px;bottom:16px;z-index:30;display:none;justify-content:center}
+@media(max-width:820px){.sticky.show{display:flex}.sticky .cta{width:100%;justify-content:center;box-shadow:0 8px 28px rgba(0,0,0,.5)}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <a class="logo" href="#top">Li Guira</a>
+  <div class="lang" role="group" aria-label="Lingua">
+    <button data-l="it" class="on">IT</button><button data-l="en">EN</button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+  <video class="h-tall" src="media/hero-v.mp4" poster="media/hero-v.jpg" autoplay muted loop playsinline></video>
+  <img class="h-wide" src="media/cover.jpg" alt="L'uliveto di Li Guira con le montagne del Cilento">
+  <div class="wrap">
+    <div class="eyebrow" data-t="hero_eye">Stio · Parco Nazionale del Cilento</div>
+    <h1 data-t="hero_h">Adotta un <em>ulivo</em>.</h1>
+    <p class="lead" data-t="hero_p">Il tuo nome su un albero del nostro uliveto, e il suo olio a casa tua.</p>
+    <div class="row">
+      <a class="cta" href="#prenota" data-t="cta">Prenota la tua adozione</a>
+      <div class="price-tag">120 €<small data-t="hero_price">5 litri · nessun pagamento ora</small></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap fade">
+    <div class="eyebrow" data-t="get_eye">Cosa ricevi</div>
+    <h2 data-t="get_h">Un olio che non troverai su nessuno scaffale.</h2>
+    <div class="grid4">
+      <div class="item"><div class="n">5 L</div><h3 data-t="g1h">Olio EVO del Cilento</h3><p data-t="g1p">Dal raccolto 2026 dei nostri uliveti. Spedito a fine gennaio.</p></div>
+      <div class="item"><div class="n">I</div><h3 data-t="g2h">Targhetta in legno</h3><p data-t="g2p">Col tuo nome, fissata sul tuo ulivo.</p></div>
+      <div class="item"><div class="n">II</div><h3 data-t="g3h">Certificato di adozione</h3><p data-t="g3p">Da tenere, o da regalare.</p></div>
+      <div class="item"><div class="n">III</div><h3 data-t="g4h">Il tuo ulivo nelle stagioni</h3><p data-t="g4p">Ti mandiamo le sue foto durante l'anno, dalla fioritura alla maturazione.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="filiera">
+  <div class="wrap fade">
+    <div class="eyebrow" data-t="fil_eye">Raccolto 2026</div>
+    <h2 data-t="fil_h">Dall'uliveto al frantoio, nella stessa notte.</h2>
+    <p class="lead" data-t="fil_p">Le olive raccolte di giorno arrivano al frantoio la sera. Quello che ricevi è questo olio, non un altro.</p>
+    <div class="clips">
+      <div class="clip"><video data-src="media/olive.mp4" poster="media/olive.jpg" muted loop playsinline></video><span data-t="c1">Le olive appena arrivate</span></div>
+      <div class="clip"><video data-src="media/nastro.mp4" poster="media/nastro.jpg" muted loop playsinline></video><span data-t="c2">Lavaggio e frangitura</span></div>
+      <div class="clip"><video data-src="media/olio.mp4" poster="media/olio.jpg" muted loop playsinline></video><span data-t="c3">L'olio nuovo</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split fade">
+    <img src="media/notte.jpg" alt="Cassoni di olive al frantoio di notte" loading="lazy">
+    <div>
+      <div class="eyebrow" data-t="how_eye">Come funziona</div>
+      <h2 data-t="how_h">Prenoti ora. Paghi solo quando confermiamo.</h2>
+      <div class="steps">
+        <div class="step"><div><h3 data-t="s1h">Prenoti</h3><p data-t="s1p">Compili il modulo qui sotto. Nessun pagamento, nessun impegno.</p></div></div>
+        <div class="step"><div><h3 data-t="s2h">Ti scriviamo noi</h3><p data-t="s2p">Su WhatsApp o via email, per confermare l'adozione e il nome sulla targhetta.</p></div></div>
+        <div class="step"><div><h3 data-t="s3h">Paghi e ricevi</h3><p data-t="s3p">Paghi dopo la conferma. A fine gennaio spediamo l'olio con il certificato, e la targhetta va sul tuo ulivo.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap split fade">
+    <div>
+      <div class="eyebrow" data-t="rit_eye">Spedizione o ritiro</div>
+      <h2 data-t="rit_h">Oppure vieni a prenderlo.</h2>
+      <p class="lead" data-t="rit_p">La spedizione è a parte. Se preferisci ritirare l'olio a Li Guira, ti riserviamo uno sconto sul soggiorno: colazione al sole, il tuo ulivo a due passi.</p>
+      <div class="bonus">
+        <h3 data-t="b_h">Adotti 3 ulivi? Il weekend te lo regaliamo.</h3>
+        <p data-t="b_p">Con tre adozioni ricevi un weekend a Li Guira in bassa stagione.</p>
+      </div>
+    </div>
+    <img src="media/terrazza.jpg" alt="Terrazza di Li Guira con vista sulle montagne del Cilento" loading="lazy">
+  </div>
+</section>
+
+<section class="prenota" id="prenota">
+  <div class="wrap">
+    <div class="eyebrow" data-t="f_eye">Prenotazione</div>
+    <h2 data-t="f_h">Prenota il tuo ulivo.</h2>
+    <p class="lead" data-t="f_p">Disponibilità limitata al raccolto 2026. Nessun pagamento ora.</p>
+
+    <form id="f" novalidate>
+      <div class="two">
+        <label><span data-t="l_nome">Nome e cognome</span><input name="nome" required autocomplete="name"></label>
+        <label><span data-t="l_tel">WhatsApp</span><input name="whatsapp" type="tel" required autocomplete="tel" placeholder="+39 …"></label>
+      </div>
+      <label><span data-t="l_email">Email</span><input name="email" type="email" required autocomplete="email"></label>
+      <label><span data-t="l_ulivi">Quanti ulivi</span>
+        <div class="stepper"><button type="button" data-d="-1" aria-label="meno">−</button><output id="qn">1</output><button type="button" data-d="1" aria-label="più">+</button></div>
+        <span class="total"><span data-t="l_tot">Totale indicativo</span>: <b id="tot">120 €</b> <span class="gift" id="gift" data-t="l_gift">· weekend in omaggio</span></span>
+      </label>
+      <label><span data-t="l_rit">Come vuoi ricevere l'olio</span>
+        <select name="ritiro">
+          <option value="Spedizione" data-t="o_sped">Spedizione (costo a parte)</option>
+          <option value="Ritiro a Li Guira" data-t="o_rit">Ritiro a Li Guira, con sconto sul soggiorno</option>
+          <option value="Da decidere" data-t="o_dec">Decido più avanti</option>
+        </select>
+      </label>
+      <label><span data-t="l_note">Nome sulla targhetta o note</span><textarea name="note" rows="3"></textarea></label>
+      <label class="check"><input type="checkbox" name="privacy" required><span data-t="l_priv">Acconsento all'uso dei miei dati solo per gestire questa prenotazione.</span></label>
+      <p class="note" data-t="f_note">La prenotazione non è vincolante. Ti contattiamo noi per confermare; il pagamento avviene solo dopo la conferma.</p>
+      <div><button class="cta" type="submit" id="sub" data-t="f_btn">Invia la prenotazione</button></div>
+      <a class="wa" href="https://wa.me/393201464485" id="wa"><span data-t="f_wa">Preferisci scriverci? WhatsApp</span> 320 146 4485</a>
+    </form>
+
+    <div class="done" id="done">
+      <h3 data-t="d_h">Grazie, il tuo ulivo ti aspetta.</h3>
+      <p data-t="d_p">Abbiamo ricevuto la prenotazione. Ti scriviamo nei prossimi giorni per confermarla.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap fade">
+    <div class="eyebrow" data-t="faq_eye">Domande</div>
+    <h2 data-t="faq_h">Prima che tu ce lo chieda.</h2>
+    <details><summary data-t="q1">Devo pagare adesso?</summary><p data-t="a1">No. Ora prenoti soltanto. Ti scriviamo per confermare e ti mandiamo i dati per il pagamento.</p></details>
+    <details><summary data-t="q2">Quando arriva l'olio?</summary><p data-t="a2">Spediamo a fine gennaio. Se scegli il ritiro, lo prendi quando vieni a Li Guira.</p></details>
+    <details><summary data-t="q3">Posso regalarlo?</summary><p data-t="a3">Sì. Scrivi nelle note il nome da mettere sulla targhetta e sul certificato: possiamo intestarli a chi vuoi.</p></details>
+    <details><summary data-t="q4">Quanto costa la spedizione?</summary><p data-t="a4">Dipende dalla destinazione. Te lo diciamo prima della conferma, così decidi con il prezzo completo.</p></details>
+    <details><summary data-t="q5">Come funziona il weekend omaggio?</summary><p data-t="a5">Adottando tre ulivi ricevi un weekend a Li Guira in bassa stagione. Date e alloggio li concordiamo insieme.</p></details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="logo">Li Guira</span>
+    Agriturismo · Stio (SA) · Parco Nazionale del Cilento<br>
+    WhatsApp 320 146 4485 · <a href="https://www.liguira.it">liguira.it</a>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky"><a class="cta" href="#prenota" data-t="cta">Prenota la tua adozione</a></div>
+
+<script>
+/* Incolla qui l'URL della Web App di Apps Script collegata allo Sheet. Vuoto = invio via WhatsApp. */
+const SCRIPT_URL = "";
+const WA = "393201464485";
+
+const T = { en: {
+ hero_eye:"Stio · Cilento National Park", hero_h:"Adopt an <em>olive tree</em>.",
+ hero_p:"Your name on a tree in our grove, and its oil delivered to your home.",
+ cta:"Reserve your tree", hero_price:"5 litres · no payment now",
+ get_eye:"What you get", get_h:"An oil you won't find on any shelf.",
+ g1h:"Cilento extra virgin olive oil", g1p:"From our groves' 2026 harvest. Shipped at the end of January.",
+ g2h:"Wooden name plate", g2p:"With your name, fixed to your tree.",
+ g3h:"Adoption certificate", g3p:"To keep, or to give as a gift.",
+ g4h:"Your tree through the seasons", g4p:"We send you photos of it during the year, from blossom to ripening.",
+ fil_eye:"2026 harvest", fil_h:"From the grove to the mill, the same night.",
+ fil_p:"Olives picked by day reach the mill in the evening. The oil you receive is this one, no other.",
+ c1:"Freshly arrived olives", c2:"Washing and milling", c3:"The new oil",
+ how_eye:"How it works", how_h:"Reserve now. Pay only once we confirm.",
+ s1h:"You reserve", s1p:"Fill in the form below. No payment, no commitment.",
+ s2h:"We get in touch", s2p:"By WhatsApp or email, to confirm the adoption and the name on the plate.",
+ s3h:"You pay and receive", s3p:"You pay after confirmation. At the end of January we ship the oil with the certificate, and the plate goes on your tree.",
+ rit_eye:"Shipping or pick-up", rit_h:"Or come and collect it.",
+ rit_p:"Shipping is extra. If you'd rather collect the oil at Li Guira, we'll give you a discount on your stay: breakfast in the sun, your tree a few steps away.",
+ b_h:"Adopt 3 trees and the weekend is on us.", b_p:"With three adoptions you get a low-season weekend at Li Guira.",
+ f_eye:"Reservation", f_h:"Reserve your olive tree.", f_p:"Limited to the 2026 harvest. No payment now.",
+ l_nome:"Full name", l_tel:"WhatsApp", l_email:"Email", l_ulivi:"How many trees",
+ l_tot:"Estimated total", l_gift:"· free weekend included", l_rit:"How you'd like to receive the oil",
+ o_sped:"Shipping (extra cost)", o_rit:"Pick-up at Li Guira, with a discount on your stay", o_dec:"I'll decide later",
+ l_note:"Name for the plate, or notes", l_priv:"I agree to my data being used only to handle this reservation.",
+ f_note:"The reservation is not binding. We'll contact you to confirm; payment happens only after confirmation.",
+ f_btn:"Send reservation", f_wa:"Prefer to message us? WhatsApp",
+ d_h:"Thank you, your tree is waiting.", d_p:"We've received your reservation and will write to you in the next few days to confirm it.",
+ faq_eye:"Questions", faq_h:"Before you ask.",
+ q1:"Do I pay now?", a1:"No. For now you only reserve. We'll write to confirm and send you the payment details.",
+ q2:"When does the oil arrive?", a2:"We ship at the end of January. If you choose pick-up, you collect it when you visit Li Guira.",
+ q3:"Can I give it as a gift?", a3:"Yes. Write in the notes the name for the plate and certificate: we can put them in anyone's name.",
+ q4:"How much is shipping?", a4:"It depends on the destination. We tell you before confirming, so you decide with the full price.",
+ q5:"How does the free weekend work?", a5:"Adopting three trees gets you a low-season weekend at Li Guira. We agree dates and accommodation together."
+}};
+const IT = {}; document.querySelectorAll('[data-t]').forEach(e=>IT[e.dataset.t]=e.innerHTML);
+let lang = 'it';
+function setLang(l){
+  lang=l; document.documentElement.lang=l;
+  document.querySelectorAll('[data-t]').forEach(e=>{const v=(l==='it'?IT:T[l])[e.dataset.t]; if(v) e.innerHTML=v;});
+  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===l));
+  calc();
+}
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+if((navigator.language||'').slice(0,2)!=='it') setLang('en');
+
+let q=1;
+function calc(){
+  document.getElementById('qn').textContent=q;
+  document.getElementById('tot').textContent=(q*120).toLocaleString('it-IT')+' €';
+  document.getElementById('gift').style.display=q>=3?'inline':'none';
+}
+document.querySelectorAll('.stepper button').forEach(b=>b.onclick=()=>{q=Math.min(20,Math.max(1,q+ +b.dataset.d));calc();});
+
+/* video in fondo pagina: partono solo quando visibili */
+const vio=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;
+  if(e.isIntersecting){ if(!v.src) v.src=v.dataset.src; v.play().catch(()=>{}); } else v.pause();
+}),{threshold:.25});
+document.querySelectorAll('video[data-src]').forEach(v=>vio.observe(v));
+const fio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');fio.unobserve(e.target);}}),{threshold:.15});
+document.querySelectorAll('.fade').forEach(e=>fio.observe(e));
+
+/* bottone fisso su mobile, nascosto quando il modulo è visibile */
+const st=document.getElementById('sticky'), pr=document.getElementById('prenota');
+let pastHero=false, formVis=false;
+const upd=()=>st.classList.toggle('show',pastHero&&!formVis);
+new IntersectionObserver(([e])=>{pastHero=!e.isIntersecting;upd();}).observe(document.querySelector('.hero'));
+new IntersectionObserver(([e])=>{formVis=e.isIntersecting;upd();}).observe(pr);
+
+const f=document.getElementById('f');
+f.addEventListener('submit', async ev=>{
+  ev.preventDefault();
+  for(const el of f.querySelectorAll('[required]')){
+    if(el.type==='checkbox'?!el.checked:!el.value.trim()){ el.focus(); el.reportValidity&&el.reportValidity(); return; }
+  }
+  const d=Object.fromEntries(new FormData(f)); d.ulivi=q; d.lingua=lang; delete d.privacy;
+  const btn=document.getElementById('sub'); btn.disabled=true; btn.style.opacity=.6;
+  let ok=false;
+  if(SCRIPT_URL){
+    try{ await fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',body:new URLSearchParams(d)}); ok=true; }catch(e){}
+  }
+  if(ok){ f.style.display='none'; document.getElementById('done').style.display='block'; return; }
+  const msg=(lang==='it'
+    ? `Ciao! Vorrei prenotare ${q} ${q>1?'ulivi':'ulivo'}.\nNome: ${d.nome}\nEmail: ${d.email}\nRicezione: ${d.ritiro}`
+    : `Hi! I'd like to reserve ${q} olive tree${q>1?'s':''}.\nName: ${d.nome}\nEmail: ${d.email}\nDelivery: ${d.ritiro}`)
+    + (d.note?`\n${lang==='it'?'Note':'Notes'}: ${d.note}`:'');
+  const a=document.getElementById('wa'); a.href=`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
+  a.style.color='var(--brace2)'; a.style.fontWeight='600';
+  a.querySelector('span').textContent = lang==='it' ? 'Tocca qui per inviare la prenotazione su WhatsApp →' : 'Tap here to send your reservation on WhatsApp →';
+  btn.disabled=false; btn.style.opacity=1; a.focus();
+});
+</script>
+</body>
+</html>

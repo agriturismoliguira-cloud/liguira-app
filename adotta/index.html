@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Adotta un ulivo — Li Guira</title>
-<meta name="description" content="Adotta un ulivo a Li Guira, nel Cilento: 9 litri di olio EVO, targhetta in legno col tuo nome, certificato di adozione.">
+<title>Adotta un ulivo — Agriturismo Li Guira</title>
+<meta name="description" content="Adotta un ulivo all'Agriturismo Li Guira, a Stio nel Cilento: 9 litri di olio EVO Ostium, targhetta in legno col tuo nome, certificato di adozione.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -33,6 +33,11 @@ p.lead{font-size:clamp(18px,2.2vw,21px);color:var(--crema2);max-width:560px}
 .lang button{background:none;border:0;color:var(--crema2);font:600 12px var(--sans);letter-spacing:.08em;padding:6px 11px;border-radius:99px;cursor:pointer}
 .lang button.on{background:var(--crema);color:var(--notte)}
 
+.logo small{display:block;font-family:var(--sans);font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--crema2);margin-bottom:1px}
+footer .logo{font-size:26px}
+.ostium{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center;border-top:1px solid var(--cenere);padding-top:64px}
+.ost-mark{font-family:var(--serif);font-weight:300;font-size:clamp(40px,8vw,72px);letter-spacing:.32em;color:var(--oro);border:1px solid var(--oro);padding:26px 18px 26px 30px;line-height:1}
+@media(max-width:700px){.ostium{grid-template-columns:1fr;gap:28px}.ost-mark{justify-self:start}}
 /* hero */
 .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
 .hero video,.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -43,7 +48,7 @@ p.lead{font-size:clamp(18px,2.2vw,21px);color:var(--crema2);max-width:560px}
 .hero .wrap{position:relative;z-index:2;padding-bottom:56px;width:100%}
 .hero h1{font-size:clamp(48px,10vw,104px);margin:14px 0 18px}
 .hero h1 em{font-style:italic;color:var(--oro)}
-.cta{display:inline-flex;align-items:center;gap:10px;background:var(--brace);color:#fff;text-decoration:none;font-weight:600;font-size:16px;padding:16px 26px;border-radius:99px;border:0;cursor:pointer;transition:background .2s}
+.cta{white-space:nowrap;display:inline-flex;align-items:center;gap:10px;background:var(--brace);color:#fff;text-decoration:none;font-weight:600;font-size:16px;padding:16px 26px;border-radius:99px;border:0;cursor:pointer;transition:background .2s}
 .cta:hover{background:var(--brace2)}
 .hero .row{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:28px}
 .price-tag{font-family:var(--serif);font-size:28px}
@@ -135,7 +140,7 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
 <body>
 
 <header class="bar">
-  <a class="logo" href="#top">Li Guira</a>
+  <a class="logo" href="#top"><small>Agriturismo</small>Li Guira</a>
   <div class="lang" role="group" aria-label="Lingua">
     <button data-l="it" class="on">IT</button><button data-l="en">EN</button>
   </div>
@@ -146,12 +151,12 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
   <video class="h-tall" src="media/hero-v.mp4" poster="media/hero-v.jpg" autoplay muted loop playsinline></video>
   <img class="h-wide" src="media/cover.jpg" alt="L'uliveto di Li Guira con le montagne del Cilento">
   <div class="wrap">
-    <div class="eyebrow" data-t="hero_eye">Stio · Parco Nazionale del Cilento</div>
+    <div class="eyebrow" data-t="hero_eye">Agriturismo Li Guira · Stio, Cilento</div>
     <h1 data-t="hero_h">Adotta un <em>ulivo</em>.</h1>
-    <p class="lead" data-t="hero_p">Il tuo nome su un albero del nostro uliveto, e il suo olio a casa tua.</p>
+    <p class="lead" data-t="hero_p">Il tuo nome su un ulivo dell'Agriturismo Li Guira, e il suo olio Ostium a casa tua.</p>
     <div class="row">
       <a class="cta" href="#prenota" data-t="cta">Prenota la tua adozione</a>
-      <div class="price-tag">190 €<small data-t="hero_price">9 litri · nessun pagamento ora</small></div>
+      <div class="price-tag">200 €<small data-t="hero_price">9 litri · nessun pagamento ora</small></div>
     </div>
   </div>
 </section>
@@ -161,10 +166,21 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
     <div class="eyebrow" data-t="get_eye">Cosa ricevi</div>
     <h2 data-t="get_h">Un olio che non troverai su nessuno scaffale.</h2>
     <div class="grid4">
-      <div class="item"><div class="n">9 L</div><h3 data-t="g1h">Olio EVO del Cilento</h3><p data-t="g1p">Tre latte da 3 litri, dal raccolto 2026 dei nostri uliveti. Spedite a fine gennaio in un'unica scatola.</p></div>
+      <div class="item"><div class="n">9 L</div><h3 data-t="g1h">Olio EVO Ostium</h3><p data-t="g1p">Tre latte da 3 litri, dal raccolto 2026 dei nostri uliveti. Spedite a fine gennaio in un'unica scatola.</p></div>
       <div class="item"><div class="n">I</div><h3 data-t="g2h">Targhetta in legno</h3><p data-t="g2p">Col tuo nome, fissata sul tuo ulivo.</p></div>
       <div class="item"><div class="n">II</div><h3 data-t="g3h">Certificato di adozione</h3><p data-t="g3p">Da tenere, o da regalare.</p></div>
       <div class="item"><div class="n">III</div><h3 data-t="g4h">Il tuo ulivo nelle stagioni</h3><p data-t="g4p">Ti mandiamo le sue foto durante l'anno, dalla fioritura alla maturazione.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap fade ostium">
+    <div class="ost-mark" aria-hidden="true">OSTIUM</div>
+    <div>
+      <div class="eyebrow" data-t="os_eye">L'etichetta</div>
+      <h2 data-t="os_h">Ostium, l'olio di Stio.</h2>
+      <p class="lead" data-t="os_p">L'olio dell'Agriturismo Li Guira porta il nome di Ostium, che si ispira al nome originario di Stio: il borgo dove crescono i nostri ulivi e dove ha sede l'agriturismo.</p>
     </div>
   </div>
 </section>
@@ -202,7 +218,7 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
     <div>
       <div class="eyebrow" data-t="rit_eye">Spedizione o ritiro</div>
       <h2 data-t="rit_h">Oppure vieni a prenderlo.</h2>
-      <p class="lead" data-t="rit_p">La spedizione è a parte. Se preferisci ritirare l'olio a Li Guira, ti riserviamo uno sconto sul soggiorno: colazione al sole, il tuo ulivo a due passi.</p>
+      <p class="lead" data-t="rit_p">La spedizione è a parte. Se preferisci ritirare l'olio a Li Guira, ti riserviamo uno sconto sul soggiorno all'Agriturismo Li Guira: colazione al sole, il tuo ulivo a due passi.</p>
       <div class="bonus">
         <h3 data-t="b_h">Adotti 3 ulivi? Il weekend te lo regaliamo.</h3>
         <p data-t="b_p">Con tre adozioni ricevi un weekend a Li Guira in bassa stagione.</p>
@@ -218,10 +234,10 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
       <div>
         <div class="eyebrow" data-t="so_eye">Senza adozione</div>
         <h2 data-t="so_h">Ti basta l'olio?</h2>
-        <p class="lead" data-t="so_p">Lo stesso olio del raccolto 2026, senza targhetta e senza certificato. Spedito a fine gennaio, o da ritirare a Li Guira.</p>
+        <p class="lead" data-t="so_p">Lo stesso olio Ostium del raccolto 2026, senza targhetta e senza certificato. Spedito a fine gennaio, o da ritirare a Li Guira.</p>
       </div>
       <div class="solo-box">
-        <div class="price-tag">48 €<small data-t="so_unit">latta da 3 litri</small></div>
+        <div class="price-tag">50 €<small data-t="so_unit">latta da 3 litri</small></div>
         <a class="cta ghost" href="#prenota" data-pick="olio" data-t="so_btn">Prenota l'olio</a>
       </div>
     </div>
@@ -237,8 +253,8 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
 
     <form id="f" novalidate>
       <div class="pick" role="radiogroup">
-        <button type="button" class="on" data-tipo="adozione"><b data-t="t_ad">Adozione</b><small data-t="t_ad_s">3 latte da 3 L · targhetta · certificato · 190 €</small></button>
-        <button type="button" data-tipo="olio"><b data-t="t_ol">Solo olio</b><small data-t="t_ol_s">latta da 3 L · 48 €</small></button>
+        <button type="button" class="on" data-tipo="adozione"><b data-t="t_ad">Adozione</b><small data-t="t_ad_s">3 latte da 3 L · targhetta · certificato · 200 €</small></button>
+        <button type="button" data-tipo="olio"><b data-t="t_ol">Solo olio</b><small data-t="t_ol_s">latta da 3 L · 50 €</small></button>
       </div>
       <div class="two">
         <label><span data-t="l_nome">Nome e cognome</span><input name="nome" required autocomplete="name"></label>
@@ -247,7 +263,7 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
       <label><span data-t="l_email">Email</span><input name="email" type="email" required autocomplete="email"></label>
       <label><span id="qlab" data-t="l_ulivi">Quanti ulivi</span>
         <div class="stepper"><button type="button" data-d="-1" aria-label="meno">−</button><output id="qn">1</output><button type="button" data-d="1" aria-label="più">+</button></div>
-        <span class="total"><span data-t="l_tot">Totale indicativo</span>: <b id="tot">190 €</b> <span class="gift" id="gift" data-t="l_gift">· weekend in omaggio</span></span>
+        <span class="total"><span data-t="l_tot">Totale indicativo</span>: <b id="tot">200 €</b> <span class="gift" id="gift" data-t="l_gift">· weekend in omaggio</span></span>
       </label>
       <label><span data-t="l_rit">Come vuoi ricevere l'olio</span>
         <select name="ritiro">
@@ -275,7 +291,7 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
     <div class="eyebrow" data-t="faq_eye">Domande</div>
     <h2 data-t="faq_h">Prima che tu ce lo chieda.</h2>
     <details><summary data-t="q1">Devo pagare adesso?</summary><p data-t="a1">No. Ora prenoti soltanto. Ti scriviamo per confermare e ti mandiamo i dati per il pagamento.</p></details>
-    <details><summary data-t="q6">Posso comprare solo l'olio?</summary><p data-t="a6">Sì: la latta da 3 litri costa 48 €, ed è lo stesso olio del raccolto 2026. Scegli "Solo olio" nel modulo. Per le bottiglie da 0,75 litri scrivici su WhatsApp.</p></details>
+    <details><summary data-t="q6">Posso comprare solo l'olio?</summary><p data-t="a6">Sì: la latta da 3 litri costa 50 €, ed è lo stesso olio Ostium del raccolto 2026. Scegli "Solo olio" nel modulo. Per le bottiglie da 0,75 litri scrivici su WhatsApp.</p></details>
     <details><summary data-t="q2">Quando arriva l'olio?</summary><p data-t="a2">Spediamo a fine gennaio. Se scegli il ritiro, lo prendi quando vieni a Li Guira.</p></details>
     <details><summary data-t="q3">Posso regalarlo?</summary><p data-t="a3">Sì. Scrivi nelle note il nome da mettere sulla targhetta e sul certificato: possiamo intestarli a chi vuoi.</p></details>
     <details><summary data-t="q4">Quanto costa la spedizione?</summary><p data-t="a4">Dipende dalla destinazione. Te lo diciamo prima della conferma, così decidi con il prezzo completo.</p></details>
@@ -286,8 +302,8 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
 
 <footer>
   <div class="wrap">
-    <span class="logo">Li Guira</span>
-    Agriturismo · Stio (SA) · Parco Nazionale del Cilento<br>
+    <span class="logo">Agriturismo Li Guira</span>
+    Stio (SA) · Parco Nazionale del Cilento · Olio EVO Ostium<br>
     WhatsApp 320 146 4485 · <a href="https://www.liguira.it">liguira.it</a>
   </div>
 </footer>
@@ -300,14 +316,15 @@ const SCRIPT_URL = "";
 const WA = "393201464485";
 
 const T = { en: {
- hero_eye:"Stio · Cilento National Park", hero_h:"Adopt an <em>olive tree</em>.",
- hero_p:"Your name on a tree in our grove, and its oil delivered to your home.",
+ hero_eye:"Agriturismo Li Guira · Stio, Cilento", hero_h:"Adopt an <em>olive tree</em>.",
+ hero_p:"Your name on an olive tree at Agriturismo Li Guira, and its Ostium oil delivered to your home.",
  cta:"Reserve your tree", hero_price:"9 litres · no payment now",
  get_eye:"What you get", get_h:"An oil you won't find on any shelf.",
- g1h:"Cilento extra virgin olive oil", g1p:"Three 3-litre tins from our groves' 2026 harvest. Shipped together at the end of January.",
+ g1h:"Ostium extra virgin olive oil", g1p:"Three 3-litre tins from our groves' 2026 harvest. Shipped together at the end of January.",
  g2h:"Wooden name plate", g2p:"With your name, fixed to your tree.",
  g3h:"Adoption certificate", g3p:"To keep, or to give as a gift.",
  g4h:"Your tree through the seasons", g4p:"We send you photos of it during the year, from blossom to ripening.",
+ os_eye:"The label", os_h:"Ostium, the oil of Stio.", os_p:"Agriturismo Li Guira's oil is called Ostium, a name inspired by the original name of Stio: the village where our olive trees grow and where the farm stands.",
  fil_eye:"2026 harvest", fil_h:"From the grove to the mill, the same night.",
  fil_p:"Olives picked by day reach the mill in the evening. The oil you receive is this one, no other.",
  c1:"Freshly arrived olives", c2:"Olives on the sieve", c3:"The new oil",
@@ -316,11 +333,11 @@ const T = { en: {
  s2h:"We get in touch", s2p:"By WhatsApp or email, to confirm the adoption and the name on the plate.",
  s3h:"You pay and receive", s3p:"You pay after confirmation. At the end of January we ship the oil with the certificate, and the plate goes on your tree.",
  rit_eye:"Shipping or pick-up", rit_h:"Or come and collect it.",
- rit_p:"Shipping is extra. If you'd rather collect the oil at Li Guira, we'll give you a discount on your stay: breakfast in the sun, your tree a few steps away.",
+ rit_p:"Shipping is extra. If you'd rather collect the oil at Li Guira, we'll give you a discount on your stay at Agriturismo Li Guira: breakfast in the sun, your tree a few steps away.",
  b_h:"Adopt 3 trees and the weekend is on us.", b_p:"With three adoptions you get a low-season weekend at Li Guira.",
- so_eye:"Without adoption", so_h:"Just the oil?", so_p:"The same oil from the 2026 harvest, without plate or certificate. Shipped at the end of January, or collected at Li Guira.", so_unit:"3-litre tin", bt_p:"Looking for 0.75-litre bottles?", bt_a:"Message us on WhatsApp →", so_btn:"Reserve the oil",
- t_ad:"Adoption", t_ad_s:"three 3 L tins · plate · certificate · €190", t_ol:"Oil only", t_ol_s:"3 L tin · €48",
- q6:"Can I buy just the oil?", a6:"Yes: a 3-litre tin costs €48, the same oil from the 2026 harvest. Choose \"Oil only\" in the form. For 0.75-litre bottles, message us on WhatsApp.",
+ so_eye:"Without adoption", so_h:"Just the oil?", so_p:"The same Ostium oil from the 2026 harvest, without plate or certificate. Shipped at the end of January, or collected at Li Guira.", so_unit:"3-litre tin", bt_p:"Looking for 0.75-litre bottles?", bt_a:"Message us on WhatsApp →", so_btn:"Reserve the oil",
+ t_ad:"Adoption", t_ad_s:"three 3 L tins · plate · certificate · €200", t_ol:"Oil only", t_ol_s:"3 L tin · €50",
+ q6:"Can I buy just the oil?", a6:"Yes: a 3-litre tin costs €50, the same Ostium oil from the 2026 harvest. Choose \"Oil only\" in the form. For 0.75-litre bottles, message us on WhatsApp.",
  f_eye:"Reservation", f_h:"Reserve your tree, or your oil.", f_p:"Limited to the 2026 harvest. No payment now.",
  l_nome:"Full name", l_tel:"WhatsApp", l_email:"Email", l_ulivi:"How many trees",
  l_tot:"Estimated total", l_gift:"· free weekend included", l_rit:"How you'd like to receive the oil",
@@ -348,7 +365,7 @@ function setLang(l){
 document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
 
 let q=1, tipo='adozione';
-const PREZZO={adozione:190, olio:48};
+const PREZZO={adozione:200, olio:50};
 const QLAB={adozione:{it:'Quanti ulivi',en:'How many trees'}, olio:{it:'Quante latte da 3 L',en:'How many 3 L tins'}};
 function calc(){
   document.getElementById('qn').textContent=q;

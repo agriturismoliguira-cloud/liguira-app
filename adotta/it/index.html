@@ -182,7 +182,7 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
     <div class="eyebrow" data-t="get_eye">Cosa ricevi</div>
     <h2 data-t="get_h">Un olio che non troverai su nessuno scaffale.</h2>
     <div class="grid4">
-      <div class="item"><div class="n">9 L</div><h3 data-t="g1h">Olio EVO Ostium</h3><p data-t="g1p">Tre latte da 3 litri dal raccolto 2026 dei nostri uliveti, spedite a fine gennaio (12 € a scatola) o da ritirare a Li Guira.</p></div>
+      <div class="item"><div class="n">9 L</div><h3 data-t="g1h">Olio EVO Ostium</h3><p data-t="g1p">Tre latte da 3 litri dal raccolto 2026 dei nostri uliveti, spedite a fine gennaio (spedizione calcolata sul quantitativo) o da ritirare a Li Guira.</p></div>
       <div class="item"><div class="n">I</div><h3 data-t="g2h">Targhetta in legno</h3><p data-t="g2p">Col tuo nome, fissata sul tuo ulivo.</p></div>
       <div class="item"><div class="n">II</div><h3 data-t="g3h">Certificato di adozione</h3><p data-t="g3p">Da tenere, o da regalare.</p></div>
       <div class="item"><div class="n">III</div><h3 data-t="g4h">Il tuo ulivo nelle stagioni</h3><p data-t="g4p">Ti mandiamo le sue foto durante l'anno, dalla fioritura alla maturazione.</p></div>
@@ -256,7 +256,7 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
         <p class="terms" data-t="so_ad">Hai adottato un ulivo? Per te la latta costa 44,10 € invece di 49 €.</p>
       </div>
       <div class="solo-box">
-        <div class="price-tag">49 €<small data-t="so_unit">per latta da 3 litri · spedizione 12 € ogni 3 latte</small></div>
+        <div class="price-tag">49 €<small data-t="so_unit">per latta da 3 litri · spedizione da calcolare</small></div>
         <a class="cta ghost" href="#prenota" data-pick="olio" data-t="so_btn">Prenota l'olio</a>
       </div>
     </div>
@@ -286,7 +286,7 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
       </label>
       <label><span data-t="l_rit">Consegna</span>
         <select name="ritiro">
-          <option value="Spedizione" data-t="o_sped">Spedizione a casa (12 € ogni 3 latte)</option>
+          <option value="Spedizione" data-t="o_sped">Spedizione a casa (da calcolare sul quantitativo)</option>
           <option value="Ritiro a Li Guira" data-t="o_rit">Ritiro a Li Guira (senza spedizione)</option>
           <option value="Da decidere" data-t="o_dec">Decido più avanti</option>
         </select>
@@ -314,7 +314,7 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
     <details><summary data-t="q6">Posso comprare solo l'olio?</summary><p data-t="a6">Sì: la latta da 3 litri costa 49 €, ed è lo stesso olio Ostium del raccolto 2026. Scegli "Solo olio" nel modulo e indica quante latte vuoi. Per le bottiglie da 0,75 litri scrivici su WhatsApp.</p></details>
     <details><summary data-t="q2">Quando arriva l'olio?</summary><p data-t="a2">Spediamo a fine gennaio. Se scegli il ritiro, lo prendi quando vieni a Li Guira.</p></details>
     <details><summary data-t="q3">Posso regalarlo?</summary><p data-t="a3">Sì. Scrivi nelle note il nome da mettere sulla targhetta e sul certificato: possiamo intestarli a chi vuoi.</p></details>
-    <details><summary data-t="q4">Quanto costa la spedizione?</summary><p data-t="a4">12 € per ogni scatola da 3 latte, in Italia continentale. Per le isole te lo confermiamo prima, così decidi con il prezzo completo. Se preferisci, ritiri a Li Guira senza spese.</p></details>
+    <details><summary data-t="q4">Quanto costa la spedizione?</summary><p data-t="a4">Si calcola sul quantitativo (le latte viaggiano in scatole da 3) e sulla destinazione. Te la comunichiamo prima della conferma, così decidi con il prezzo completo. Se preferisci, ritiri a Li Guira senza spese.</p></details>
     <details><summary data-t="q7">Come funziona lo sconto sul soggiorno?</summary><p data-t="a7">Ogni ulivo adottato dà diritto a uno sconto del 10% su un soggiorno all'Agriturismo Li Guira prenotato direttamente con noi (WhatsApp o sito): minimo 2 notti, nel 2027, escluso agosto e ponti. Non è cumulabile con altre promozioni e non vale per l'acquisto del solo olio.</p></details>
     <details><summary data-t="q8">Ho adottato un ulivo: posso comprare altro olio?</summary><p data-t="a8">Sì, con il 10% di sconto: la latta ti costa 44,10 € invece di 49 €. Vale per tutto il 2027, fino a esaurimento dell'olio del raccolto.</p></details>
     <details><summary data-t="q5">Come funziona il weekend omaggio?</summary><p data-t="a5">Adottando tre ulivi ricevi un weekend a Li Guira in bassa stagione. Date e alloggio li concordiamo insieme. Il weekend si aggiunge agli sconti: tieni i tre sconti del 10% sul soggiorno e il 10% sull'olio.</p></details>
@@ -347,9 +347,8 @@ const QLAB={adozione:{it:'Quanti ulivi',en:'How many trees',de:'Wie viele Bäume
 function calc(){
   document.getElementById('qn').textContent=q;
   const sel=document.querySelector('[name=ritiro]');
-  const box=tipo==='adozione'?q:Math.ceil(q/3);
-  const sped=(sel&&sel.value==='Spedizione')?12*box:0;
-  document.getElementById('tot').textContent=(q*PREZZO[tipo]).toLocaleString('it-IT')+' €'+(sped?' + '+sped+' € di spedizione':'');
+  const sped=(sel&&sel.value==='Spedizione');
+  document.getElementById('tot').textContent=(q*PREZZO[tipo]).toLocaleString('it-IT')+' €'+(sped?' + spedizione da calcolare':'');
   document.getElementById('gift').style.display=(tipo==='adozione'&&q>=3)?'inline':'none';
   document.getElementById('qlab').textContent=QLAB[tipo].it;
 }

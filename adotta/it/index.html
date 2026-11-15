@@ -381,7 +381,7 @@ f.addEventListener('submit', async ev=>{
   for(const el of f.querySelectorAll('[required]')){
     if(el.type==='checkbox'?!el.checked:!el.value.trim()){ el.focus(); el.reportValidity&&el.reportValidity(); return; }
   }
-  const d=Object.fromEntries(new FormData(f)); d.tipo=tipo==='adozione'?'Adozione 9 L (3 latte da 3 L) 195 €':'Latta olio 3 L 49 € (qtà in ulivi/latte)'; const rs=f.querySelector('[name=ritiro]'), ps=f.querySelector('[name=paese]'); d.ritiro=d.ritiro+' · '+d.paese; const ritTxt=rs.options[rs.selectedIndex].text+' · '+ps.options[ps.selectedIndex].text; d.ulivi=q; d.lingua=lang; delete d.privacy;
+  const d=Object.fromEntries(new FormData(f)); d.tipo=tipo==='adozione'?'Adozione 9 L (3 latte da 3 L) 195 €':'Latta olio 3 L 49 € (qtà in ulivi/latte)'; const rs=f.querySelector('[name=ritiro]'), ps=f.querySelector('[name=paese]'); d.ritiro=d.ritiro+' · '+d.paese; const ritTxt=rs.options[rs.selectedIndex].text+' · Italia'; d.ulivi=q; d.lingua=lang; delete d.privacy;
   const btn=document.getElementById('sub'); btn.disabled=true; btn.style.opacity=.6;
   let ok=false;
   if(SCRIPT_URL){

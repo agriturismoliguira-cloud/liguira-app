@@ -336,7 +336,7 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
 
 <script>
 /* Incolla qui l'URL della Web App di Apps Script collegata allo Sheet. Vuoto = invio via WhatsApp. */
-const SCRIPT_URL = "";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwG5-42SvV7tvxNSJtxfLKyZA1-oRZf9tKGdrxS3zVwqEYal04pBAAoZSvrogZASn5F/exec";
 const WA = "393201464485";
 
 let lang = 'it';
@@ -381,7 +381,7 @@ f.addEventListener('submit', async ev=>{
   for(const el of f.querySelectorAll('[required]')){
     if(el.type==='checkbox'?!el.checked:!el.value.trim()){ el.focus(); el.reportValidity&&el.reportValidity(); return; }
   }
-  const d=Object.fromEntries(new FormData(f)); d.tipo=tipo==='adozione'?'Adozione 9 L (3 latte da 3 L) 195 €':'Latta olio 3 L 49 € (qtà in ulivi/latte)'; const rs=f.querySelector('[name=ritiro]'), ps=f.querySelector('[name=paese]'); d.ritiro=d.ritiro+' · '+d.paese; const ritTxt=rs.options[rs.selectedIndex].text+' · Italia'; d.ulivi=q; d.lingua=lang; delete d.privacy;
+  const d=Object.fromEntries(new FormData(f)); d.tipo=tipo==='adozione'?'Adozione 9 L (3 latte da 3 L) 195 €':'Latta olio 3 L 49 € (qtà = n. latte)'; const rs=f.querySelector('[name=ritiro]'), ps=f.querySelector('[name=paese]'); d.ritiro=d.ritiro+' · '+d.paese; const ritTxt=rs.options[rs.selectedIndex].text+' · Italia'; d.ulivi=q; d.lingua=lang; delete d.privacy;
   const btn=document.getElementById('sub'); btn.disabled=true; btn.style.opacity=.6;
   let ok=false;
   if(SCRIPT_URL){

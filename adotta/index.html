@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="de">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Adotta un ulivo — Agriturismo Li Guira</title>
-<meta name="description" content="Adotta un ulivo all'Agriturismo Li Guira, a Stio nel Cilento: 9 litri di olio EVO Ostium, targhetta in legno col tuo nome, certificato di adozione.">
+<title>Ihr eigener Olivenbaum — Agriturismo Li Guira</title>
+<meta name="description" content="Adoptieren Sie einen Olivenbaum im Cilento: 9 Liter natives Olivenöl extra Ostium, nach Hause geliefert, mit Namensschild und Urkunde. Adopt an olive tree at Agriturismo Li Guira, Italy.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -123,6 +123,9 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--brace)}
 
 .solo{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:28px;border-top:1px solid var(--cenere);padding-top:56px}
 .solo-box{display:flex;align-items:center;gap:22px}
+.check a{color:var(--brace2)}
+footer a{color:var(--crema2)}
+.todo-f{color:var(--oro)}
 .terms{font-size:13.5px;color:var(--crema2);opacity:.8;margin-top:14px;max-width:520px}
 .bottiglie{margin-top:22px;color:var(--crema2);font-size:15.5px}
 .bottiglie a{color:var(--brace2);font-weight:600;text-decoration:none}
@@ -154,8 +157,8 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
 
 <header class="bar">
   <a class="logo" href="#top"><small>Agriturismo</small>Li Guira</a>
-  <div class="lang" role="group" aria-label="Lingua">
-    <button data-l="it" class="on">IT</button><button data-l="en">EN</button>
+  <div class="lang" role="group" aria-label="Sprache / Language">
+    <button data-l="de" class="on">DE</button><button data-l="en">EN</button>
   </div>
 </header>
 
@@ -169,11 +172,10 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
     <p class="h1b" data-t="hero_h2">O porta a casa il suo olio.</p>
     <p class="lead" data-t="hero_p">Olio EVO Ostium dell'Agriturismo Li Guira, raccolto 2026. Con l'adozione, anche il tuo nome sull'ulivo.</p>
     <div class="row choices">
-      <a class="choice main" href="#prenota" data-pick="adozione"><b data-t="hc1">Adotta un ulivo</b><span data-t="hc1s">200 € · 9 litri · targhetta e sconti</span></a>
-      <a class="choice" href="#prenota" data-pick="olio"><b data-t="hc2">Compra l'olio</b><span data-t="hc2s">50 € · latta da 3 litri</span></a>
+      <a class="choice main" href="#prenota" data-pick="adozione"><b data-t="hc1">Adotta un ulivo</b><span data-t="hc1s">249 € · 9 litri · consegna inclusa</span></a>
+      <a class="choice" href="#prenota" data-pick="olio"><b data-t="hc2">Box olio</b><span data-t="hc2s">199 € · 3 latte da 3 litri · consegna inclusa</span></a>
     </div>
     <p class="hero-note" data-t="hero_price">Prenoti ora, nessun pagamento finché non confermiamo.</p>
-    </div>
   </div>
 </section>
 
@@ -182,7 +184,7 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
     <div class="eyebrow" data-t="get_eye">Cosa ricevi</div>
     <h2 data-t="get_h">Un olio che non troverai su nessuno scaffale.</h2>
     <div class="grid4">
-      <div class="item"><div class="n">9 L</div><h3 data-t="g1h">Olio EVO Ostium</h3><p data-t="g1p">Tre latte da 3 litri, dal raccolto 2026 dei nostri uliveti. Spedite a fine gennaio in un'unica scatola.</p></div>
+      <div class="item"><div class="n">9 L</div><h3 data-t="g1h">Olio EVO Ostium</h3><p data-t="g1p">Tre latte da 3 litri dal raccolto 2026 dei nostri uliveti, consegnate a casa tua a fine gennaio in un'unica scatola.</p></div>
       <div class="item"><div class="n">I</div><h3 data-t="g2h">Targhetta in legno</h3><p data-t="g2p">Col tuo nome, fissata sul tuo ulivo.</p></div>
       <div class="item"><div class="n">II</div><h3 data-t="g3h">Certificato di adozione</h3><p data-t="g3p">Da tenere, o da regalare.</p></div>
       <div class="item"><div class="n">III</div><h3 data-t="g4h">Il tuo ulivo nelle stagioni</h3><p data-t="g4p">Ti mandiamo le sue foto durante l'anno, dalla fioritura alla maturazione.</p></div>
@@ -235,7 +237,7 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
     <div>
       <div class="eyebrow" data-t="rit_eye">Vieni a trovarlo</div>
       <h2 data-t="rit_h">Il tuo ulivo ti aspetta.</h2>
-      <p class="lead" data-t="rit_p">Ogni adozione include uno sconto del 10% su un soggiorno all'Agriturismo Li Guira, prenotato direttamente con noi. Colazione al sole, il tuo ulivo a due passi, e se vuoi ritiri l'olio senza spese di spedizione.</p>
+      <p class="lead" data-t="rit_p">Ogni adozione include uno sconto del 10% su un soggiorno all'Agriturismo Li Guira, prenotato direttamente con noi. Colazione al sole, il tuo ulivo a due passi, e se vuoi ritiri l'olio di persona.</p>
       <p class="terms" data-t="rit_t">Minimo 2 notti, valido nel 2027 escluso agosto e ponti. Uno sconto per adozione, non cumulabile con altre promozioni.</p>
       <div class="bonus">
         <h3 data-t="b_h">Adotti 3 ulivi? Il weekend te lo regaliamo.</h3>
@@ -252,12 +254,12 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
       <div>
         <div class="eyebrow" data-t="so_eye">Senza adozione</div>
         <h2 data-t="so_h">Ti basta l'olio?</h2>
-        <p class="lead" data-t="so_p">Lo stesso olio Ostium del raccolto 2026, senza targhetta e senza certificato. Spedito a fine gennaio, o da ritirare a Li Guira.</p>
-        <p class="terms" data-t="so_ad">Hai adottato un ulivo? Per te la latta costa 45 € invece di 50 €.</p>
+        <p class="lead" data-t="so_p">Lo stesso olio Ostium del raccolto 2026, in una box da tre latte da 3 litri, senza targhetta e senza certificato. Consegna a fine gennaio inclusa.</p>
+        <p class="terms" data-t="so_ad">Hai adottato un ulivo? Per te la box costa 179 € invece di 199 €.</p>
       </div>
       <div class="solo-box">
-        <div class="price-tag">50 €<small data-t="so_unit">latta da 3 litri</small></div>
-        <a class="cta ghost" href="#prenota" data-pick="olio" data-t="so_btn">Prenota l'olio</a>
+        <div class="price-tag">199 €<small data-t="so_unit">3 latte da 3 litri · consegna inclusa</small></div>
+        <a class="cta ghost" href="#prenota" data-pick="olio" data-t="so_btn">Prenota la box</a>
       </div>
     </div>
     <p class="bottiglie"><span data-t="bt_p">Cerchi le bottiglie da 0,75 litri?</span> <a id="bt" href="https://wa.me/393201464485?text=Ciao%21%20Vorrei%20informazioni%20sulle%20bottiglie%20d%27olio%20da%200%2C75%20L." data-t="bt_a">Scrivici su WhatsApp →</a></p>
@@ -272,8 +274,8 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
 
     <form id="f" novalidate>
       <div class="pick" role="radiogroup">
-        <button type="button" class="on" data-tipo="adozione"><b data-t="t_ad">Adozione</b><small data-t="t_ad_s">3 latte da 3 L · targhetta · certificato · 200 €</small></button>
-        <button type="button" data-tipo="olio"><b data-t="t_ol">Solo olio</b><small data-t="t_ol_s">latta da 3 L · 50 €</small></button>
+        <button type="button" class="on" data-tipo="adozione"><b data-t="t_ad">Adozione</b><small data-t="t_ad_s">3 latte da 3 L · targhetta · certificato · 249 €</small></button>
+        <button type="button" data-tipo="olio"><b data-t="t_ol">Box olio</b><small data-t="t_ol_s">3 latte da 3 L · 199 €</small></button>
       </div>
       <div class="two">
         <label><span data-t="l_nome">Nome e cognome</span><input name="nome" required autocomplete="name"></label>
@@ -282,18 +284,25 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
       <label><span data-t="l_email">Email</span><input name="email" type="email" required autocomplete="email"></label>
       <label><span id="qlab" data-t="l_ulivi">Quanti ulivi</span>
         <div class="stepper"><button type="button" data-d="-1" aria-label="meno">−</button><output id="qn">1</output><button type="button" data-d="1" aria-label="più">+</button></div>
-        <span class="total"><span data-t="l_tot">Totale indicativo</span>: <b id="tot">200 €</b> <span class="gift" id="gift" data-t="l_gift">· weekend in omaggio</span></span>
+        <span class="total"><span data-t="l_tot">Totale indicativo</span>: <b id="tot">249 €</b> <span class="gift" id="gift" data-t="l_gift">· weekend in omaggio</span></span>
       </label>
-      <label><span data-t="l_rit">Come vuoi ricevere l'olio</span>
+      <label><span data-t="l_rit">Consegna</span>
         <select name="ritiro">
-          <option value="Spedizione" data-t="o_sped">Spedizione (costo a parte)</option>
-          <option value="Ritiro a Li Guira" data-t="o_rit">Ritiro a Li Guira (senza spedizione)</option>
+          <option value="Consegna a casa" data-t="o_sped">A casa, consegna inclusa</option>
+          <option value="Ritiro a Li Guira" data-t="o_rit">Ritiro a Li Guira</option>
           <option value="Da decidere" data-t="o_dec">Decido più avanti</option>
         </select>
       </label>
+      <label><span data-t="l_paese">Paese di consegna</span>
+        <select name="paese">
+          <option>Deutschland</option><option>Österreich</option><option>Nederland</option><option>België / Belgique</option><option>Italia</option>
+          <option value="Schweiz" data-t="o_ch">Svizzera (su richiesta)</option>
+          <option value="Altro" data-t="o_altro">Altro Paese (su richiesta)</option>
+        </select>
+      </label>
       <label><span data-t="l_note">Nome sulla targhetta o note</span><textarea name="note" rows="3"></textarea></label>
-      <label class="check"><input type="checkbox" name="privacy" required><span data-t="l_priv">Acconsento all'uso dei miei dati solo per gestire questa prenotazione.</span></label>
-      <p class="note" data-t="f_note">La prenotazione non è vincolante. Ti contattiamo noi per confermare; il pagamento avviene solo dopo la conferma.</p>
+      <label class="check"><input type="checkbox" name="privacy" required><span data-t="l_priv">Ho letto l'<a href="privacy.html">informativa privacy</a> e le <a href="condizioni.html">condizioni di vendita</a>.</span></label>
+      <p class="note" data-t="f_note">La prenotazione non è vincolante. Confermiamo in ordine di arrivo e ti contattiamo noi; il pagamento avviene solo dopo la conferma. Se l'olio finisce prima della conferma, ti avvisiamo: non paghi nulla e puoi restare in lista d'attesa.</p>
       <div><button class="cta" type="submit" id="sub" data-t="f_btn">Invia la prenotazione</button></div>
       <a class="wa" href="https://wa.me/393201464485" id="wa"><span data-t="f_wa">Preferisci scriverci? WhatsApp</span> 320 146 4485</a>
     </form>
@@ -310,12 +319,12 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
     <div class="eyebrow" data-t="faq_eye">Domande</div>
     <h2 data-t="faq_h">Prima che tu ce lo chieda.</h2>
     <details><summary data-t="q1">Devo pagare adesso?</summary><p data-t="a1">No. Ora prenoti soltanto. Ti scriviamo per confermare e ti mandiamo i dati per il pagamento.</p></details>
-    <details><summary data-t="q6">Posso comprare solo l'olio?</summary><p data-t="a6">Sì: la latta da 3 litri costa 50 €, ed è lo stesso olio Ostium del raccolto 2026. Scegli "Solo olio" nel modulo. Per le bottiglie da 0,75 litri scrivici su WhatsApp.</p></details>
-    <details><summary data-t="q2">Quando arriva l'olio?</summary><p data-t="a2">Spediamo a fine gennaio. Se scegli il ritiro, lo prendi quando vieni a Li Guira.</p></details>
+    <details><summary data-t="q6">Posso comprare solo l'olio?</summary><p data-t="a6">Sì: la box da tre latte da 3 litri costa 199 €, consegna inclusa, ed è lo stesso olio Ostium del raccolto 2026. Scegli "Box olio" nel modulo. Per le bottiglie da 0,75 litri scrivici su WhatsApp.</p></details>
+    <details><summary data-t="q2">Quando arriva l'olio?</summary><p data-t="a2">Spediamo a fine gennaio, consegna inclusa. Se scegli il ritiro, lo prendi quando vieni a Li Guira.</p></details>
     <details><summary data-t="q3">Posso regalarlo?</summary><p data-t="a3">Sì. Scrivi nelle note il nome da mettere sulla targhetta e sul certificato: possiamo intestarli a chi vuoi.</p></details>
-    <details><summary data-t="q4">Quanto costa la spedizione?</summary><p data-t="a4">Dipende dalla destinazione. Te lo diciamo prima della conferma, così decidi con il prezzo completo.</p></details>
+    <details><summary data-t="q4">La consegna è inclusa?</summary><p data-t="a4">Sì, in Germania, Austria, Paesi Bassi, Belgio e Italia. Per la Svizzera e gli altri Paesi scrivici: ti diciamo costi e tempi.</p></details>
     <details><summary data-t="q7">Come funziona lo sconto sul soggiorno?</summary><p data-t="a7">Ogni ulivo adottato dà diritto a uno sconto del 10% su un soggiorno all'Agriturismo Li Guira prenotato direttamente con noi (WhatsApp o sito): minimo 2 notti, nel 2027, escluso agosto e ponti. Non è cumulabile con altre promozioni e non vale per l'acquisto del solo olio.</p></details>
-    <details><summary data-t="q8">Ho adottato un ulivo: posso comprare altro olio?</summary><p data-t="a8">Sì, con il 10% di sconto: la latta da 3 litri ti costa 45 € invece di 50 €. Vale per tutto il 2027, fino a esaurimento dell'olio del raccolto.</p></details>
+    <details><summary data-t="q8">Ho adottato un ulivo: posso comprare altro olio?</summary><p data-t="a8">Sì, con il 10% di sconto: la box ti costa 179 € invece di 199 €. Vale per tutto il 2027, fino a esaurimento dell'olio del raccolto.</p></details>
     <details><summary data-t="q5">Come funziona il weekend omaggio?</summary><p data-t="a5">Adottando tre ulivi ricevi un weekend a Li Guira in bassa stagione. Date e alloggio li concordiamo insieme. Il weekend si aggiunge agli sconti: tieni i tre sconti del 10% sul soggiorno e il 10% sull'olio.</p></details>
   </div>
 </section>
@@ -325,7 +334,9 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
   <div class="wrap">
     <span class="logo">Agriturismo Li Guira</span>
     Stio (SA) · Parco Nazionale del Cilento · Olio EVO Ostium<br>
-    WhatsApp 320 146 4485 · <a href="https://www.liguira.it">liguira.it</a>
+    WhatsApp 320 146 4485 · <a href="https://www.liguira.it">liguira.it</a><br>
+    <span class="todo-f">[ragione sociale] · P.IVA [numero] · PEC [indirizzo]</span><br>
+    <a href="condizioni.html" data-t="ft_cond">Condizioni di vendita</a> · <a href="privacy.html">Privacy</a>
   </div>
 </footer>
 
@@ -336,62 +347,226 @@ footer .logo{font-size:26px;color:var(--crema);display:block;margin-bottom:8px}
 const SCRIPT_URL = "";
 const WA = "393201464485";
 
-const T = { en: {
- hero_eye:"Agriturismo Li Guira · Stio, Cilento", hero_h:"Adopt an <em>olive tree</em>.", hero_h2:"Or take its oil home.",
- hero_p:"Ostium extra virgin olive oil from Agriturismo Li Guira, 2026 harvest. With an adoption, your name on the tree too.",
- hc1:"Adopt a tree", hc1s:"€200 · 9 litres · plate and discounts", hc2:"Buy the oil", hc2s:"€50 · 3-litre tin",
- cta:"Reserve your tree", hero_price:"Reserve now, no payment until we confirm.",
- get_eye:"What you get", get_h:"An oil you won't find on any shelf.",
- g1h:"Ostium extra virgin olive oil", g1p:"Three 3-litre tins from our groves' 2026 harvest. Shipped together at the end of January.",
- g2h:"Wooden name plate", g2p:"With your name, fixed to your tree.",
- g3h:"Adoption certificate", g3p:"To keep, or to give as a gift.",
- g4h:"Your tree through the seasons", g4p:"We send you photos of it during the year, from blossom to ripening.", g5h:"Exclusive discounts", g5p:"10% off a stay at Agriturismo Li Guira and 10% off the Ostium oil you buy during the year.",
- os_eye:"The label", os_h:"Ostium, the oil of Stio.", os_p:"Agriturismo Li Guira's oil is called Ostium, a name inspired by the original name of Stio: the village where our olive trees grow and where the farm stands.",
- fil_eye:"2026 harvest", fil_h:"From the grove to the mill, the same night.",
- fil_p:"Olives picked by day reach the mill in the evening. The oil you receive is this one, no other.",
- c1:"Olives on the sieve", c2:"Milling", c3:"The new oil",
- how_eye:"How it works", how_h:"Reserve now. Pay only once we confirm.",
- s1h:"You reserve", s1p:"Fill in the form below. No payment, no commitment.",
- s2h:"We get in touch", s2p:"By WhatsApp or email, to confirm the adoption and the name on the plate.",
- s3h:"You pay and receive", s3p:"You pay after confirmation. At the end of January we ship the oil with the certificate, and the plate goes on your tree.",
- rit_eye:"Come and visit", rit_h:"Your tree is waiting.",
- rit_p:"Every adoption includes a 10% discount on a stay at Agriturismo Li Guira, booked directly with us. Breakfast in the sun, your tree a few steps away, and you can collect the oil with no shipping cost.",
- rit_t:"Minimum 2 nights, valid in 2027 except August and Italian bank-holiday weekends. One discount per adoption, not combinable with other offers.",
- b_h:"Adopt 3 trees and the weekend is on us.", b_p:"With three adoptions you get a low-season weekend at Li Guira, and you keep the three 10% stay discounts and the oil discount too.",
- so_eye:"Without adoption", so_h:"Just the oil?", so_p:"The same Ostium oil from the 2026 harvest, without plate or certificate. Shipped at the end of January, or collected at Li Guira.", so_unit:"3-litre tin", so_ad:"Adopted a tree? For you the tin is €45 instead of €50.", bt_p:"Looking for 0.75-litre bottles?", bt_a:"Message us on WhatsApp →", so_btn:"Reserve the oil",
- t_ad:"Adoption", t_ad_s:"three 3 L tins · plate · certificate · €200", t_ol:"Oil only", t_ol_s:"3 L tin · €50",
- q6:"Can I buy just the oil?", a6:"Yes: a 3-litre tin costs €50, the same Ostium oil from the 2026 harvest. Choose \"Oil only\" in the form. For 0.75-litre bottles, message us on WhatsApp.",
- f_eye:"Reservation", f_h:"Reserve your tree, or your oil.", f_p:"Limited to the 2026 harvest. No payment now.",
- l_nome:"Full name", l_tel:"WhatsApp", l_email:"Email", l_ulivi:"How many trees",
- l_tot:"Estimated total", l_gift:"· free weekend included", l_rit:"How you'd like to receive the oil",
- o_sped:"Shipping (extra cost)", o_rit:"Pick-up at Li Guira (no shipping)", o_dec:"I'll decide later",
- l_note:"Name for the plate, or notes", l_priv:"I agree to my data being used only to handle this reservation.",
- f_note:"The reservation is not binding. We'll contact you to confirm; payment happens only after confirmation.",
- f_btn:"Send reservation", f_wa:"Prefer to message us? WhatsApp",
- d_h:"Thank you, your tree is waiting.", d_p:"We've received your reservation and will write to you in the next few days to confirm it.",
- faq_eye:"Questions", faq_h:"Before you ask.",
- q1:"Do I pay now?", a1:"No. For now you only reserve. We'll write to confirm and send you the payment details.",
- q2:"When does the oil arrive?", a2:"We ship at the end of January. If you choose pick-up, you collect it when you visit Li Guira.",
- q3:"Can I give it as a gift?", a3:"Yes. Write in the notes the name for the plate and certificate: we can put them in anyone's name.",
- q4:"How much is shipping?", a4:"It depends on the destination. We tell you before confirming, so you decide with the full price.",
- q7:"How does the discount on your stay work?", a7:"Each adopted tree gives you a 10% discount on a stay at Agriturismo Li Guira booked directly with us (WhatsApp or website): minimum 2 nights, in 2027, except August and bank-holiday weekends. It can't be combined with other offers and doesn't apply to oil-only purchases.",
- q8:"I adopted a tree: can I buy more oil?", a8:"Yes, at 10% off: a 3-litre tin costs you €45 instead of €50. Valid throughout 2027, while the harvest oil lasts.",
- q5:"How does the free weekend work?", a5:"Adopting three trees gets you a low-season weekend at Li Guira. We agree dates and accommodation together. The weekend comes on top of the discounts: you keep the three 10% stay discounts and the 10% off oil."
-}};
+const T = {
+"en": {
+"hero_eye": "Agriturismo Li Guira · Stio, Cilento",
+"hero_h": "Adopt an <em>olive tree</em>.",
+"hero_h2": "Or take its oil home.",
+"hero_p": "Ostium extra virgin olive oil from Agriturismo Li Guira, 2026 harvest. With an adoption, your name on the tree too.",
+"hc1": "Adopt a tree",
+"hc1s": "€249 · 9 litres · delivery included",
+"hc2": "Oil box",
+"hc2s": "€199 · three 3-litre tins · delivery included",
+"cta": "Reserve your tree",
+"hero_price": "Reserve now, no payment until we confirm.",
+"get_eye": "What you get",
+"get_h": "An oil you won't find on any shelf.",
+"g1h": "Ostium extra virgin olive oil",
+"g1p": "Three 3-litre tins from our 2026 harvest, delivered to your door at the end of January in a single box.",
+"g2h": "Wooden name plate",
+"g2p": "With your name, fixed to your tree.",
+"g3h": "Adoption certificate",
+"g3p": "To keep, or to give as a gift.",
+"g4h": "Your tree through the seasons",
+"g4p": "We send you photos of it during the year, from blossom to ripening.",
+"g5h": "Exclusive discounts",
+"g5p": "10% off a stay at Agriturismo Li Guira and 10% off the Ostium oil you buy during the year.",
+"os_eye": "The label",
+"os_h": "Ostium, the oil of Stio.",
+"os_p": "Agriturismo Li Guira's oil is called Ostium, a name inspired by the original name of Stio: the village where our olive trees grow and where the farm stands.",
+"fil_eye": "2026 harvest",
+"fil_h": "From the grove to the mill, the same night.",
+"fil_p": "Olives picked by day reach the mill in the evening. The oil you receive is this one, no other.",
+"c1": "Olives on the sieve",
+"c2": "Milling",
+"c3": "The new oil",
+"how_eye": "How it works",
+"how_h": "Reserve now. Pay only once we confirm.",
+"s1h": "You reserve",
+"s1p": "Fill in the form below. No payment, no commitment.",
+"s2h": "We get in touch",
+"s2p": "By WhatsApp or email, to confirm the adoption and the name on the plate.",
+"s3h": "You pay and receive",
+"s3p": "You pay after confirmation. At the end of January we ship the oil with the certificate, and the plate goes on your tree.",
+"rit_eye": "Come and visit",
+"rit_h": "Your tree is waiting.",
+"rit_p": "Every adoption includes a 10% discount on a stay at Agriturismo Li Guira, booked directly with us. Breakfast in the sun, your tree a few steps away – and if you like, you can collect your oil in person.",
+"rit_t": "Minimum 2 nights, valid in 2027 except August and Italian bank-holiday weekends. One discount per adoption, not combinable with other offers.",
+"b_h": "Adopt 3 trees and the weekend is on us.",
+"b_p": "With three adoptions you get a low-season weekend at Li Guira, and you keep the three 10% stay discounts and the oil discount too.",
+"so_eye": "Without adoption",
+"so_h": "Just the oil?",
+"so_p": "The same Ostium oil from the 2026 harvest, in a box of three 3-litre tins, without plate or certificate. Delivery at the end of January included.",
+"so_unit": "three 3-litre tins · delivery included",
+"so_ad": "Adopted a tree? For you the box is €179 instead of €199.",
+"bt_p": "Looking for 0.75-litre bottles?",
+"bt_a": "Message us on WhatsApp →",
+"so_btn": "Reserve the box",
+"t_ad": "Adoption",
+"t_ad_s": "three 3 L tins · plate · certificate · €249",
+"t_ol": "Oil box",
+"t_ol_s": "three 3 L tins · €199",
+"q6": "Can I buy just the oil?",
+"a6": "Yes: the box of three 3-litre tins costs €199, delivery included – the same Ostium oil from the 2026 harvest. Choose \"Oil box\" in the form. For 0.75-litre bottles, message us on WhatsApp.",
+"f_eye": "Reservation",
+"f_h": "Reserve your tree, or your oil.",
+"f_p": "Limited to the 2026 harvest. No payment now.",
+"l_nome": "Full name",
+"l_tel": "WhatsApp",
+"l_email": "Email",
+"l_ulivi": "How many trees",
+"l_tot": "Estimated total",
+"l_gift": "· free weekend included",
+"l_rit": "Delivery",
+"o_sped": "To your home, delivery included",
+"o_rit": "Pick-up at Li Guira",
+"o_dec": "I'll decide later",
+"l_note": "Name for the plate, or notes",
+"ft_cond": "Terms of sale",
+"l_priv": "I have read the <a href=\"privacy.html\">privacy notice</a> and the <a href=\"condizioni.html\">terms of sale</a> (in Italian).",
+"f_note": "The reservation is not binding. We confirm in order of arrival and get in touch with you; payment happens only after confirmation. If the oil sells out before we confirm, we'll let you know – you pay nothing and can stay on the waiting list.",
+"f_btn": "Send reservation",
+"f_wa": "Prefer to message us? WhatsApp",
+"d_h": "Thank you, your tree is waiting.",
+"d_p": "We've received your reservation and will write to you in the next few days to confirm it.",
+"faq_eye": "Questions",
+"faq_h": "Before you ask.",
+"q1": "Do I pay now?",
+"a1": "No. For now you only reserve. We'll write to confirm and send you the payment details.",
+"q2": "When does the oil arrive?",
+"a2": "We deliver at the end of January, delivery included. If you choose pick-up, you collect it when you visit Li Guira.",
+"q3": "Can I give it as a gift?",
+"a3": "Yes. Write in the notes the name for the plate and certificate: we can put them in anyone's name.",
+"q4": "Is delivery included?",
+"a4": "Yes, to Germany, Austria, the Netherlands, Belgium and Italy. For Switzerland and other countries, message us and we'll tell you the cost and delivery time.",
+"q7": "How does the discount on your stay work?",
+"a7": "Each adopted tree gives you a 10% discount on a stay at Agriturismo Li Guira booked directly with us (WhatsApp or website): minimum 2 nights, in 2027, except August and bank-holiday weekends. It can't be combined with other offers and doesn't apply to oil-only purchases.",
+"q8": "I adopted a tree: can I buy more oil?",
+"a8": "Yes, at 10% off: the box costs you €179 instead of €199. Valid throughout 2027, while the harvest oil lasts.",
+"q5": "How does the free weekend work?",
+"a5": "Adopting three trees gets you a low-season weekend at Li Guira. We agree dates and accommodation together. The weekend comes on top of the discounts: you keep the three 10% stay discounts and the 10% off oil.",
+"l_paese": "Delivery country",
+"o_ch": "Switzerland (on request)",
+"o_altro": "Other country (on request)"
+},
+"de": {
+"hero_eye": "Agriturismo Li Guira · Stio, Cilento",
+"hero_h": "Ihr eigener <em>Olivenbaum</em>.",
+"hero_h2": "Oder holen Sie sich sein Öl nach Hause.",
+"hero_p": "Natives Olivenöl extra Ostium vom Agriturismo Li Guira, Ernte 2026. Mit der Adoption steht auch Ihr Name am Baum.",
+"hc1": "Olivenbaum adoptieren",
+"hc1s": "249 € · 9 Liter · Lieferung inklusive",
+"hc2": "Öl-Box",
+"hc2s": "199 € · 3 Kanister à 3 Liter · Lieferung inklusive",
+"hero_price": "Jetzt reservieren – bezahlt wird erst nach unserer Bestätigung.",
+"cta": "Baum reservieren",
+"get_eye": "Das erhalten Sie",
+"get_h": "Ein Öl, das Sie in keinem Regal finden.",
+"g1h": "Natives Olivenöl extra Ostium",
+"g1p": "Drei 3-Liter-Kanister aus unserer Ernte 2026, Ende Januar in einem einzigen Paket zu Ihnen nach Hause geliefert.",
+"g2h": "Holzschild",
+"g2p": "Mit Ihrem Namen, an Ihrem Baum befestigt.",
+"g3h": "Adoptionsurkunde",
+"g3p": "Zum Behalten oder Verschenken.",
+"g4h": "Ihr Baum im Lauf der Jahreszeiten",
+"g4p": "Wir schicken Ihnen das Jahr über Fotos, von der Blüte bis zur Reife.",
+"g5h": "Exklusive Rabatte",
+"g5p": "10 % auf einen Aufenthalt im Agriturismo Li Guira und 10 % auf das Ostium-Öl, das Sie im Lauf des Jahres nachbestellen.",
+"os_eye": "Das Etikett",
+"os_h": "Ostium, das Öl von Stio.",
+"os_p": "Das Öl des Agriturismo Li Guira heißt Ostium – ein Name, der sich am ursprünglichen Namen von Stio orientiert: dem Dorf, in dem unsere Olivenbäume wachsen und in dem das Agriturismo liegt.",
+"fil_eye": "Ernte 2026",
+"fil_h": "Vom Olivenhain in die Ölmühle, noch in derselben Nacht.",
+"fil_p": "Die tagsüber geernteten Oliven kommen am Abend in die Mühle. Sie erhalten genau dieses Öl, kein anderes.",
+"c1": "Oliven auf dem Sieb",
+"c2": "Das Mahlen",
+"c3": "Das neue Öl",
+"how_eye": "So funktioniert's",
+"how_h": "Jetzt reservieren. Bezahlen erst nach Bestätigung.",
+"s1h": "Reservieren",
+"s1p": "Füllen Sie das Formular unten aus. Keine Zahlung, keine Verpflichtung.",
+"s2h": "Wir melden uns",
+"s2p": "Per WhatsApp oder E-Mail, um die Adoption und den Namen auf dem Schild zu bestätigen.",
+"s3h": "Bezahlen und erhalten",
+"s3p": "Sie bezahlen nach der Bestätigung. Ende Januar liefern wir das Öl mit der Urkunde, und das Schild kommt an Ihren Baum.",
+"rit_eye": "Besuchen Sie ihn",
+"rit_h": "Ihr Baum wartet auf Sie.",
+"rit_p": "Jede Adoption enthält 10 % Rabatt auf einen Aufenthalt im Agriturismo Li Guira, direkt bei uns gebucht. Frühstück in der Sonne, Ihr Baum ein paar Schritte entfernt – und wenn Sie möchten, nehmen Sie Ihr Öl persönlich mit.",
+"rit_t": "Mindestens 2 Nächte, gültig 2027 außer im August und an italienischen Feiertagswochenenden. Ein Rabatt pro Adoption, nicht mit anderen Angeboten kombinierbar.",
+"b_h": "Drei Bäume adoptiert? Das Wochenende schenken wir Ihnen.",
+"b_p": "Mit drei Adoptionen erhalten Sie ein Wochenende im Li Guira in der Nebensaison – und behalten zusätzlich die drei 10-%-Rabatte auf den Aufenthalt und den Rabatt aufs Öl.",
+"so_eye": "Ohne Adoption",
+"so_h": "Nur das Öl?",
+"so_p": "Dasselbe Ostium-Öl aus der Ernte 2026, in einer Box mit drei 3-Liter-Kanistern, ohne Schild und Urkunde. Lieferung Ende Januar inklusive.",
+"so_ad": "Sie haben einen Baum adoptiert? Für Sie kostet die Box 179 € statt 199 €.",
+"so_unit": "3 Kanister à 3 Liter · Lieferung inklusive",
+"so_btn": "Box reservieren",
+"bt_p": "Sie suchen 0,75-Liter-Flaschen?",
+"bt_a": "Schreiben Sie uns auf WhatsApp →",
+"f_eye": "Reservierung",
+"f_h": "Reservieren Sie Ihren Baum oder Ihr Öl.",
+"f_p": "Begrenzt auf die Ernte 2026. Jetzt keine Zahlung.",
+"t_ad": "Adoption",
+"t_ad_s": "3 Kanister à 3 L · Schild · Urkunde · 249 €",
+"t_ol": "Öl-Box",
+"t_ol_s": "3 Kanister à 3 L · 199 €",
+"l_nome": "Vor- und Nachname",
+"l_tel": "WhatsApp",
+"l_email": "E-Mail",
+"l_ulivi": "Wie viele Bäume",
+"l_tot": "Voraussichtliche Summe",
+"l_gift": "· Wochenende geschenkt",
+"l_rit": "Lieferung",
+"o_sped": "Nach Hause, Lieferung inklusive",
+"o_rit": "Abholung im Li Guira",
+"o_dec": "Entscheide ich später",
+"l_paese": "Lieferland",
+"o_ch": "Schweiz (auf Anfrage)",
+"o_altro": "Anderes Land (auf Anfrage)",
+"l_note": "Name für das Schild oder Anmerkungen",
+"l_priv": "Ich habe die <a href=\"privacy.html\">Datenschutzerklärung</a> und die <a href=\"condizioni.html\">Verkaufsbedingungen</a> gelesen (auf Italienisch).",
+"f_note": "Die Reservierung ist unverbindlich. Wir bestätigen in der Reihenfolge des Eingangs und melden uns bei Ihnen; bezahlt wird erst danach. Ist das Öl vor Ihrer Bestätigung ausverkauft, sagen wir Ihnen Bescheid – Sie zahlen nichts und können auf der Warteliste bleiben.",
+"f_btn": "Reservierung senden",
+"f_wa": "Lieber schreiben? WhatsApp",
+"d_h": "Danke, Ihr Baum wartet auf Sie.",
+"d_p": "Wir haben Ihre Reservierung erhalten und melden uns in den nächsten Tagen zur Bestätigung.",
+"faq_eye": "Fragen",
+"faq_h": "Bevor Sie fragen.",
+"q1": "Muss ich jetzt bezahlen?",
+"a1": "Nein. Jetzt reservieren Sie nur. Wir melden uns zur Bestätigung und schicken Ihnen die Zahlungsdaten.",
+"q6": "Kann ich nur das Öl kaufen?",
+"a6": "Ja: Die Box mit drei 3-Liter-Kanistern kostet 199 €, Lieferung inklusive – dasselbe Ostium-Öl aus der Ernte 2026. Wählen Sie im Formular „Öl-Box“. Für 0,75-Liter-Flaschen schreiben Sie uns auf WhatsApp.",
+"q2": "Wann kommt das Öl?",
+"a2": "Wir liefern Ende Januar, Lieferung inklusive. Bei Abholung nehmen Sie es bei Ihrem Besuch im Li Guira mit.",
+"q3": "Kann ich es verschenken?",
+"a3": "Ja. Schreiben Sie in die Anmerkungen den Namen für Schild und Urkunde – wir stellen sie auf jeden gewünschten Namen aus.",
+"q4": "Ist die Lieferung inklusive?",
+"a4": "Ja, nach Deutschland, Österreich, in die Niederlande, nach Belgien und Italien. Für die Schweiz und andere Länder schreiben Sie uns: Wir nennen Ihnen Kosten und Lieferzeit.",
+"q7": "Wie funktioniert der Rabatt auf den Aufenthalt?",
+"a7": "Jeder adoptierte Baum gibt Ihnen 10 % Rabatt auf einen direkt bei uns gebuchten Aufenthalt im Agriturismo Li Guira (WhatsApp oder Website): mindestens 2 Nächte, 2027, außer im August und an Feiertagswochenenden. Nicht mit anderen Angeboten kombinierbar und nicht gültig für den reinen Ölkauf.",
+"q8": "Ich habe adoptiert: Kann ich mehr Öl kaufen?",
+"a8": "Ja, mit 10 % Rabatt: Die Box kostet Sie 179 € statt 199 €. Gültig das ganze Jahr 2027, solange das Öl der Ernte reicht.",
+"q5": "Wie funktioniert das geschenkte Wochenende?",
+"a5": "Wenn Sie drei Bäume adoptieren, erhalten Sie ein Wochenende im Li Guira in der Nebensaison. Termin und Unterkunft stimmen wir gemeinsam ab. Das Wochenende kommt zu den Rabatten hinzu: Sie behalten die drei 10-%-Rabatte auf den Aufenthalt und die 10 % aufs Öl.",
+"ft_cond": "Verkaufsbedingungen"
+}
+};
 const IT = {}; document.querySelectorAll('[data-t]').forEach(e=>IT[e.dataset.t]=e.innerHTML);
 let lang = 'it';
+const BT={it:"Ciao! Vorrei informazioni sulle bottiglie d'olio da 0,75 L.",en:"Hi! I'd like information about the 0.75 L bottles of oil.",de:'Hallo! Ich hätte gern Informationen zu den 0,75-Liter-Flaschen Olivenöl.'};
 function setLang(l){
   lang=l; document.documentElement.lang=l;
+  document.title={de:'Ihr eigener Olivenbaum — Agriturismo Li Guira',en:'Adopt an olive tree — Agriturismo Li Guira',it:'Adotta un ulivo — Agriturismo Li Guira'}[l];
   document.querySelectorAll('[data-t]').forEach(e=>{const v=(l==='it'?IT:T[l])[e.dataset.t]; if(v) e.innerHTML=v;});
   document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===l));
-  document.getElementById('bt').href=l==='it'?'https://wa.me/393201464485?text=Ciao%21%20Vorrei%20informazioni%20sulle%20bottiglie%20d%27olio%20da%200%2C75%20L.':'https://wa.me/393201464485?text=Hi%21%20I%27d%20like%20information%20about%20the%200.75%20L%20bottles%20of%20oil.';
+  document.getElementById('bt').href='https://wa.me/393201464485?text='+encodeURIComponent(BT[l]);
   calc();
 }
 document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
 
 let q=1, tipo='adozione';
-const PREZZO={adozione:200, olio:50};
-const QLAB={adozione:{it:'Quanti ulivi',en:'How many trees'}, olio:{it:'Quante latte da 3 L',en:'How many 3 L tins'}};
+const PREZZO={adozione:249, olio:199};
+const QLAB={adozione:{it:'Quanti ulivi',en:'How many trees',de:'Wie viele Bäume'}, olio:{it:'Quante box',en:'How many boxes',de:'Wie viele Boxen'}};
 function calc(){
   document.getElementById('qn').textContent=q;
   document.getElementById('tot').textContent=(q*PREZZO[tipo]).toLocaleString('it-IT')+' €';
@@ -426,23 +601,25 @@ f.addEventListener('submit', async ev=>{
   for(const el of f.querySelectorAll('[required]')){
     if(el.type==='checkbox'?!el.checked:!el.value.trim()){ el.focus(); el.reportValidity&&el.reportValidity(); return; }
   }
-  const d=Object.fromEntries(new FormData(f)); d.tipo=tipo==='adozione'?'Adozione 9 L (3 latte da 3 L)':'Solo olio (latta 3 L)'; d.ulivi=q; d.lingua=lang; delete d.privacy;
+  const d=Object.fromEntries(new FormData(f)); d.tipo=tipo==='adozione'?'Adozione 9 L (3 latte da 3 L) 249 €':'Box olio (3 latte da 3 L) 199 €'; const rs=f.querySelector('[name=ritiro]'), ps=f.querySelector('[name=paese]'); d.ritiro=d.ritiro+' · '+d.paese; const ritTxt=rs.options[rs.selectedIndex].text+' · '+ps.options[ps.selectedIndex].text; d.ulivi=q; d.lingua=lang; delete d.privacy;
   const btn=document.getElementById('sub'); btn.disabled=true; btn.style.opacity=.6;
   let ok=false;
   if(SCRIPT_URL){
     try{ await fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',body:new URLSearchParams(d)}); ok=true; }catch(e){}
   }
   if(ok){ f.style.display='none'; document.getElementById('done').style.display='block'; return; }
-  const msg=(lang==='it'
-    ? (tipo==='adozione' ? `Ciao! Vorrei adottare ${q} ${q>1?'ulivi':'ulivo'} (3 latte da 3 L ciascuno).` : `Ciao! Vorrei prenotare ${q} ${q>1?'latte':'latta'} di olio da 3 L.`) + `\nNome: ${d.nome}\nEmail: ${d.email}\nRicezione: ${d.ritiro}`
-    : (tipo==='adozione' ? `Hi! I'd like to adopt ${q} olive tree${q>1?'s':''} (three 3 L tins each).` : `Hi! I'd like to reserve ${q} 3 L tin${q>1?'s':''} of oil.`) + `\nName: ${d.nome}\nEmail: ${d.email}\nDelivery: ${d.ritiro}`)
-    + (d.note?`\n${lang==='it'?'Note':'Notes'}: ${d.note}`:'');
+  const M={
+    it:{ad:`Ciao! Vorrei adottare ${q} ${q>1?'ulivi':'ulivo'} (3 latte da 3 L ciascuno, consegna inclusa).`,ol:`Ciao! Vorrei prenotare ${q} box di olio (3 latte da 3 L, consegna inclusa).`,n:'Nome',r:'Consegna',x:'Note'},
+    en:{ad:`Hi! I'd like to adopt ${q} olive tree${q>1?'s':''} (three 3 L tins each, delivery included).`,ol:`Hi! I'd like to reserve ${q} oil box${q>1?'es':''} (three 3 L tins, delivery included).`,n:'Name',r:'Delivery',x:'Notes'},
+    de:{ad:`Hallo! Ich möchte ${q} ${q>1?'Olivenbäume':'Olivenbaum'} adoptieren (je drei 3-Liter-Kanister, Lieferung inklusive).`,ol:`Hallo! Ich möchte ${q} ${q>1?'Öl-Boxen':'Öl-Box'} reservieren (drei 3-Liter-Kanister, Lieferung inklusive).`,n:'Name',r:'Lieferung',x:'Anmerkungen'}
+  }[lang];
+  const msg=(tipo==='adozione'?M.ad:M.ol)+`\n${M.n}: ${d.nome}\nEmail: ${d.email}\n${M.r}: ${ritTxt}`+(d.note?`\n${M.x}: ${d.note}`:'');
   const a=document.getElementById('wa'); a.href=`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
   a.style.color='var(--brace2)'; a.style.fontWeight='600';
-  a.querySelector('span').textContent = lang==='it' ? 'Tocca qui per inviare la prenotazione su WhatsApp →' : 'Tap here to send your reservation on WhatsApp →';
+  a.querySelector('span').textContent = {it:'Tocca qui per inviare la prenotazione su WhatsApp →',en:'Tap here to send your reservation on WhatsApp →',de:'Hier tippen, um die Reservierung per WhatsApp zu senden →'}[lang];
   btn.disabled=false; btn.style.opacity=1; a.focus();
 });
-if((navigator.language||'').slice(0,2)!=='it') setLang('en');
+setLang((navigator.language||'').slice(0,2)==='de'?'de':'en');
 calc();
 </script>
 </body>
